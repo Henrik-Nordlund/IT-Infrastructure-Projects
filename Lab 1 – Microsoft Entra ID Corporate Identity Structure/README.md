@@ -12,8 +12,6 @@ This lab focuses on building a fictional corporate identity structure in Microso
 
 ## Scenario
 
-## Scenario
-
 Nordlund Industries is a fictional company with five departments: Executive, HR, IT, Finance, and Sales.
 
 The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
