@@ -21,7 +21,7 @@ Azure and Microsoft infrastructure.
 Practical exercises covering users, groups, administrative units,
 identity management and access control.
 
- - <a href= "https://github.com/Henrik-Nordlund/professional-certifications/blob/main/Pluralsight-AD-Entra-01-The-Big-Picture.pdf">View certificate</a>
+ - <a href= "https://github.com/Henrik-Nordlund/professional-certifications/blob/main/Pluralsight-AD-Entra-01-The-Big-Picture.pdf">Lab 1 – Microsoft Entra ID: Corporate Identity Structure</a>
 
 ### Intune
 Practical exercises covering device management, policies and configuration.
