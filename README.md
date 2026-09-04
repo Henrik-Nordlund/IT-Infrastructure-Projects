@@ -21,6 +21,8 @@ Azure and Microsoft infrastructure.
 Practical exercises covering users, groups, administrative units,
 identity management and access control.
 
+ - <a href= "https://github.com/Henrik-Nordlund/professional-certifications/blob/main/Pluralsight-AD-Entra-01-The-Big-Picture.pdf">View certificate</a>
+
 ### Intune
 Practical exercises covering device management, policies and configuration.
 
