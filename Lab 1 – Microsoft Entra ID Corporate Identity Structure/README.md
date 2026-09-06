@@ -44,7 +44,7 @@ The scenario is designed to demonstrate practical identity administration, inclu
 
 ### Security Groups
 Intital state
-<img width="1436" height="442" alt="Intial state" src="https://github.com/user-attachments/assets/b65ff7ac-cd39-4b57-9a54-fc267623f823" />
+<img width="1537" height="472" alt="initial state" src="https://github.com/user-attachments/assets/db024d85-564f-429f-b38c-0cd42e325c54" />
 
 
 
