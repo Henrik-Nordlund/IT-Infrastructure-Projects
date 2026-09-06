@@ -53,8 +53,8 @@ SEC- groups are used for access control and permissions. These are the security 
 
 ### Microsoft 365 Groups
 M365- groups are used for collaboration. These are the M365 groups I created for the users.
+<img width="1507" height="607" alt="M365 grupper" src="https://github.com/user-attachments/assets/01baadac-1386-450b-8bc2-6c041b418ebe" />
 
-...
 
 ### Administrative Units
 ...
