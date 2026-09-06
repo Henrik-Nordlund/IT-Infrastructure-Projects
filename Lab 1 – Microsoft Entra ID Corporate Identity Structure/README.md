@@ -23,7 +23,7 @@ The scenario is designed to demonstrate practical identity administration, inclu
 
 ## Implementation
 
-### Users
+### Users (16 fictional corporate users + 1 personal administrative account)
 - Adele Vance
 - Alex Wilber
 - Diego Siciliani
@@ -40,3 +40,38 @@ The scenario is designed to demonstrate practical identity administration, inclu
 - Nestor Wilke
 - Patti Fernandez
 - Pradeep Gupta
+<img width="822" height="707" alt="Userlist" src="https://github.com/user-attachments/assets/1bd8fb72-7794-49ef-a4ca-431db0767964" />
+
+### Security Groups
+Intital state
+<img width="1436" height="442" alt="Intial state" src="https://github.com/user-attachments/assets/b65ff7ac-cd39-4b57-9a54-fc267623f823" />
+
+
+
+### Microsoft 365 Groups
+...
+
+### Administrative Units
+...
+
+## Validation
+
+### Test 1 – Group membership
+Expected:
+Result:
+
+### Test 2 – Department change
+Expected:
+Result:
+
+### Test 3 – Block sign-in
+Expected:
+Result:
+
+## Lessons Learned
+
+...
+
+## References
+
+- Microsoft Learn
