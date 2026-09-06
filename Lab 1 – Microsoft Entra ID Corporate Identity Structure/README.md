@@ -57,7 +57,9 @@ M365- groups are used for collaboration. These are the M365 groups I created for
 
 
 ### Administrative Units
-...
+<img width="1417" height="491" alt="administrative units" src="https://github.com/user-attachments/assets/21d39102-7546-44d4-a79a-3416461f20d6" />
+
+
 
 ## Validation
 
