@@ -46,9 +46,12 @@ The scenario is designed to demonstrate practical identity administration, inclu
 Intital state
 <img width="1537" height="472" alt="initial state" src="https://github.com/user-attachments/assets/db024d85-564f-429f-b38c-0cd42e325c54" />
 
+SEC- groups are used for access control and permissions. These are the security groups I created for the users.
 
 
 ### Microsoft 365 Groups
+M365- groups are used for collaboration. These are the M365 groups I created for the users.
+
 ...
 
 ### Administrative Units
