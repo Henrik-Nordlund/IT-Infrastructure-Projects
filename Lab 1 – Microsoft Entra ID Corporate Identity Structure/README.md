@@ -12,7 +12,7 @@ This lab focuses on building a fictional corporate identity structure in Microso
 
 ## Scenario
 
-Nordlund Industries is a fictional company with five departments: Executive, HR, IT, Finance, and Sales.
+Nordlund Industries is a fictional company with several departments: HR, Sales, Marketing, R&D, Engineering, Manufactoring, and Finance.
 
 The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
 
@@ -47,6 +47,8 @@ Intital state
 <img width="1537" height="472" alt="initial state" src="https://github.com/user-attachments/assets/db024d85-564f-429f-b38c-0cd42e325c54" />
 
 SEC- groups are used for access control and permissions. These are the security groups I created for the users.
+<img width="1460" height="737" alt="Security Groups" src="https://github.com/user-attachments/assets/c8bfedc6-662b-44d2-93f7-5a2ca92137b7" />
+
 
 
 ### Microsoft 365 Groups
