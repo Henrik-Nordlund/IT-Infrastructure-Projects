@@ -124,9 +124,9 @@ $group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
 New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
 ```
 
-### Test 3 – Multiple Group Membership
+### Test 3 – Owner vs member in Group Memberships
 
-Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This demonstrates that a user can belong to multiple security groups based on their responsibilities.
+Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This demonstrates the distinction between group ownership and group membership.
 
 <img width="1246" height="377" alt="owner sales" src="https://github.com/user-attachments/assets/8885ba77-76dd-4061-91a6-b380a45ebb83" />
 <img width="1251" height="405" alt="owner marketing" src="https://github.com/user-attachments/assets/88d8744a-7429-44d9-be99-6c80312e9f98" /> 
@@ -135,7 +135,7 @@ Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This
 
 **PowerShell:**
 ```powershell
-$$user = Get-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com"
+$user = Get-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com"
 
 $group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
 New-MgGroupOwnerByRef -GroupId $group.Id `
@@ -191,14 +191,8 @@ The membership of the Administrative Units was checked. Users were verified agai
 
 **Result:** Passed
 
-
-
-### Test 6 – Block sign-in
-Expected:
-Result:
-
 ## Lessons Learned
-
+Automation with PowerShell can considerably ease allocation of attributes and other things when there are many users.
 ...
 
 ## References
