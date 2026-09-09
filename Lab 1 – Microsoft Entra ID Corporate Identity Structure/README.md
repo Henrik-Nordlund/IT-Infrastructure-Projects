@@ -96,7 +96,7 @@ Result: Passed
 Update-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com" `
     -JobTitle "Director" `
     -Department "Sales & Marketing" `
-    -State "California"
+    -State "CA"
 ```
 
 ### Test 2 – Department change
