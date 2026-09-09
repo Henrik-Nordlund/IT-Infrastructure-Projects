@@ -108,14 +108,10 @@ Update-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com" `
 ```
 
 ### Test 2 – Security Group Membership
-
-Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing, and the membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that users were assigned to the appropriate groups.
+The membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that users were assigned to the appropriate groups.
 
 <img width="1462" height="537" alt="sales group" src="https://github.com/user-attachments/assets/f721bb76-0d84-406f-a3f3-f5296f626064" />
-<img width="1246" height="377" alt="owner sales" src="https://github.com/user-attachments/assets/8885ba77-76dd-4061-91a6-b380a45ebb83" />
 <img width="1267" height="566" alt="Marketing group" src="https://github.com/user-attachments/assets/f551b990-220e-44a7-959d-907d83c95d24" />
-<img width="1251" height="405" alt="owner marketing" src="https://github.com/user-attachments/assets/88d8744a-7429-44d9-be99-6c80312e9f98" />
-
 
 **Result:** Passed
 
@@ -130,9 +126,23 @@ New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
 
 ### Test 3 – Multiple Group Membership
 
-Miriam Graham was verified as a member of both `SEC-Sales` and `SEC-Marketing`. This demonstrates that a user can belong to multiple security groups based on their responsibilities.
+Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This demonstrates that a user can belong to multiple security groups based on their responsibilities.
 
-**Result:** Passed
+<img width="1246" height="377" alt="owner sales" src="https://github.com/user-attachments/assets/8885ba77-76dd-4061-91a6-b380a45ebb83" />
+<img width="1251" height="405" alt="owner marketing" src="https://github.com/user-attachments/assets/88d8744a-7429-44d9-be99-6c80312e9f98" /> 
+ 
+ **Result:** Passed
+
+**PowerShell:**
+```powershell
+$user = Get-MgUser -Filter "displayName eq 'Miriam Graham'"
+
+$group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
+New-MgGroupOwnerByRef -GroupId $group.Id -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
+
+$group = Get-MgGroup -Filter "displayName eq 'SEC-Marketing'"
+New-MgGroupOwnerByRef -GroupId $group.Id -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
+```
 
 ### Test 4 – Microsoft 365 Collaboration Group
 
