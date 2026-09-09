@@ -192,7 +192,7 @@ The membership of the Administrative Units was checked. Users were verified agai
 **Result:** Passed
 
 ## Lessons Learned
-Automation with PowerShell can considerably ease allocation of attributes to user among other tasks when there are many users.
+Automation with PowerShell can considerably ease allocation of attributes to users among other tasks when there are many users.
 
 ## References
 
