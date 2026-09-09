@@ -135,21 +135,54 @@ Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This
 
 **PowerShell:**
 ```powershell
-$user = Get-MgUser -Filter "displayName eq 'Miriam Graham'"
+$$user = Get-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com"
 
 $group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
-New-MgGroupOwnerByRef -GroupId $group.Id -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
+New-MgGroupOwnerByRef -GroupId $group.Id `
+    -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
 
 $group = Get-MgGroup -Filter "displayName eq 'SEC-Marketing'"
-New-MgGroupOwnerByRef -GroupId $group.Id -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
+New-MgGroupOwnerByRef -GroupId $group.Id `
+    -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
 ```
 
 ### Test 4 – Microsoft 365 Collaboration Group
 
 The membership of `M365-Sales-Marketing` was verified. The group contains users from both Sales and Marketing for collaboration purposes.
+<img width="1482" height="632" alt="Sales and marketing" src="https://github.com/user-attachments/assets/b75b5883-fedc-429a-b1ac-df5ef22675b1" />
+<img width="1485" height="372" alt="owner sales and marketing" src="https://github.com/user-attachments/assets/c86dccdf-dc5a-4890-b08a-2f602aaa64fb" />
+
 
 **Result:** Passed
 
+**PowerShell:**
+```powershell
+$group = New-MgGroup `
+    -DisplayName "M365-Sales-Marketing" `
+    -MailEnabled:$true `
+    -MailNickname "M365-Sales-Marketing" `
+    -SecurityEnabled:$false `
+    -GroupTypes @("Unified")
+
+$users = @(
+    "adele.vance@1s1mkr.onmicrosoft.com"
+    "isaiah.langer@1s1mkr.onmicrosoft.com"
+    "lynne.robbins@1s1mkr.onmicrosoft.com"
+    "alex.wilber@1s1mkr.onmicrosoft.com"
+    "megan.bowen@1s1mkr.onmicrosoft.com"
+)
+
+foreach ($upn in $users) {
+    $user = Get-MgUser -UserId $upn
+    New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
+}
+
+$miriam = Get-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com"
+
+New-MgGroupOwnerByRef `
+    -GroupId $group.Id `
+    -OdataId "https://graph.microsoft.com/v1.0/users/$($miriam.Id)"
+```
 ### Test 5 – Administrative Units
 
 The membership of the Administrative Units was checked. Users were verified against their assigned regional Administrative Unit.
