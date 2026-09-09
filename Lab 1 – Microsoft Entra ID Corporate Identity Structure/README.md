@@ -42,6 +42,27 @@ The scenario is designed to demonstrate practical identity administration, inclu
 - Pradeep Gupta
 <img width="822" height="707" alt="Userlist" src="https://github.com/user-attachments/assets/1bd8fb72-7794-49ef-a4ca-431db0767964" />
 
+## Planned Structure
+| User              | Job title           | Department           | Manager         | State/Country  |
+| ----------------- | ------------------- | -------------------- | --------------- | -------------- |
+| Adele Vance       | Retail Manager      | Retail               | Miriam Graham   | Washington     |
+| Alex Wilber       | Marketing Assistant | Marketing            | Miriam Graham   | California     |
+| Diego Siciliani   | HR Manager          | HR                   | Nestor Wilke    | Alabama        |
+| Grady Archie      | Designer            | R&D                  | Lee Gu          | Illinois       |
+| Henrietta Mueller | Developer           | R&D                  | Lee Gu          | Florida        |
+| Isaiah Langer     | Sales Rep           | Sales                | Miriam Graham   | Oklahoma       |
+| Johanna Lorenz    | Senior Engineer     | Engineering          | Lee Gu          | Kentucky       |
+| Joni Sherman      | Paralegal           | Legal                | Nestor Wilke    | North Carolina |
+| Lee Gu            | Director            | Manufacturing        | Patti Fernandez | Kansas         |
+| Lidia Holloway    | Product Manager     | Engineering          | Lee Gu          | Oklahoma       |
+| Lynne Robbins     | Planner             | Retail               | Miriam Graham   | Oklahoma       |
+| Megan Bowen       | Marketing Manager   | Marketing            | Miriam Graham   | Pennsylvania   |
+| Miriam Graham     | Director            | Sales & Marketing    | Patti Fernandez | California     |
+| Nestor Wilke      | Director            | Operations           | Patti Fernandez | Washington     |
+| Patti Fernandez   | President           | Executive Management | —               | Kentucky       |
+| Pradeep Gupta     | Accountant          | Finance              | Nestor Wilke    | Egypt          |
+
+
 ### Security Groups
 Intital state
 <img width="1537" height="472" alt="initial state" src="https://github.com/user-attachments/assets/db024d85-564f-429f-b38c-0cd42e325c54" />
