@@ -88,7 +88,16 @@ M365- groups are used for collaboration. These are the M365 groups I created for
 The purpose is to control if each user have been provided with the correct attributes as given in the planned structure table.
 Expected: The users attribute correspond with the planned organizational structure
 Ex for the user Miriam Graham: <img width="1312" height="742" alt="Miriam Graham user information" src="https://github.com/user-attachments/assets/841d589f-9a94-43f1-8e3d-17ec67ae4ad5" />
-Result: Passed
+Result: Passed  
+
+**PowerShell:**
+
+```powershell
+Update-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com" `
+    -JobTitle "Director" `
+    -Department "Sales & Marketing" `
+    -State "California"
+```
 
 ### Test 2 – Department change
 Expected:
