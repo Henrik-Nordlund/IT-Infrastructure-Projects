@@ -45,7 +45,7 @@ The scenario is designed to demonstrate practical identity administration, inclu
 ## Planned Structure
 | User              | Job title           | Department           | Manager         | State/Country  |
 | ----------------- | ------------------- | -------------------- | --------------- | -------------- |
-| Adele Vance       | Retail Manager      | Retail               | Miriam Graham   | Washington     |
+| Adele Vance       | Retail Manager      | Sales                | Miriam Graham   | Washington     |
 | Alex Wilber       | Marketing Assistant | Marketing            | Miriam Graham   | California     |
 | Diego Siciliani   | HR Manager          | HR                   | Nestor Wilke    | Alabama        |
 | Grady Archie      | Designer            | R&D                  | Lee Gu          | Illinois       |
@@ -55,7 +55,7 @@ The scenario is designed to demonstrate practical identity administration, inclu
 | Joni Sherman      | Paralegal           | Legal                | Nestor Wilke    | North Carolina |
 | Lee Gu            | Director            | Manufacturing        | Patti Fernandez | Kansas         |
 | Lidia Holloway    | Product Manager     | Engineering          | Lee Gu          | Oklahoma       |
-| Lynne Robbins     | Planner             | Retail               | Miriam Graham   | Oklahoma       |
+| Lynne Robbins     | Planner             | Sales                | Miriam Graham   | Oklahoma       |
 | Megan Bowen       | Marketing Manager   | Marketing            | Miriam Graham   | Pennsylvania   |
 | Miriam Graham     | Director            | Sales & Marketing    | Patti Fernandez | California     |
 | Nestor Wilke      | Director            | Operations           | Patti Fernandez | Washington     |
@@ -84,9 +84,11 @@ M365- groups are used for collaboration. These are the M365 groups I created for
 
 ## Validation
 
-### Test 1 – Group membership
-Expected:
-Result:
+### Test 1 – User structure
+The purpose is to control if each user have been provided with the correct attributes as given in the planned structure table.
+Expected: The users attribute correspond with the planned organizational structure
+Ex for the user Miriam Graham: <img width="1312" height="742" alt="Miriam Graham user information" src="https://github.com/user-attachments/assets/841d589f-9a94-43f1-8e3d-17ec67ae4ad5" />
+Result: Passed
 
 ### Test 2 – Department change
 Expected:
