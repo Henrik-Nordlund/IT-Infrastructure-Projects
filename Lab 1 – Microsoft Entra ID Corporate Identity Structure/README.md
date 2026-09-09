@@ -82,13 +82,21 @@ M365- groups are used for collaboration. These are the M365 groups I created for
 
 
 
-## Validation
+## Validation - Test Results
 
-### Test 1 – User structure
-The purpose is to control if each user have been provided with the correct attributes as given in the planned structure table.
-Expected: The users attribute correspond with the planned organizational structure
-Ex for the user Miriam Graham: <img width="1312" height="742" alt="Miriam Graham user information" src="https://github.com/user-attachments/assets/841d589f-9a94-43f1-8e3d-17ec67ae4ad5" />
-Result: Passed  
+| Test                              | Expected result                                                        | Result |
+| --------------------------------- | ---------------------------------------------------------------------- | ------ |
+| User structure                    | User attributes match the planned organizational structure.            | Passed |
+| Security group membership         | Users are members of the appropriate security groups.                  | Passed |
+| Multiple group membership         | Miriam Graham is a member of both `SEC-Sales` and `SEC-Marketing`.     | Passed |
+| Microsoft 365 collaboration group | `M365-Sales-Marketing` contains members from both Sales and Marketing. | Passed |
+| Administrative Units              | Users are assigned to the appropriate Administrative Unit.             | Passed |
+
+### Test 1 – User Structure
+
+Miriam Graham was selected as a test user. Her job title, department, state and manager were verified against the planned organizational structure.  
+<img width="1312" height="742" alt="Miriam Graham user information" src="https://github.com/user-attachments/assets/841d589f-9a94-43f1-8e3d-17ec67ae4ad5" />
+**Result:** Passed
 
 **PowerShell:**
 
@@ -99,11 +107,48 @@ Update-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com" `
     -State "CA"
 ```
 
-### Test 2 – Department change
-Expected:
-Result:
+### Test 2 – Security Group Membership
 
-### Test 3 – Block sign-in
+Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing, and the membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that users were assigned to the appropriate groups.
+
+<img width="1462" height="537" alt="sales group" src="https://github.com/user-attachments/assets/f721bb76-0d84-406f-a3f3-f5296f626064" />
+<img width="1246" height="377" alt="owner sales" src="https://github.com/user-attachments/assets/8885ba77-76dd-4061-91a6-b380a45ebb83" />
+<img width="1267" height="566" alt="Marketing group" src="https://github.com/user-attachments/assets/f551b990-220e-44a7-959d-907d83c95d24" />
+<img width="1251" height="405" alt="owner marketing" src="https://github.com/user-attachments/assets/88d8744a-7429-44d9-be99-6c80312e9f98" />
+
+
+**Result:** Passed
+
+**PowerShell:**
+
+```powershell
+$user = Get-MgUser -Filter "displayName eq 'Isaiah Langer'"
+$group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
+
+New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
+```
+
+### Test 3 – Multiple Group Membership
+
+Miriam Graham was verified as a member of both `SEC-Sales` and `SEC-Marketing`. This demonstrates that a user can belong to multiple security groups based on their responsibilities.
+
+**Result:** Passed
+
+### Test 4 – Microsoft 365 Collaboration Group
+
+The membership of `M365-Sales-Marketing` was verified. The group contains users from both Sales and Marketing for collaboration purposes.
+
+**Result:** Passed
+
+### Test 5 – Administrative Units
+
+The membership of the Administrative Units was checked. Users were verified against their assigned regional Administrative Unit.
+
+**Result:** Passed
+
+
+
+### Test 6 – Block sign-in
 Expected:
 Result:
 
