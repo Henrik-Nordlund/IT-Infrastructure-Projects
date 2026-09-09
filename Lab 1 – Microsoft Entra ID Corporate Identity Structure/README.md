@@ -186,6 +186,8 @@ New-MgGroupOwnerByRef `
 ### Test 5 – Administrative Units
 
 The membership of the Administrative Units was checked. Users were verified against their assigned regional Administrative Unit.
+<img width="1512" height="571" alt="AU east-south" src="https://github.com/user-attachments/assets/429d5670-28cf-4d62-a1f8-f581e68041e4" />
+
 
 **Result:** Passed
 
