@@ -12,7 +12,7 @@ This lab focuses on building a fictional corporate identity structure in Microso
 
 ## Scenario
 
-Nordlund Industries is a fictional company with several departments: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
+Nordlund Industries is a fictional company with several departments and business functions: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
 
 The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
 
@@ -123,8 +123,7 @@ $group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
 
 New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
 ```
-
-### Test 3 – Owner vs member in Group Memberships
+### Test 3 – Group Owner vs. Member
 
 Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This demonstrates the distinction between group ownership and group membership.
 
