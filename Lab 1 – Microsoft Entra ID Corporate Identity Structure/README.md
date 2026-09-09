@@ -12,7 +12,7 @@ This lab focuses on building a fictional corporate identity structure in Microso
 
 ## Scenario
 
-Nordlund Industries is a fictional company with several departments: HR, Sales, Marketing, R&D, Engineering, Manufactoring, and Finance.
+Nordlund Industries is a fictional company with several departments: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
 
 The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
 
@@ -192,8 +192,7 @@ The membership of the Administrative Units was checked. Users were verified agai
 **Result:** Passed
 
 ## Lessons Learned
-Automation with PowerShell can considerably ease allocation of attributes and other things when there are many users.
-...
+Automation with PowerShell can considerably ease allocation of attributes to user among other tasks when there are many users.
 
 ## References
 
