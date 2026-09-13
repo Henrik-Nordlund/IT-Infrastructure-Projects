@@ -21,13 +21,9 @@ verification of allowed and not allowed administrative tasks
 
 ## Scenario
 
-Nordlund Industries is a fictional company with several departments and business functions: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
+Nordlund Industries has a central IT-department, but not all IT-admininistrators should have access to the entire organizations digital environment. The company therefore would to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
 
-The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
-
-The lab includes creating and managing security groups for access and administration, as well as Microsoft 365 groups for collaboration. Users are assigned to the appropriate groups based on their department and role.
-
-The scenario is designed to demonstrate practical identity administration, including user management, group-based organization, and the use of Microsoft Entra ID to manage identities in a small corporate environment.
+For instance, if we create an IT Helpdesk Administrator for an office he/she should be able to manage user accounts within his/her AU only.
 
 # Implementation
 Users (16 fictional corporate users created in lab 1)
