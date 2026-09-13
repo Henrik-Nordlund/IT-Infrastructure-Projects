@@ -1,4 +1,4 @@
-# Lab 1 – Microsoft Entra ID: Corporate Identity Structure 
+# Lab 2 – Microsoft Entra ID RBAC and Least Privilege
 
 ## Project overview
 
