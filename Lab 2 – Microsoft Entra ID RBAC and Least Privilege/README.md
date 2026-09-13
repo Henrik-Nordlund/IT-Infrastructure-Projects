@@ -97,11 +97,13 @@ Logging in as Henrik Berg
 Reseetting password for user Adele Vance, another member in AU-West.
 <img width="1582" height="395" alt="reset password AU-west" src="https://github.com/user-attachments/assets/42ec5d74-8233-4da9-9f8c-7cdd3bf6ae29" />
 
+Result: Allowed -> Passed
 
 ## Test 2 – Restricted action
 Attempting to reset password for Lynne Robbins, located within AU-central.  
 <img width="1597" height="345" alt="cannot reset password" src="https://github.com/user-attachments/assets/3cf18733-f1f7-4883-9a18-61d26358aa7b" />
 
+Result: Denied - Passed
 
 ## Test 3 – Role scope verification
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
