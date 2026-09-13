@@ -72,3 +72,22 @@ These AU:s along with other AU:s, and the users assigned to them, were created i
 
 # Implementation
 
+## Create administrative test accounts 
+
+I create a new user for the helpdesk role in AU-West, for the management of user accounts in AU-central as well as a security administrator for the entire organization, respectively. 
+
+| Person          | Job title                 | Purpose i Lab 2        |
+| --------------- | ------------------------- | ---------------------- |
+| **Henrik Berg** | IT Support Technician     | Helpdesk Administrator |
+| **Anna Lind**   | IT Administrator          | User Administrator     |
+| **Erik Holm**   | IT Security Administrator | Security Administrator |
+
+<img width="1242" height="717" alt="Henrik Berg" src="https://github.com/user-attachments/assets/52f22f50-00fb-49df-b238-485a7a7695d5" />
+<img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
+
+<img width="1222" height="662" alt="Anna Lind" src="https://github.com/user-attachments/assets/ef6b5709-89af-4488-bf70-0effbecb9504" />
+<img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
+
+
+
+
