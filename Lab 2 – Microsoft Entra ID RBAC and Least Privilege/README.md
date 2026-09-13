@@ -6,12 +6,12 @@ This lab focuses on how administrative rights can be assigned with Microsoft Ent
 
 Focus:
 
-Entra built-in roles
-rollassignment
-Administrative Units
-scoped administration
-separation of duties
-verification of allowed and not allowed administrative tasks
+- Entra built-in roles
+- Role assignment
+- Administrative Units
+- Scoped administration
+- Separation of duties
+- Verification of allowed and not allowed administrative tasks
 
 ## Tools
 - Microsoft Entra ID
