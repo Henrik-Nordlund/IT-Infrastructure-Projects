@@ -105,6 +105,8 @@ Attempting to reset password for Lynne Robbins, located within AU-central.
 
 ## Test 3 – Role scope verification
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
+Powershell
+Get-MgUserRoleMemberOf -UserId "henrik.berg@1s1mkr.onmicrosoft.com"
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
