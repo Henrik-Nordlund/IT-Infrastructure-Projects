@@ -1,15 +1,15 @@
 Lab 1 – Microsoft Entra ID: Corporate Identity Structure
-Project overview
+##Project overview
 
 This lab focuses on building a fictional corporate identity structure in Microsoft Entra ID. It covers user and group management, Microsoft 365 groups, Administrative Units, and basic identity administration across different departments.
 Environment
 
-    Microsoft Entra ID
-    Microsoft 365 Developer Program
-    Microsoft Entra ID Premium P2
-    16 available developer users
+- Microsoft Entra ID
+- Microsoft 365 Developer Program
+- Microsoft Entra ID Premium P2
+- 16 developer users (created in lab 1)
 
-Scenario
+##Scenario
 
 Nordlund Industries is a fictional company with several departments and business functions: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
 
