@@ -83,13 +83,54 @@ I create a new user for the helpdesk role in AU-West, for the management of user
 | **Erik Holm**   | IT Security Administrator | Security Administrator |
 
 <img width="1242" height="717" alt="Henrik Berg" src="https://github.com/user-attachments/assets/52f22f50-00fb-49df-b238-485a7a7695d5" />
-<img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
 
 <img width="1222" height="662" alt="Anna Lind" src="https://github.com/user-attachments/assets/ef6b5709-89af-4488-bf70-0effbecb9504" />
-<img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
 <img width="1237" height="626" alt="Erik Holm" src="https://github.com/user-attachments/assets/0d7d3bc8-99d1-4519-87d5-ffa841ac08c7" />
+
+
+## Test 1 – Allowed action
+
+Logging in as Henrik Berg
+<img width="290" height="56" alt="inloggad Henrik Berg" src="https://github.com/user-attachments/assets/0af28714-7b63-4c61-bd13-65ea7cca1a2a" />
+
+Reseetting password for user Adele Vance, another member in AU-West.
+<img width="1582" height="395" alt="reset password AU-west" src="https://github.com/user-attachments/assets/42ec5d74-8233-4da9-9f8c-7cdd3bf6ae29" />
+
+
+## Test 2 – Restricted action
+Attempting to reset password for Lynne Robbins, located within AU-central.  
+<img width="1597" height="345" alt="cannot reset password" src="https://github.com/user-attachments/assets/3cf18733-f1f7-4883-9a18-61d26358aa7b" />
+
+
+## Test 3 – Role scope verification
+<img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
+
+<img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
+
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
 
+## Test 4 – Privilege comparison
+
+
+
+
+## Validation
+
+| Test                                                    | Expected result | Result |
+| ------------------------------------------------------- | --------------- | ------ |
+| Admin can manage user in AU-West                        | Allowed         | Passed |
+| Admin attempts to manage user outside AU-West           | Denied          | Passed |
+| RBAC assignment has correct scope                       | AU-West         | Passed |
+| Global Administrator retains unrestricted access        | Allowed         | Passed |
+| Helpdesk account has no tenant-wide administrative role | Confirmed       | Passed |
+
+## Lessons learned
+
+- RBAC allows administrative permissions to be assigned according to job responsibilities.
+- Administrative Units can be used to limit the scope of delegated administration.
+- Least privilege reduces the impact of compromised or misused administrative accounts.
+- Administrative role assignments should be reviewed regularly.
+- Global Administrator should not be used for routine administrative tasks.This is an example of Seperation of Duties in effect.
 
