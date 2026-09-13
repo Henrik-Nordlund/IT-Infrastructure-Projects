@@ -88,6 +88,8 @@ I create a new user for the helpdesk role in AU-West, for the management of user
 <img width="1222" height="662" alt="Anna Lind" src="https://github.com/user-attachments/assets/ef6b5709-89af-4488-bf70-0effbecb9504" />
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
+<img width="1237" height="626" alt="Erik Holm" src="https://github.com/user-attachments/assets/0d7d3bc8-99d1-4519-87d5-ffa841ac08c7" />
+<img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
 
 
