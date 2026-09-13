@@ -2,13 +2,22 @@
 
 ## Project overview
 
-This lab focuses on building a fictional corporate identity structure in Microsoft Entra ID. It covers user and group management, Microsoft 365 groups, Administrative Units, and basic identity administration across different departments.
-Environment
+This lab focuses on how administrative rights can be assigned with Microsoft Entra RBAC and how the principle of least privilege works.
 
+Focus:
+
+Entra built-in roles
+rollassignment
+Administrative Units
+scoped administration
+separation of duties
+verification of allowed and not allowed administrative tasks
+
+## Tools
 - Microsoft Entra ID
 - Microsoft 365 Developer Program
 - Microsoft Entra ID Premium P2
-- 16 developer users (created in lab 1)
+- 16 developer users and associated administrative units (created in lab 1) 
 
 ## Scenario
 
