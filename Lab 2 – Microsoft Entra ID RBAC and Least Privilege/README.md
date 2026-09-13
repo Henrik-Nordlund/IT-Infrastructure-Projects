@@ -25,9 +25,7 @@ Nordlund Industries has a central IT-department, but not all IT-admininistrators
 
 For instance, if we create an IT Helpdesk Administrator for an office he/she should be able to manage user accounts within his/her AU only.
 
-# Implementation
-
-### RBAC design
+## RBAC design
 | Administrative function | Entra-role             | Scope        |
 | ----------------------- | ---------------------- | ------------ |
 | Helpdesk                | Helpdesk Administrator | AU-West      |
@@ -35,7 +33,7 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 | Security administration | Security Administrator | Tenant-wide* |
 
 
-### Users (16 fictional corporate users created in lab 1)
+## Users (16 fictional corporate users created in lab 1)
 
 - Adele Vance
 - Alex Wilber
@@ -57,7 +55,6 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 ### Administrative Units (AU) 
 
 #### AU-West
-
 - Adele Vance
 - Alex Wilber
 - Miriam Graham
@@ -71,5 +68,7 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 - Lynne Robbins
 <img width="1497" height="475" alt="AU-central users" src="https://github.com/user-attachments/assets/a5c4fd26-8b79-4c27-8ee3-c346c5e3b552" />
 
+These AU:s along with other AU:s, and the users assigned to them, were created in Lab 1. See Lab 1 for further reference.
 
+# Implementation
 
