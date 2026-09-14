@@ -158,6 +158,58 @@ Conclusion: Henrik Berg is Helpdesk Administrator with scope: AU-West
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
+**PowerShell:**
+
+Step 1. Identify the admnin account for Anna Lind         
+```powershell
+Get-MgUser -UserId "anna.lind@1s1mkr.onmicrosoft.com" |
+    Select-Object Id,DisplayName,UserPrincipalName
+```
+Result:    
+Id: 1520c1b3-321a-4498-a04e-febf9f0da685
+DisplayName:  Anna Lind    
+UserPrincipalName: anna.lind@1s1mkr.onmicrosoft.com
+
+Step 2. Control RBAC role assignment for Anna.
+
+```powershell
+Get-MgRoleManagementDirectoryRoleAssignment `
+    -Filter "principalId eq '1520c1b3-321a-4498-a04e-febf9f0da685'" |
+    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+```
+
+Result:    
+PrincipalId      : 1520c1b3-321a-4498-a04e-febf9f0da685   
+RoleDefinitionId : fe930be7-5e62-47db-91af-98c3a49a38b1   
+DirectoryScopeId : /administrativeUnits/961d8447-dc46-4dc3-871e-3be19f7f4bc3    
+
+Step 3. Control RBAC id for Anna.
+
+```powershell
+Get-MgRoleManagementDirectoryRoleAssignment `
+    -Filter "principalId eq '1520c1b3-321a-4498-a04e-febf9f0da685'" |
+    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+```
+
+Result:   
+Id:  fe930be7-5e62-47db-91af-98c3a49a38b1
+DisplayName:  User Administrator   
+
+Step 4. Control scope for Anna.
+
+```powershell
+Get-MgDirectoryAdministrativeUnit `
+    -AdministrativeUnitId "961d8447-dc46-4dc3-871e-3be19f7f4bc3" |
+    Select-Object Id,DisplayName
+```
+
+Result:
+Id: 961d8447-dc46-4dc3-871e-3be19f7f4bc3
+DisplayName:  AU-central
+
+
+
+
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
 
