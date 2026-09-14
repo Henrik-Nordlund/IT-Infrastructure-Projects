@@ -21,7 +21,7 @@ Focus:
 
 ## Scenario
 
-Nordlund Industries has a central IT-department, but not all IT-admininistrators should have access to the entire organizations digital environment. The company therefore would to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
+Nordlund Industries has a central IT-department, but not all IT-admininistrators should have access to the entire organization's digital environment. The company therefore would like to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
 
 For instance, if we create an IT Helpdesk Administrator for an office he/she should be able to manage user accounts within his/her AU only.
 
@@ -68,7 +68,7 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 - Lynne Robbins
 <img width="1497" height="475" alt="AU-central users" src="https://github.com/user-attachments/assets/a5c4fd26-8b79-4c27-8ee3-c346c5e3b552" />
 
-These AU:s along with other AU:s, and the users assigned to them, were created in Lab 1. See Lab 1 for further reference.
+These AUs along with other AUs, and the users assigned to them, were created in Lab 1. See Lab 1 for further reference.
 
 # Implementation
 
@@ -94,7 +94,7 @@ I create a new user for the helpdesk role in AU-West, for the management of user
 Logging in as Henrik Berg
 <img width="290" height="56" alt="inloggad Henrik Berg" src="https://github.com/user-attachments/assets/0af28714-7b63-4c61-bd13-65ea7cca1a2a" />
 
-Reseetting password for user Adele Vance, another member in AU-West.
+Resetting password for user Adele Vance, another member in AU-West.
 <img width="1582" height="395" alt="reset password AU-west" src="https://github.com/user-attachments/assets/42ec5d74-8233-4da9-9f8c-7cdd3bf6ae29" />
 
 Result: Allowed -> Passed
@@ -254,11 +254,6 @@ Conclusion: Erik Holm is the security administrator, and his scope is the entire
 
 ## Test 4 – Privilege comparison
 
-
-
-
-## Validation
-
 | Test                                                    | Expected result | Result |
 | ------------------------------------------------------- | --------------- | ------ |
 | Admin can manage user in AU-West                        | Allowed         | Passed |
@@ -273,5 +268,5 @@ Conclusion: Erik Holm is the security administrator, and his scope is the entire
 - Administrative Units can be used to limit the scope of delegated administration.
 - Least privilege reduces the impact of compromised or misused administrative accounts.
 - Administrative role assignments should be reviewed regularly.
-- Global Administrator should not be used for routine administrative tasks.This is an example of Seperation of Duties in effect.
+- Global Administrator should not be used for routine administrative tasks. This is an example of Separation of Duties in effect.
 
