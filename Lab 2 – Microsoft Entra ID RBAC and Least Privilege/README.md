@@ -116,9 +116,9 @@ Get-MgUser -UserId "henrik.berg@1s1mkr.onmicrosoft.com" |
 ```
 Result:   
 
-DisplayName       : Henrik Berg
-UserPrincipalName : henrik.berg@1s1mkr.onmicrosoft.com
-Id                : add50200-7217-4d6d-b8eb-84fe0dce19df
+DisplayName       : Henrik Berg    
+UserPrincipalName : henrik.berg@1s1mkr.onmicrosoft.com    
+Id                : add50200-7217-4d6d-b8eb-84fe0dce19df    
 
 Step 2. Find his RBAC roleassignment.  
 ```powershell
