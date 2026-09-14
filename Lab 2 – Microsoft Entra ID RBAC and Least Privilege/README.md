@@ -140,8 +140,8 @@ Get-MgRoleManagementDirectoryRoleDefinition `
 ```
 Result:
 
-Id: 729827e3-9c14-49f7-bb1b-9608f156bbb8
-DisplayName: Helpdesk Administrator
+Id: 729827e3-9c14-49f7-bb1b-9608f156bbb8   
+DisplayName: Helpdesk Administrator     
 
 Step 4. Verify which admninistrative unit (AU)
 ```powershell
@@ -151,9 +151,9 @@ Get-MgDirectoryAdministrativeUnit `
 ```
 Result:  
 
-Id                                   DisplayName
---                                   -----------
-75d6878f-63ad-435d-b85b-544d94af4f5d AU-West
+Id: 75d6878f-63ad-435d-b85b-544d94af4f5d      
+DisplayName: AU-West    
+
 Conclusion: Henrik Berg is Helpdesk Administrator with scope: AU-West
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
