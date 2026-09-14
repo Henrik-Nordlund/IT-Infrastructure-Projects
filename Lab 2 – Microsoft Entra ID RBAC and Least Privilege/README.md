@@ -140,9 +140,8 @@ Get-MgRoleManagementDirectoryRoleDefinition `
 ```
 Result:
 
-Id                                   DisplayName
---                                   -----------
-729827e3-9c14-49f7-bb1b-9608f156bbb8 Helpdesk Administrator
+Id: 729827e3-9c14-49f7-bb1b-9608f156bbb8
+DisplayName: Helpdesk Administrator
 
 Step 4. Verify which admninistrative unit (AU)
 ```powershell
