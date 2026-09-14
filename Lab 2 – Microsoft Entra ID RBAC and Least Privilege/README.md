@@ -269,4 +269,5 @@ Conclusion: Erik Holm is the security administrator, and his scope is the entire
 - Least privilege reduces the impact of compromised or misused administrative accounts.
 - Administrative role assignments should be reviewed regularly.
 - Global Administrator should not be used for routine administrative tasks. This is an example of Separation of Duties in effect.
+- Bit tedious to use powershell instead of GUI for single users.
 
