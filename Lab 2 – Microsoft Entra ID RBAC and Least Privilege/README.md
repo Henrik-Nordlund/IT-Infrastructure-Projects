@@ -109,9 +109,50 @@ Result: Denied - Passed
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
 
 **PowerShell:**
+Step 1. Find the Entra ID for Henrik Berg
 ```powershell
-Get-MgUserRoleMemberOf -UserId "henrik.berg@1s1mkr.onmicrosoft.com"
+Get-MgUser -UserId "henrik.berg@1s1mkr.onmicrosoft.com" |
+    Select-Object Id,DisplayName,UserPrincipalName
 ```
+Result: 
+DisplayName       : Henrik Berg
+UserPrincipalName : henrik.berg@1s1mkr.onmicrosoft.com
+Id                : add50200-7217-4d6d-b8eb-84fe0dce19df
+
+Step 2. Find his RBAC roleassignment.  
+```powershell
+Get-MgRoleManagementDirectoryRoleAssignment `
+    -Filter "principalId eq 'add50200-7217-4d6d-b8eb-84fe0dce19df'" |
+    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+```
+Result:
+PrincipalId      : add50200-7217-4d6d-b8eb-84fe0dce19df
+RoleDefinitionId : 729827e3-9c14-49f7-bb1b-9608f156bbb8
+DirectoryScopeId : /administrativeUnits/75d6878f-63ad-435d-b85b-544d94af4f5d
+
+Step 3. Verify the rolename.
+```powershell
+Get-MgRoleManagementDirectoryRoleDefinition `
+    -UnifiedRoleDefinitionId "729827e3-9c14-49f7-bb1b-9608f156bbb8" |
+    Select-Object Id,DisplayName
+```
+Result:
+Id                                   DisplayName
+--                                   -----------
+729827e3-9c14-49f7-bb1b-9608f156bbb8 Helpdesk Administrator
+
+Step 4. Verify which admninistrative unit (AU)
+```powershell
+Get-MgDirectoryAdministrativeUnit `
+    -AdministrativeUnitId "75d6878f-63ad-435d-b85b-544d94af4f5d" |
+    Select-Object Id,DisplayName
+```
+Result:
+Id                                   DisplayName
+--                                   -----------
+75d6878f-63ad-435d-b85b-544d94af4f5d AU-West
+Conclusion: Henrik Berg is Helpdesk Administrator with scope: AU-West
+
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
