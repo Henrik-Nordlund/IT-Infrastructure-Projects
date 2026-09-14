@@ -192,8 +192,8 @@ Get-MgRoleManagementDirectoryRoleAssignment `
 ```
 
 Result:   
-Id:  fe930be7-5e62-47db-91af-98c3a49a38b1
-DisplayName:  User Administrator   
+Id:  fe930be7-5e62-47db-91af-98c3a49a38b1     
+DisplayName:  User Administrator        
 
 Step 4. Control scope for Anna.
 
@@ -204,14 +204,53 @@ Get-MgDirectoryAdministrativeUnit `
 ```
 
 Result:
-Id: 961d8447-dc46-4dc3-871e-3be19f7f4bc3
+Id: 961d8447-dc46-4dc3-871e-3be19f7f4bc3     
 DisplayName:  AU-central
 
-
+Conclusion: Henrik Berg is a User Administrator with scope: AU-central
 
 
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
+**PowerShell:**
+
+Step 1. Identify the id for Erik Holm         
+```powershell
+Get-MgUser -UserId "erik.holm@1s1mkr.onmicrosoft.com" |
+    Select-Object Id,DisplayName,UserPrincipalName
+```
+
+Result:   
+Id: 50284f0e-8886-4fc1-8efa-842e5a8364d2
+DisplayName: Erik Holm    
+UserPrincipalName: erik.holm@1s1mkr.onmicrosoft.com    
+
+Step 2. Identify the scope for Erik Holm         
+```powershell
+Get-MgRoleManagementDirectoryRoleAssignment `
+    -Filter "principalId eq '50284f0e-8886-4fc1-8efa-842e5a8364d2'" |
+    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+ ```   
+
+Result:  
+PrincipalId      : 50284f0e-8886-4fc1-8efa-842e5a8364d2    
+RoleDefinitionId : 194ae4cb-b126-40b2-bd5b-6091b380977d    
+DirectoryScopeId : /   
+
+-> /. Scope is global.
+
+Step 3. Identify the role name for Erik Holm         
+```powershell
+Get-MgRoleManagementDirectoryRoleDefinition `
+    -UnifiedRoleDefinitionId "194ae4cb-b126-40b2-bd5b-6091b380977d" |
+    Select-Object Id,DisplayName
+```
+
+Result:
+Id: 194ae4cb-b126-40b2-bd5b-6091b380977d                                   
+DisplayName: Security Administrator     
+
+Conclusion: Erik Holm is the security administrator, and his scope is the entire tenant.
 
 ## Test 4 – Privilege comparison
 
