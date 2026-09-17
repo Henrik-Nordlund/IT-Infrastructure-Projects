@@ -1,19 +1,28 @@
 
-Project overview
+# Lab 3 – Microsoft Intune: Endpoint Management
 
-This lab focuses on building a fictional corporate identity structure in Microsoft Entra ID. It covers user and group management, Microsoft 365 groups, Administrative Units, and basic identity administration across different departments.
-Environment
+## Project overview
+This lab focuses on illustrating on how an administrator can manage Windows units centrally, apply configuration and security requirements and control that the managed units follows the policies created by the organization.
 
-    Microsoft 365 Developer Program
-    Microsoft Intune
-    Users from the developer program
+My goal here is to demonstrate that I can:
+- manage Windows units with Intune
+- use groups for policy assignment
+- create and apply Configuration Profiles
+- create Compliance Policies
+- illustrate that I know the difference between onfiguration and compliance
+- control whether a unit is compliant or not
+- generally use Intune as part of an organizations security work.
 
-Scenario
+## Environment
 
-Nordlund Industries is a fictional company with several departments and business functions: HR, Sales, Marketing, R&D, Engineering, Manufacturing, and Finance.
+- Microsoft 365 Developer Program
+- Microsoft Intune
+- Available and potential future developer users
+- Virtual machine (Hyper-V)
 
-The objective of this lab is to build a corporate identity environment in Microsoft Entra ID. The 16 fictional users are assigned to appropriate departments and job titles, and organized according to their roles and responsibilities within the company.
+## Scenario
 
-The lab includes creating and managing security groups for access and administration, as well as Microsoft 365 groups for collaboration. Users are assigned to the appropriate groups based on their department and role.
 
-The scenario is designed to demonstrate practical identity administration, including user management, group-based organization, and the use of Microsoft Entra ID to manage identities in a small corporate environment.
+
+
+## Implementation
