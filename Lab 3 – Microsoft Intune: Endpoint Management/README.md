@@ -21,7 +21,9 @@ My goal here is to demonstrate that I can:
 - Virtual machine (Hyper-V)
 
 ## Scenario
+Nordlund Industries wants to centrally manage its Windows devices using Microsoft Intune. The goal is to establish a basic endpoint management setup where configuration, security requirements and device compliance can be managed through Microsoft 365.
 
+The lab uses a small test environment to demonstrate how an administrator can enroll and manage Windows devices, assign policies to users or groups, and verify the resulting device state.
 
 
 
