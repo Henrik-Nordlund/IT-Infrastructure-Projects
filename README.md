@@ -28,6 +28,8 @@ identity management and access control.
 ### Intune
 Practical exercises covering device management, policies and configuration.
 
+ - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%201%20%E2%80%93%20Microsoft%20Entra%20ID%20Corporate%20Identity%20Structure/README.md"> - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%201%20%E2%80%93%20Microsoft%20Entra%20ID%20Corporate%20Identity%20Structure/README.md">Lab 1 – Microsoft Entra ID: Corporate Identity Structure</a></a>
+
 ### Azure
 Practical exercises covering Azure administration, networking,
 monitoring and cloud infrastructure.
