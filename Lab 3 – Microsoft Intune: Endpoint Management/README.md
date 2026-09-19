@@ -39,7 +39,7 @@ tenant and verified that Intune is available to the administrator account.
 Two Windows virtual machines were created using Hyper-V Manager and given names as listed below.
 
 | Device          | Operating System | Purpose                      |     
-| WIN11-INTUNE-01 | Windows 11       | Primary Intune test device   |
+| WIN11-INTUNE-01 | Windows 11       | Primary Intune test device   |     
 | WIN11-INTUNE-02 | Windows 11       | Secondary Intune test device |
 
 The virtual machines will now be used as managed endpoint devices in the
