@@ -17,8 +17,8 @@ My goal here is to demonstrate that I can:
 
 - Microsoft 365 Developer Program
 - Microsoft Intune
-- Test users in the Microsoft 365 Developer environment
-- Virtual machine (Hyper-V)
+- 2 test users in the Microsoft 365 Developer environment - Adele Vance and Alex Wilber
+- 2 Virtual machines (Hyper-V)
 
 ## Scenario
 Nordlund Industries wants to centrally manage its Windows devices using Microsoft Intune. The goal is to establish a basic endpoint management setup where configuration, security requirements and device compliance can be managed through Microsoft 365.
@@ -43,7 +43,7 @@ Two Windows virtual machines were created using Hyper-V Manager and given names 
 | WIN11-INTUNE-02 | Windows 11       | Secondary Intune test device |
 
 The virtual machines will now be used as managed endpoint devices in the
-Intune environment. 
+Intune environment. Adele Vance has been assigned the role as local administrator in WIN11-INTUNE-01 and Alex Wilber has the same function in WIN11-INTUNE-02.
 
 The Windows 11 installation ISO was downloaded from the official Microsoft website (https://www.microsoft.com/sv-se/software-download/windows11).
 A detailed description of the procedure of setting up the test environment with virtual machines will not be provided here - out of scope.
