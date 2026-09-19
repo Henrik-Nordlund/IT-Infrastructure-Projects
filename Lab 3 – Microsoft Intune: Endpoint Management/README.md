@@ -28,3 +28,39 @@ The lab uses a small test environment to demonstrate how an administrator can en
 
 
 ## Implementation
+
+### 1. Intune Access
+
+Logged in to Microsoft Intune using the Microsoft 365 Developer Program
+tenant and verified that Intune is available to the administrator account.
+
+### 2. Windows Test Devices
+
+Two Windows virtual machines were created using Hyper-V Manager and given names as listed below.
+
+| Device          | Operating System | Purpose                      |
+| WIN11-INTUNE-01 | Windows 11       | Primary Intune test device   |
+| WIN11-INTUNE-02 | Windows 11       | Secondary Intune test device |
+
+The virtual machines will now be used as managed endpoint devices in the
+Intune environment. 
+
+The Windows 11 installation ISO was downloaded from the official Microsoft website (https://www.microsoft.com/sv-se/software-download/windows11).
+A detailed description of the procedure of setting up the test environment with virtual machines will not be provided here - out of scope.
+
+The virtual machines will be used as managed endpoint devices in the Intune environment. The host computer running Hyper-V is not itself part of the Intune test
+environment.
+
+### Planned Testing
+
+The following tests will be performed during the next stages of the lab:
+
+- Enroll a Windows device in Intune
+- Verify that enrolled devices appear in the Intune admin center
+- Assign a Configuration Profile to the test devices
+- Verify that the configured settings are applied
+- Assign a Compliance Policy
+- Verify the compliance state of the devices
+- Introduce a non-compliant condition
+- Verify that Intune detects the non-compliant state
+- Remediate the condition and verify the resulting compliance state
