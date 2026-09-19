@@ -36,7 +36,7 @@ tenant and verified that Intune is available to the administrator account.
 
 ### 2. Windows Test Devices
 
-Two Windows virtual machines were created using Hyper-V Manager and given names as listed below.
+Two Windows virtual machines were created using Hyper-V Manager and given the names listed below.
 
 | Device          | Operating System | Purpose                      |     
 | WIN11-INTUNE-01 | Windows 11       | Primary Intune test device   |     
@@ -48,7 +48,7 @@ Intune environment. Adele Vance has been assigned the role as local administrato
 The Windows 11 installation ISO was downloaded from the official Microsoft website (https://www.microsoft.com/sv-se/software-download/windows11).
 A detailed description of the procedure of setting up the test environment with virtual machines will not be provided here - out of scope.
 
-The virtual machines will be used as managed endpoint devices in the Intune environment. The host computer running Hyper-V is not itself part of the Intune test
+The host computer running Hyper-V is not itself part of the Intune test
 environment.
 
 ### Planned Testing
