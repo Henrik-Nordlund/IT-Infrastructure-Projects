@@ -78,3 +78,21 @@ WIN11-INTUNE-01 was successfully enrolled in Microsoft Intune and appeared in th
 <img width="1742" height="487" alt="WIN11_INTUNE-01 enrolleras i Intune bekräftad" src="https://github.com/user-attachments/assets/e0f35078-0443-4c56-93ad-6a0ec573be87" />
 
 Expected result → Passed
+
+
+## Test 3 - creating a configuration profile and push it out to the managed devices.
+
+For this test a change in the settings for the public network firewall is desirable to enforce on managed devices.
+This is the baseline on each of the managed devices:
+
+Powershell:
+
+PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
+
+Name    Enabled DefaultInboundAction DefaultOutboundAction
+----    ------- -------------------- ---------------------
+Domain     True        NotConfigured         NotConfigured
+Private    True        NotConfigured         NotConfigured
+Public     True        NotConfigured         NotConfigured
+
+
