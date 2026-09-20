@@ -51,19 +51,74 @@ A detailed description of the procedure of setting up the test environment with 
 The host computer running Hyper-V is not itself part of the Intune test
 environment.
 
-### Planned Testing
+### Test Status
 
-The following tests will be performed during the next stages of the lab:
+| Test | Status |
+|---|---|
+| Enroll a Windows device in Intune | Passed |
+| Verify that enrolled devices appear in Intune | Passed |
+| Assign a Configuration Profile | Passed |
+| Verify that the configured settings are applied | Passed |
+| Assign a Compliance Policy | Planned |
+| Verify the compliance state of the devices | Planned |
+| Introduce a non-compliant condition | Planned |
+| Verify that Intune detects the non-compliant state | Planned |
+| Remediate the condition | Planned |
+| Verify the resulting compliance state | Planned |
 
-- Enroll a Windows device in Intune
-- Verify that enrolled devices appear in the Intune admin center
-- Assign a Configuration Profile to the test devices
-- Verify that the configured settings are applied
-- Assign a Compliance Policy
-- Verify the compliance state of the devices
-- Introduce a non-compliant condition
-- Verify that Intune detects the non-compliant state
-- Remediate the condition and verify the resulting compliance state
+### 3. Device Enrollment
+
+WIN11-INTUNE-01 and WIN11-INTUNE-02 were enrolled in Microsoft Intune
+and joined to Microsoft Entra ID.
+
+Both devices were successfully registered as Intune-managed Windows
+devices and appeared in the Intune admin center.
+
+### 4. Configuration Profile
+
+A Windows Firewall configuration profile was created using the
+Settings Catalog.
+
+The following settings were configured:
+
+- Enable Public Network Firewall
+- Enable Log Dropped Packets
+
+The profile was assigned to the test device group containing
+WIN11-INTUNE-01 and WIN11-INTUNE-02.
+
+Intune reported successful deployment of both settings to both devices.
+
+### 5. Configuration Verification
+
+The configuration was verified on WIN11-INTUNE-02 using PowerShell.
+
+The local PersistentStore initially reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | False |
+| Private | False |
+| Public | False |
+
+After the Intune policy was applied, the MDM policy store reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | NotConfigured |
+| Private | NotConfigured |
+| Public | True |
+
+The effective ActiveStore configuration also reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | False |
+| Private | False |
+| Public | True |
+
+This confirmed that the Intune configuration was applied to the
+device and became part of the effective Windows Firewall configuration.
 
 ## Test 1 – Enroll a Windows device in Intune
 Logging into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enroll this device in Intune. As shown below, this windows device is now joined to both Entra ID and Intune.
