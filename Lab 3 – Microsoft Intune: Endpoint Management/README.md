@@ -98,6 +98,8 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, De
 ### Configuration Profile deployment
 
 The Windows Firewall configuration profile was assigned to the test devices. Intune reported successful deployment for both devices.
+<img width="1052" height="427" alt="Windows Firewall settings lab 3 settings" src="https://github.com/user-attachments/assets/fddb3067-f433-46e0-afac-ccffc99fc3c6" />
+
 
 ## Test 4 - Verification that the configured settings are applied on the endpoints.
 
