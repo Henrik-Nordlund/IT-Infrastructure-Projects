@@ -87,7 +87,9 @@ This is the baseline on each of the managed devices:
 
 Powershell:
 
+```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
+```
 
 Name    Enabled DefaultInboundAction DefaultOutboundAction
 ----    ------- -------------------- ---------------------
