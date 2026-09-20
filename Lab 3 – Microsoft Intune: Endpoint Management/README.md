@@ -95,4 +95,20 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, De
 | Private | True | NotConfigured | NotConfigured |
 | Public | True | NotConfigured | NotConfigured |
 
+Configuration Profile deployment
+
+The Windows Firewall configuration profile was assigned to the test devices. Intune reported successful deployment for both devices.
+
+Endpoint verification
+
+The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune MDM policy store reported EnableLogDroppedPackets = True for the Public profile, and the effective ActiveStore configuration also reported LogBlocked = True.
+
+| Test                                      | Expected result                 | Result |
+| ----------------------------------------- | ------------------------------- | ------ |
+| Configuration Profile assigned            | Policy deployed to test devices | Passed |
+| Configuration Profile status              | Succeeded                       | Passed |
+| `Enable Log Dropped Packets` in MDM store | Public = True                   | Passed |
+| Effective firewall configuration          | Public = True                   | Passed |
+
+
 
