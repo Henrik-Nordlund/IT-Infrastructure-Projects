@@ -91,10 +91,8 @@ Powershell:
 PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
 ```
 
-Name    Enabled DefaultInboundAction DefaultOutboundAction
-----    ------- -------------------- ---------------------
-Domain     True        NotConfigured         NotConfigured
-Private    True        NotConfigured         NotConfigured
-Public     True        NotConfigured         NotConfigured
-
-
+| Profile | Enabled | Default Inbound Action | Default Outbound Action |
+|---|---|---|---|
+| Domain | True | NotConfigured | NotConfigured |
+| Private | True | NotConfigured | NotConfigured |
+| Public | True | NotConfigured | NotConfigured |
