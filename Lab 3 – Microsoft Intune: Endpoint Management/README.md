@@ -83,9 +83,7 @@ Expected result → Passed
 ## Test 3 - creating a configuration profile and push it out to the managed devices.
 
 For this test a change in the settings for the public network firewall is desirable to enforce on managed devices.
-This is the baseline on each of the managed devices:
-
-Powershell:
+Baseline configuration: The Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured.
 
 ```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
@@ -96,3 +94,5 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, De
 | Domain | True | NotConfigured | NotConfigured |
 | Private | True | NotConfigured | NotConfigured |
 | Public | True | NotConfigured | NotConfigured |
+
+
