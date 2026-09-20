@@ -64,3 +64,9 @@ The following tests will be performed during the next stages of the lab:
 - Introduce a non-compliant condition
 - Verify that Intune detects the non-compliant state
 - Remediate the condition and verify the resulting compliance state
+
+## Test 1 – Windows Device Enrollment
+WIN11-INTUNE-01 was successfully enrolled in Microsoft Intune and appeared in the Intune admin center as a managed Windows device.
+<img width="1291" height="631" alt="WIN11_INTUNE-01 enrolleras i Intune" src="https://github.com/user-attachments/assets/f1040138-a490-4902-9db4-38b0ae78a949" />
+
+Expected result → Passed
