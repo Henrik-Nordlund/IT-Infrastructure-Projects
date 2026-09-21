@@ -60,7 +60,7 @@ environment.
 | Assign a Configuration Profile | Passed |
 | Verify that the configured settings are applied | Passed |
 | Assign a Compliance Policy | Passed |
-| Verify the compliance state of the devices | Planned |
+| Verify the compliance state of the devices | Passed |
 | Introduce a non-compliant condition | Planned |
 | Verify that Intune detects the non-compliant state | Planned |
 | Remediate the condition | Planned |
