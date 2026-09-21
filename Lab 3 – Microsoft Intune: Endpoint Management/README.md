@@ -184,3 +184,8 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 | Microsoft Defender | Security intelligence up-to-date   | Require | 
 
 <img width="1542" height="316" alt="compliance policy" src="https://github.com/user-attachments/assets/f6f771b5-3669-4625-9783-517c69b56233" />
+
+<img width="1512" height="446" alt="compliant devices" src="https://github.com/user-attachments/assets/e7590ddc-7d74-42c9-b218-7b35d86738d7" />
+
+
+
