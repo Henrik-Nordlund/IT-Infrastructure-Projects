@@ -59,7 +59,7 @@ environment.
 | Verify that enrolled devices appear in Intune | Passed |
 | Assign a Configuration Profile | Passed |
 | Verify that the configured settings are applied | Passed |
-| Assign a Compliance Policy | Planned |
+| Assign a Compliance Policy | Passed |
 | Verify the compliance state of the devices | Planned |
 | Introduce a non-compliant condition | Planned |
 | Verify that Intune detects the non-compliant state | Planned |
@@ -187,5 +187,25 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 
 <img width="1512" height="446" alt="compliant devices" src="https://github.com/user-attachments/assets/e7590ddc-7d74-42c9-b218-7b35d86738d7" />
 
+## Test 6 - Verification of the compliance state of the devices
 
+## Test 6 - Verify compliance from the endpoint
+
+The compliance requirements were independently verified on the Windows
+endpoint using PowerShell.
+
+The following security controls were verified:
+
+| Compliance requirement | Endpoint verification | Result |
+|---|---|---|
+| Trusted Platform Module (TPM) | TpmPresent = True, TpmReady = True | Passed |
+| Secure Boot | Confirm-SecureBootUEFI = True | Passed |
+| Firewall | All profiles enabled | Passed |
+| Antivirus | AntivirusEnabled = True | Passed |
+| Antispyware | AntispywareEnabled = True | Passed |
+| Real-time protection | RealTimeProtectionEnabled = True | Passed |
+| Security intelligence | Antivirus signature timestamp present | Passed |
+
+The endpoint configuration matched the requirements defined in the
+Intune compliance policy.
 
