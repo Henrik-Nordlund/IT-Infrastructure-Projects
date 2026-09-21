@@ -166,8 +166,20 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 | ----------------------------------------- | ------------------------------- | ------ |
 | Configuration Profile assigned            | Policy deployed to test devices | Passed |
 | Configuration Profile status              | Succeeded                       | Passed |
-| `Enable Log Dropped Packets` in MDM store | Public = True                   | Passed |
+| Enable Log Dropped Packets` in MDM store | Public = True                    | Passed |
 | Effective firewall configuration          | Public = True                   | Passed |
 
+## Test 5 - Assigning a Compliance Policy
 
+**Compliance policy matrix** 
+| Focus-area   | Settings               | value   | Explanation | 
+|--------------|------------------------|-------  |-------------|
+| Device Heath | Require BitLocker      | Require | Illustrates device encryption/compliance        |
+| Device Heath | Require Secure Boot    | Require | Relevant endpoint-security-requirement          |
+| Device Heath | Require code integrity | Require | Illustrates additional Windows Security-control |
+| Focus-area | Settings | value | Explanation |
+| Focus-area | Settings | value | Explanation |
+| Focus-area | Settings | value | Explanation |
+| Focus-area | Settings | value | Explanation |
+| Focus-area | Settings | value | Explanation |
 
