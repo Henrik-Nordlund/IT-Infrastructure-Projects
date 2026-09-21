@@ -172,14 +172,14 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 ## Test 5 - Assigning a Compliance Policy
 
 **Compliance policy matrix** 
-| Focus-area   | Settings               | value   | Explanation | 
-|--------------|------------------------|-------  |-------------|
-| Device Heath | Require BitLocker      | Require | Illustrates device encryption/compliance        |
-| Device Heath | Require Secure Boot    | Require | Relevant endpoint-security-requirement          |
-| Device Heath | Require code integrity | Require | Illustrates additional Windows Security-control |
-| Focus-area | Settings | value | Explanation |
-| Focus-area | Settings | value | Explanation |
-| Focus-area | Settings | value | Explanation |
-| Focus-area | Settings | value | Explanation |
-| Focus-area | Settings | value | Explanation |
+| Focus-area         | Settings                           | value   |
+|--------------------|------------------------------------|-------  |
+| Device Heath       | Trusted Platform module (TPM)      | Require |
+| Device Heath       | Require Secure Boot                | Require | 
+| Device Security    | Firewall                           | Require | 
+| Device Security    | Antivirus                          | Require |
+| Device Security    | Antispyware                        | Require | 
+| Microsoft Defender | Microsoft Defender Antimalware     | Require | 
+| Microsoft Defender | Real-time protection               | Require | 
+| Microsoft Defender | Security intelligence up-to-date   | Require | 
 
