@@ -207,7 +207,7 @@ The following security controls were verified:
 The endpoint configuration matched the requirements defined in the
 Intune compliance policy.
 
-Test 7 – Introducing a non-compliant condition
+## Test 7 – Introducing a non-compliant condition
 
 For the non-compliant condition to introduce and evaluate, shutting off real-time protection on WIN11-INTUNE-02 was selected.
 <img width="1037" height="922" alt="avstängt skydd" src="https://github.com/user-attachments/assets/17888ed1-89c8-49c1-824f-16e4d15c293d" />
@@ -220,7 +220,7 @@ RealTimeProtectionEnabled
 
 The endpoint reported `RealTimeProtectionEnabled = False`.
 
-Test 8 – Verification that Intune detects the non-compliant state
+## Test 8 – Verification that Intune detects the non-compliant state
 <img width="1496" height="397" alt="non compliant" src="https://github.com/user-attachments/assets/9edc895d-1c7a-4d01-b147-6799da742040" />
 <img width="1562" height="370" alt="non compliant 2" src="https://github.com/user-attachments/assets/3569363f-6547-4947-8fe2-0eb1b6dd0ceb" />
 <img width="1572" height="547" alt="non compliant 3" src="https://github.com/user-attachments/assets/ef514919-0467-4c2c-ab03-ad07b1fc4193" />
@@ -230,5 +230,35 @@ The device was reported as Not compliant. The compliance policy identified
 Real-time protection and Antivirus as not compliant, while the remaining
 requirements remained compliant.
 
+## Test 9 – Remediation
 
+Of course, we can remediate this, enable realtime protection from the endpoint. That would simply be a replication of test 7 & 8 in reverse order.
+But I thought we should remediate this from within Intune instead. To do this, we have to use the Run remediation function pictured in the first image shown in test 8.
+This is a motor able to contain powershell scripts that enables an administrator to automate certain tasks, such as for this instance automatically remediate things that some careless person in the team might be known to do occasionally.
+
+It is done in 2 steps:
+- Detection script
+
+Ex: 
+```powershell
+$Status = Get-MpComputerStatus
+
+if ($Status.RealTimeProtectionEnabled -eq $true) {
+    exit 0
+}
+
+exit 1
+```
+  
+- Remediation script
+
+Ex:
+```powershell
+Set-MpPreference -DisableRealtimeMonitoring $false
+```
+
+However: Use of remediations requires Windows a license verification to be enabled, and I don´t intend to purchase a windows license for a temporary virtual machine just to prove my point.
+
+
+Test 10 – Verification of resulting compliance state
 
