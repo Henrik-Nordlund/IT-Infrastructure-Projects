@@ -189,8 +189,6 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 
 ## Test 6 - Verification of the compliance state of the devices
 
-## Test 6 - Verify compliance from the endpoint
-
 The compliance requirements were independently verified on the Windows
 endpoint using PowerShell.
 
