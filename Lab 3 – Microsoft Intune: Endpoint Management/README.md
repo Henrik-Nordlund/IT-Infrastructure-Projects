@@ -61,10 +61,10 @@ environment.
 | Verify that the configured settings are applied | Passed |
 | Assign a Compliance Policy | Passed |
 | Verify the compliance state of the devices | Passed |
-| Introduce a non-compliant condition | Planned |
-| Verify that Intune detects the non-compliant state | Planned |
-| Remediate the condition | Planned |
-| Verify the resulting compliance state | Planned |
+| Introduce a non-compliant condition | Passed |
+| Verify that Intune detects the non-compliant state | Passed |
+| Remediate the condition | Passed |
+| Verify the resulting compliance state | Passed |
 
 ### 3. Device Enrollment
 
