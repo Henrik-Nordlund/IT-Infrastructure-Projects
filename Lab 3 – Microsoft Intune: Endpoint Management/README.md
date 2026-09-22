@@ -232,9 +232,8 @@ requirements remained compliant.
 
 ## Test 9 – Remediation
 
-Of course, we can remediate this, enable realtime protection from the endpoint. That would simply be a replication of test 7 & 8 in reverse order.
-But I thought we should remediate this from within Intune instead. To do this, we have to use the Run remediation function pictured in the first image shown in test 8.
-This is a motor able to contain powershell scripts that enables an administrator to automate certain tasks, such as for this instance automatically remediate things that some careless person in the team might be known to do occasionally.
+Of course, we can remediate this by enabling realtime protection from the endpoint. That would simply be a replication of test 7 & 8 in reverse order.
+But initially I thought we should remediate this from within Intune instead. To do this, we have to use the Run remediation function pictured in the first image shown in test 8 above. This is a motor able to contain powershell scripts that enables an administrator to automate certain tasks, such as for this instance automatically remediate things that some careless person in the team might be known to do occasionally.
 
 It is done in 2 steps:
 - Detection script
@@ -259,6 +258,18 @@ Set-MpPreference -DisableRealtimeMonitoring $false
 
 However: Use of remediations requires Windows a license verification to be enabled, and I don´t intend to purchase a windows license for a temporary virtual machine just to prove my point.
 
+PS C:\WINDOWS\system32> Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
+
+RealTimeProtectionEnabled
+-------------------------
+                     True
+
 
 Test 10 – Verification of resulting compliance state
+
+<img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
+
+# Lessons Learned
+Microsoft Intune is monitoring tool, used for both convenience and for security reasons. It is not really a control tool for the organization.
+
 
