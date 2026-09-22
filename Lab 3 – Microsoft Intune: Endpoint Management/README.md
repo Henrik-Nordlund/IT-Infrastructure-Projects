@@ -270,6 +270,6 @@ Test 10 – Verification of resulting compliance state
 <img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
 
 # Lessons Learned
-Microsoft Intune is monitoring tool, used for both convenience and for security reasons. It is not really a control tool for the organization.
+One important observation from this lab was the distinction between device configuration and compliance evaluation. Intune did not automatically prevent the local user from disabling a security setting. Instead, the change was detected during compliance evaluation and caused the device to become non-compliant. That makes Intune more an administrative tool and a monitoring tool, rather than a control tool.
 
 
