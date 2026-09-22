@@ -207,3 +207,13 @@ The following security controls were verified:
 The endpoint configuration matched the requirements defined in the
 Intune compliance policy.
 
+Test 7 – Introducing a non-compliant condition
+
+For the non-compliant condition to introduce and evaluate, shutting off real-time protection on WIN11-INTUNE-02 was selected.
+<img width="1037" height="922" alt="avstängt skydd" src="https://github.com/user-attachments/assets/17888ed1-89c8-49c1-824f-16e4d15c293d" />
+
+PS C:\WINDOWS\system32> Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
+
+RealTimeProtectionEnabled
+-------------------------
+                    False
