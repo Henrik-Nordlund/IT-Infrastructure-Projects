@@ -33,6 +33,8 @@ It also illustrates how Microsoft Intune can be utilized as a security tool, as 
 
   * `WIN11-INTUNE-01`
   * `WIN11-INTUNE-02`
+    
+On both virtual machines I configured Windows 11 Pro (the OS) to use Swedish as the system language as it is my mother tongue.
 
 ## Scenario
 
