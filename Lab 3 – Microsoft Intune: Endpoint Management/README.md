@@ -66,7 +66,7 @@ The profile was assigned to the test device group containing WIN11-INTUNE-01 and
 
 A Windows 11 compliance policy was created to evaluate the security state of the managed endpoints.
 
-The policy requires the following:
+The policy I set requires the following:
 
 | Focus area | Setting | Requirement |
 |---|---|---|
@@ -81,7 +81,7 @@ The policy requires the following:
 
 ### Policy Assignment
 
-I created a security group called `GRP-Intune-Test-Devices` and put both test devices in it so it would be more convenient for me. This lab only has two test devices, but it could be infinitely more.
+I created a security group called GRP-Intune-Test-Devices and added both test devices to the group. Using a device group makes it easier and more convenient for me as an administrator to manage policy assignments if there are many test devices or to scale the configuration when more test devices are added.
 
 The Configuration Profile was then assigned to the security group `GRP-Intune-Test-Devices`, containing WIN11-INTUNE-01 and WIN11-INTUNE-02.
 
