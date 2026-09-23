@@ -105,12 +105,6 @@ The Compliance Policy was also assigned to the same security group and thus the 
 | Remediate the condition | Passed |
 | Verify the resulting compliance state | Passed |
 
-### Test 1 – Enroll a Windows device in Intune
-...
-
-### Test 2 – Verify that enrolled devices appear in the Intune admin center
-...
-
 ### Test 3 – Create and deploy a Configuration Profile
 ...
 
@@ -154,24 +148,23 @@ The effective ActiveStore configuration also reported:
 This confirmed that the Intune configuration was applied to the
 device and became part of the effective Windows Firewall configuration.
 
-
 ## Test 1 – Enroll a Windows device in Intune
 
-WIN11-INTUNE-01 was enrolled in Microsoft Intune and joined to Microsoft Entra ID. Adele Vance is set to be the local administrator.
+I logged into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enrolled the device in Intune.
 
-The device was successfully registered as an Intune-managed Windows device and appeared in the Intune admin center.
-
-<img width="1291" height="631" alt="WIN11_INTUNE-01 enrolleras i Intune" src="https://github.com/user-attachments/assets/f1040138-a490-4902-9db4-38b0ae78a949" />
+As shown below, the Windows device is now joined to both Microsoft Entra ID and Microsoft Intune.
 
 **Expected result → Passed**
 
+<img width="1291" height="631" alt="WIN11_INTUNE-01 enrolleras i Intune" src="https://github.com/user-attachments/assets/f1040138-a490-4902-9db4-38b0ae78a949" />
+
 ## Test 2 – Verify that enrolled devices appear in the Intune admin center
-WIN11-INTUNE-01 was successfully enrolled in Microsoft Intune and appeared in the Intune admin center as a managed Windows device.
+
+I verified in the Intune admin center that WIN11-INTUNE-01 was successfully enrolled in Microsoft Intune and appeared as a managed Windows device.
+
+**Expected result → Passed**
 
 <img width="1742" height="487" alt="WIN11_INTUNE-01 enrolleras i Intune bekräftad" src="https://github.com/user-attachments/assets/e0f35078-0443-4c56-93ad-6a0ec573be87" />
-
-Expected result → Passed
-
 
 ## Test 3 - creating a configuration profile and push it out to the managed devices.
 
