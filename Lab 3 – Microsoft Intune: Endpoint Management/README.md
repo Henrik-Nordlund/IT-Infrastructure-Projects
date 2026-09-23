@@ -38,34 +38,57 @@ It also illustrates how Microsoft Intune can be utilized as a security tool, as 
 
 Nordlund Industries wants to centrally manage Windows endpoints using Microsoft Intune.
 
-The objective is to establish a basic endpoint management environment where devices can be enrolled, configured through centralized policies, and evaluated against  security and compliance requirements applicable to this fictional company.
+The objective is to establish a basic endpoint management environment where devices can be enrolled, configured through centralized policies, and evaluated against  security and compliance requirements defined by me for this fictional company.
 
 The lab uses a small test environment to simulate common endpoint management tasks performed by an IT administrator. Policy deployment and compliance results are verified both in the Intune admin center and directly on the Windows endpoints.
 
 
 ## Implementation
 
-### 1. Intune Access
+### Device Enrollment
 
-Logged in to Microsoft Intune using the Microsoft 365 Developer Program
-tenant and verified that Intune is available to the administrator account.
+WIN11-INTUNE-01 and WIN11-INTUNE-02 were enrolled in Microsoft Intune and joined to Microsoft Entra ID.
 
-### 2. Windows Test Devices
+Both devices were successfully registered as Intune-managed Windows devices and appeared in the Intune admin center without any issues.
 
-Two Windows virtual machines were created using Hyper-V Manager and given the names listed below.
+### Configuration Profile
 
-| Device          | Operating System | Purpose                      |     
-| WIN11-INTUNE-01 | Windows 11       | Primary Intune test device   |     
-| WIN11-INTUNE-02 | Windows 11       | Secondary Intune test device |
+A Windows Firewall configuration profile was created using the Settings Catalog.
 
-The virtual machines will now be used as managed endpoint devices in the
-Intune environment. Adele Vance has been assigned the role as local administrator in WIN11-INTUNE-01 and Alex Wilber has the same function in WIN11-INTUNE-02.
+The following settings were configured:
 
-The Windows 11 installation ISO was downloaded from the official Microsoft website (https://www.microsoft.com/sv-se/software-download/windows11).
-A detailed description of the procedure of setting up the test environment with virtual machines will not be provided here - out of scope.
+* Enable Public Network Firewall
+* Enable Log Dropped Packets
 
-The host computer running Hyper-V is not itself part of the Intune test
-environment.
+The profile was assigned to the test device group containing WIN11-INTUNE-01 and WIN11-INTUNE-02.
+
+### Compliance Policy
+
+A Windows 11 compliance policy was created to evaluate the security state of the managed endpoints.
+
+The policy requires the following:
+
+| Focus area | Setting | Requirement |
+|---|---|---|
+| Device Health | Trusted Platform Module (TPM) | Require |
+| Device Health | Secure Boot | Require |
+| Device Security | Firewall | Require |
+| Device Security | Antivirus | Require |
+| Device Security | Antispyware | Require |
+| Microsoft Defender | Microsoft Defender Antimalware | Require |
+| Microsoft Defender | Real-time protection | Require |
+| Microsoft Defender | Security intelligence up-to-date | Require |
+
+### Policy Assignment
+
+I created a security group called `GRP-Intune-Test-Devices` and put both test devices in it so it would be more convenient for me. This lab only has two test devices, but it could be infinitely more.
+
+The Configuration Profile was then assigned to the security group `GRP-Intune-Test-Devices`, containing WIN11-INTUNE-01 and WIN11-INTUNE-02.
+
+The Compliance Policy was also assigned to the same security group and thus the same test devices.
+
+
+## Testing and Results
 
 ### Test Status
 
@@ -82,28 +105,23 @@ environment.
 | Remediate the condition | Passed |
 | Verify the resulting compliance state | Passed |
 
-### 3. Device Enrollment
+### Test 1 – Enroll a Windows device in Intune
+...
 
-WIN11-INTUNE-01 and WIN11-INTUNE-02 were enrolled in Microsoft Intune
-and joined to Microsoft Entra ID.
+### Test 2 – Verify that enrolled devices appear in the Intune admin center
+...
 
-Both devices were successfully registered as Intune-managed Windows
-devices and appeared in the Intune admin center.
+### Test 3 – Create and deploy a Configuration Profile
+...
 
-### 4. Configuration Profile
+### Test 4 – Verify that the configured settings are applied
+...
 
-A Windows Firewall configuration profile was created using the
-Settings Catalog.
+### Test 5 – Assign a Compliance Policy
+...
 
-The following settings were configured:
+...
 
-- Enable Public Network Firewall
-- Enable Log Dropped Packets
-
-The profile was assigned to the test device group containing
-WIN11-INTUNE-01 and WIN11-INTUNE-02.
-
-Intune reported successful deployment of both settings to both devices.
 
 ### 5. Configuration Verification
 
@@ -135,6 +153,7 @@ The effective ActiveStore configuration also reported:
 
 This confirmed that the Intune configuration was applied to the
 device and became part of the effective Windows Firewall configuration.
+
 
 ## Test 1 – Enroll a Windows device in Intune
 Logging into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enroll this device in Intune. As shown below, this windows device is now joined to both Entra ID and Intune.
