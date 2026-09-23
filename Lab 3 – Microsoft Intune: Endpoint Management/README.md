@@ -2,23 +2,40 @@
 # Lab 3 – Microsoft Intune: Endpoint Management
 
 ## Project overview
-This lab focuses on illustrating on how an administrator can manage Windows devices centrally, apply configuration and security requirements and make sure that the managed units follows the policies created by the organization.
+
+## Project overview
+
+This lab is meant to demonstrates how Microsoft Intune can be used to manage Windows endpoints, apply security-related configuration, and evaluate device compliance.
+
+The focus is the practical administration and verification of managed Windows devices, including policy deployment, endpoint configuration, compliance evaluation, and troubleshooting.
 
 My goal here is to demonstrate that I can:
-- manage Windows devices with Intune
-- use groups for policy assignment
-- create and apply Configuration Profiles
-- create Compliance Policies
-- illustrate that I know the difference between configuration and compliance
-- control whether a device is compliant or not
-- generally use Intune as part of an organization's security work.
+
+* enroll and manage Windows devices with Microsoft Intune
+* use security groups for policy assignment
+* create and deploy Configuration Profiles
+* create and evaluate Compliance Policies
+* verify policy results from both Intune and the Windows endpoint
+* investigate differences between configured and effective endpoint settings
+* identify and analyze non-compliant device states
+* use PowerShell to verify endpoint configuration and security status
+
+It also illustrates how Microsoft Intune can be utilized as a security tool, and its limitations therein.
 
 ## Environment
 
-- Microsoft 365 Developer Program
-- Microsoft Intune
-- 2 test users in the Microsoft 365 Developer environment - Adele Vance and Alex Wilber
-- 2 Virtual machines (Hyper-V)
+* Microsoft 365 Developer Program tenant
+* Microsoft Intune
+* Microsoft Entra ID
+* Two test users:
+
+  * Adele Vance
+  * Alex Wilber
+* Two Windows 11 virtual machines running on Hyper-V:
+
+  * `WIN11-INTUNE-01`
+  * `WIN11-INTUNE-02`
+
 
 ## Scenario
 Nordlund Industries wants to centrally manage its Windows devices using Microsoft Intune. The goal is to establish a basic endpoint management setup where configuration, security requirements and device compliance can be managed through Microsoft 365.
