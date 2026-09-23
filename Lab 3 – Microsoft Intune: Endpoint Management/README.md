@@ -156,11 +156,14 @@ device and became part of the effective Windows Firewall configuration.
 
 
 ## Test 1 – Enroll a Windows device in Intune
-Logging into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enroll this device in Intune. As shown below, this windows device is now joined to both Entra ID and Intune.
+
+WIN11-INTUNE-01 was enrolled in Microsoft Intune and joined to Microsoft Entra ID. Adele Vance is set to be the local administrator.
+
+The device was successfully registered as an Intune-managed Windows device and appeared in the Intune admin center.
 
 <img width="1291" height="631" alt="WIN11_INTUNE-01 enrolleras i Intune" src="https://github.com/user-attachments/assets/f1040138-a490-4902-9db4-38b0ae78a949" />
 
-Expected result → Passed
+**Expected result → Passed**
 
 ## Test 2 – Verify that enrolled devices appear in the Intune admin center
 WIN11-INTUNE-01 was successfully enrolled in Microsoft Intune and appeared in the Intune admin center as a managed Windows device.
