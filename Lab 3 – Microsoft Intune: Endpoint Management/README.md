@@ -3,11 +3,9 @@
 
 ## Project overview
 
-## Project overview
+This lab demonstrate how Microsoft Intune can be used to manage Windows endpoints, apply security-related configuration, and evaluate device compliance.
 
-This lab is meant to demonstrates how Microsoft Intune can be used to manage Windows endpoints, apply security-related configuration, and evaluate device compliance.
-
-The focus is the practical administration and verification of managed Windows devices, including policy deployment, endpoint configuration, compliance evaluation, and troubleshooting.
+The focus is the hands-on administration and verification of managed Windows devices, including policy deployment, endpoint configuration, compliance evaluation, and troubleshooting.
 
 My goal here is to demonstrate that I can:
 
@@ -20,7 +18,7 @@ My goal here is to demonstrate that I can:
 * identify and analyze non-compliant device states
 * use PowerShell to verify endpoint configuration and security status
 
-It also illustrates how Microsoft Intune can be utilized as a security tool, and its limitations therein.
+It also illustrates how Microsoft Intune can be utilized as a security tool, as well as its limitations in this area.
 
 ## Environment
 
@@ -36,12 +34,13 @@ It also illustrates how Microsoft Intune can be utilized as a security tool, and
   * `WIN11-INTUNE-01`
   * `WIN11-INTUNE-02`
 
-
 ## Scenario
-Nordlund Industries wants to centrally manage its Windows devices using Microsoft Intune. The goal is to establish a basic endpoint management setup where configuration, security requirements and device compliance can be managed through Microsoft 365.
 
-The lab uses a small test environment to demonstrate how an administrator can enroll and manage Windows devices, assign policies to users or groups, and verify the resulting device state.
+Nordlund Industries wants to centrally manage Windows endpoints using Microsoft Intune.
 
+The objective is to establish a basic endpoint management environment where devices can be enrolled, configured through centralized policies, and evaluated against  security and compliance requirements applicable to this fictional company.
+
+The lab uses a small test environment to simulate common endpoint management tasks performed by an IT administrator. Policy deployment and compliance results are verified both in the Intune admin center and directly on the Windows endpoints.
 
 
 ## Implementation
