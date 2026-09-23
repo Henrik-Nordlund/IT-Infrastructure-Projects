@@ -107,18 +107,6 @@ The Compliance Policy was also assigned to the same security group and thus the 
 | Remediate the condition | Passed |
 | Verify the resulting compliance state | Passed |
 
-### Test 3 – Create and deploy a Configuration Profile
-...
-
-### Test 4 – Verify that the configured settings are applied
-...
-
-### Test 5 – Assign a Compliance Policy
-...
-
-...
-
-
 ### 5. Configuration Verification
 
 The configuration was verified on WIN11-INTUNE-02 using PowerShell.
@@ -168,7 +156,7 @@ I verified in the Intune admin center that WIN11-INTUNE-01 was successfully enro
 
 <img width="1742" height="487" alt="WIN11_INTUNE-01 enrolleras i Intune bekräftad" src="https://github.com/user-attachments/assets/e0f35078-0443-4c56-93ad-6a0ec573be87" />
 
-## Test 3 - creating a configuration profile and push it out to the managed devices.
+## Test 3 - Create and deploy a Configuration Profile.
 
 For this test a change in the settings for the public network firewall is desirable to enforce on managed devices.
 Baseline configuration: The Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured.
@@ -189,7 +177,7 @@ The Windows Firewall configuration profile was assigned to the test devices. Int
 <img width="1052" height="427" alt="Windows Firewall settings lab 3 settings" src="https://github.com/user-attachments/assets/fddb3067-f433-46e0-afac-ccffc99fc3c6" />
 
 
-## Test 4 - Verification that the configured settings are applied on the endpoints.
+## Test 4 - Verify that the configured settings are applied.
 
 ### Endpoint verification
 
@@ -199,10 +187,12 @@ The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune M
 | ----------------------------------------- | ------------------------------- | ------ |
 | Configuration Profile assigned            | Policy deployed to test devices | Passed |
 | Configuration Profile status              | Succeeded                       | Passed |
-| Enable Log Dropped Packets` in MDM store | Public = True                    | Passed |
+| Enable Log Dropped Packets` in MDM store  | Public = True                   | Passed |
 | Effective firewall configuration          | Public = True                   | Passed |
 
-## Test 5 - Assigning a Compliance Policy
+**Expected result → Passed**
+
+## Test 5 - Assign a Compliance Policy
 
 **Compliance policy matrix** 
 | Focus-area         | Settings                           | value   |
