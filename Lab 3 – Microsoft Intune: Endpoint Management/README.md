@@ -125,22 +125,23 @@ I verified in the Intune admin center that WIN11-INTUNE-01 was successfully enro
 
 **Expected result → Passed**
 
-## Test 3 - Create and deploy a Configuration Profile.
+## Test 3 - Create a Configuration Profile and deploy it to the managed devices
 
-To create a configuration profile in Intune, one has to go to Devices > manage devices > configuration > create policy
+To create a Configuration Profile in Intune, I went to Devices > Manage devices > Configuration > Create policy.
+
+As mentioned above, the Configuration Profile was configured to enable logging of dropped packets for the Public network firewall.
+
+The Windows Firewall configuration profile was then assigned to GRP-Intune-Test-Devices. Intune reported successful deployment for both devices.
+
 <img width="1475" height="615" alt="configuration settings picker" src="https://github.com/user-attachments/assets/9be57b67-eed0-4e54-baa8-f6a54e031a8b" />
-
-As mentioned above, a change in the settings of the public network firewall - to log dropped packets - was to be part of the configuration profile    
 
 <img width="1590" height="477" alt="firewall settings intune portal" src="https://github.com/user-attachments/assets/7670cad5-b3a3-496c-87f6-024c8839c834" />
 
-
-The Windows Firewall configuration profile was then assigned to GRP-Intune-Test-Devices. Intune reported successful deployment for both devices.
 <img width="1052" height="427" alt="Windows Firewall settings lab 3 settings" src="https://github.com/user-attachments/assets/fddb3067-f433-46e0-afac-ccffc99fc3c6" />
 
 **Expected result → Passed**
 
-## Test 4 - Verify that the configured settings are applied.
+## Test 4 - Verify that the configured settings are applied on the endpoints
 
 ### Endpoint verification
 
