@@ -138,6 +138,14 @@ As mentioned above, a change in the settings of the public network firewall - to
 The Windows Firewall configuration profile was then assigned to GRP-Intune-Test-Devices. Intune reported successful deployment for both devices.
 <img width="1052" height="427" alt="Windows Firewall settings lab 3 settings" src="https://github.com/user-attachments/assets/fddb3067-f433-46e0-afac-ccffc99fc3c6" />
 
+
+**Expected result → Passed**
+
+
+## Test 4 - Verify that the configured settings are applied.
+
+### Endpoint verification
+
 Baseline configuration: The Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured.
 
 ```powershell
@@ -180,10 +188,6 @@ This confirmed that the Intune configuration was applied to the
 device and became part of the effective Windows Firewall configuration.
 
 
-
-## Test 4 - Verify that the configured settings are applied.
-
-### Endpoint verification
 
 The configuration was verified on WIN11-INTUNE-02 using PowerShell. The Intune MDM policy store reported EnableLogDroppedPackets = True for the Public profile, and the effective ActiveStore configuration also reported LogBlocked = True.
 
