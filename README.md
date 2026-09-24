@@ -1,7 +1,7 @@
 # IT Support & Microsoft Infrastructure
 
-Practical lab work and documentation focused on IT support, Microsoft 365,
-Azure and Microsoft infrastructure.
+Practical lab work and documentation focused on IT support, Microsoft 365, Infrastructure
+Azure and Microsoft ecosystem.
 
 ## Areas
 
@@ -9,6 +9,7 @@ Azure and Microsoft infrastructure.
 - Microsoft 365
 - Azure
 - Intune
+- Purview
 - Active Directory
 - Windows Server
 - IT support and troubleshooting
