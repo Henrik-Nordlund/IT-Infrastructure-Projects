@@ -314,6 +314,8 @@ Result -> RealTimeProtectionEnabled: True
 
 ## Test 10 – Verification of resulting compliance state
 
+I logged into Intune.
+
 <img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
 
 **Expected result → Passed**
