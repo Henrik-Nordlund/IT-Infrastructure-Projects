@@ -211,11 +211,15 @@ device and became part of the effective Windows Firewall configuration.
 
 ## Test 5 - Assign a Compliance Policy
 
+I assigned the Compliance Policy to GRP-Intune-Test-Devices, containing WIN11-INTUNE-01 and WIN11-INTUNE-02.
+
+The policy was then synchronized with the test devices and evaluated by Intune.
+
 **Compliance policy matrix** 
 | Focus-area         | Settings                           | value   |
 |--------------------|------------------------------------|-------  |
-| Device Heath       | Trusted Platform module (TPM)      | Require |
-| Device Heath       | Require Secure Boot                | Require | 
+| Device Health       | Trusted Platform module (TPM)      | Require |
+| Device Health       | Require Secure Boot                | Require | 
 | Device Security    | Firewall                           | Require | 
 | Device Security    | Antivirus                          | Require |
 | Device Security    | Antispyware                        | Require | 
@@ -227,25 +231,27 @@ device and became part of the effective Windows Firewall configuration.
 
 <img width="1512" height="446" alt="compliant devices" src="https://github.com/user-attachments/assets/e7590ddc-7d74-42c9-b218-7b35d86738d7" />
 
-## Test 6 - Verification of the compliance state of the devices
+**Expected result → Passed**
 
-The compliance requirements were independently verified on the Windows
-endpoint using PowerShell.
+## Test 6 – Verify the compliance state of the devices
+
+The compliance requirements were independently verified on the Windows endpoint using PowerShell.
 
 The following security controls were verified:
 
-| Compliance requirement | Endpoint verification | Result |
-|---|---|---|
-| Trusted Platform Module (TPM) | TpmPresent = True, TpmReady = True | Passed |
-| Secure Boot | Confirm-SecureBootUEFI = True | Passed |
-| Firewall | All profiles enabled | Passed |
-| Antivirus | AntivirusEnabled = True | Passed |
-| Antispyware | AntispywareEnabled = True | Passed |
-| Real-time protection | RealTimeProtectionEnabled = True | Passed |
-| Security intelligence | Antivirus signature timestamp present | Passed |
+| Compliance requirement        | Endpoint verification                  | Result |
+| ----------------------------- | -------------------------------------- | ------ |
+| Trusted Platform Module (TPM) | `TpmPresent = True`, `TpmReady = True` | Passed |
+| Secure Boot                   | `Confirm-SecureBootUEFI = True`        | Passed |
+| Firewall                      | All profiles enabled                   | Passed |
+| Antivirus                     | `AntivirusEnabled = True`              | Passed |
+| Antispyware                   | `AntispywareEnabled = True`            | Passed |
+| Real-time protection          | `RealTimeProtectionEnabled = True`     | Passed |
+| Security intelligence         | Antivirus signature timestamp present  | Passed |
 
-The endpoint configuration matched the requirements defined in the
-Intune compliance policy.
+The endpoint configuration matched the requirements defined in the Intune compliance policy.
+
+**Expected result → Passed**
 
 ## Test 7 – Introducing a non-compliant condition
 
