@@ -278,11 +278,13 @@ The compliance policy identified Real-time protection and Antivirus as not compl
 
 ## Test 9 – Remediation
 
-Of course, we can remediate this by enabling realtime protection from the endpoint. That would simply be a replication of test 7 & 8 in reverse order.
-But initially I thought we should remediate this from within Intune instead. To do this, we have to use the Run remediation function pictured in the first image shown in test 8 above. This is a motor able to contain powershell scripts that enables an administrator to automate certain tasks, such as for this instance automatically remediate things that some careless person in the team might be known to do occasionally.
+At this point I can remediate this by this by enabling real-time protection from the endpoint, and I ultimately that is what I decided to do. 
 
-It is done in 2 steps:
-- Detection script
+To remediate from the intune portal, the run remediation function could be run however this requires purchasing specific windows license for the OS on the virtual machines which was out of scope for this demonstration lab.
+
+It would be done in 2 steps.
+
+Step 1 - Detection script
 
 Ex: 
 ```powershell
@@ -295,27 +297,32 @@ if ($Status.RealTimeProtectionEnabled -eq $true) {
 exit 1
 ```
   
-- Remediation script
+Step 2 - Remediation script
 
 Ex:
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $false
 ```
+### Remediation from the endpoint
 
-However: Use of remediations requires Windows a license verification to be enabled, and I don´t intend to purchase a windows license for a temporary virtual machine just to prove my point.
-
+```powershell
 PS C:\WINDOWS\system32> Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
+```
+Result -> RealTimeProtectionEnabled: True
 
-RealTimeProtectionEnabled
--------------------------
-                     True
+**Expected result → Passed**
 
-
-Test 10 – Verification of resulting compliance state
+## Test 10 – Verification of resulting compliance state
 
 <img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
 
+**Expected result → Passed**
+
 # Lessons Learned
-One important observation from this lab was the distinction between device configuration and compliance evaluation. Intune did not automatically prevent the local user from disabling a security setting. Instead, the change was detected during compliance evaluation and caused the device to become non-compliant. That makes Intune more an administrative tool and a monitoring tool, rather than a control tool.
+One lesson from this lab is that compliance and configuration is not the same thing. Configuration policy enables the organization to centrally configure the endpoints in their digital environment to their liking. It could be to not show this optionality if a user clicks in this specific menu, or to automatically have firewall enabled on the device. But it is not really a security setting, it is an administrative tool. Compliance however is used to measure to determine if this particualar device fullfills our security requirements as the organization ha defined them
 
+Another important observation from this lab was the distinction between device configuration and compliance evaluation. Intune did not automatically prevent the local user from disabling a security setting. Instead, the change was detected during compliance evaluation and caused the device to become flagged as non-compliant. That makes Intune more an administrative tool used for configuration and monitoring, rather than a security tool to me - even if Intune is useful for security purposes.
 
+It is worth mentioning that Intune does not automatically detect a non-compliant device. There is a check-in cycle, but to apply it immediately - sync.
+
+As always in Microsoft 365 - it is faster and easier to manage things if you put things in groups, and apply policies to those groups rather than manage each device individually. If there are many policies to apply, pay attention to principles as least privilege as those polcies could otherwise interfer with each other. Policies needs to have te right scope and be specific. 
