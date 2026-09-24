@@ -127,6 +127,12 @@ I verified in the Intune admin center that WIN11-INTUNE-01 was successfully enro
 
 ## Test 3 - Create and deploy a Configuration Profile.
 
+To create a configuration profile in Intune, one has to go to Devices > manage devices > configuration > create policy
+<img width="1475" height="615" alt="configuration settings picker" src="https://github.com/user-attachments/assets/9be57b67-eed0-4e54-baa8-f6a54e031a8b" />
+
+As mentioned above, a change in the settings of the public network firewall - to log dropped packets - was to be part of the configuration profile 
+
+
 For this test a change in the settings for the public network firewall is desirable to enforce on managed devices.
 Baseline configuration: The Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured.
 
