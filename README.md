@@ -39,5 +39,5 @@ Planned lab covering Microsoft Purview and information protection.
 
 ## Purpose
 
-This repository documents hands-on technical work and provides examples
-of practical experience with Microsoft-based IT environments.
+This repository documents hands-on technical work and provides examples of practical experience with Microsoft-based IT environments, including lessons learned from the work. The repository is continuously updated as new labs and infrastructure projects are completed.
+
