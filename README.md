@@ -35,7 +35,7 @@ Practical exercises covering device management, configuration profiles, complian
 Practical exercises covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
-## Purview
+### Purview
 Practical exercises covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
