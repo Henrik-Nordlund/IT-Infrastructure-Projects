@@ -35,6 +35,10 @@ Practical exercises covering device management, configuration profiles, complian
 Practical exercises covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
+## Purview
+Practical exercises covering Azure administration, networking,
+monitoring and cloud infrastructure.
+
 ## Purpose
 
 This repository documents hands-on technical work and provides examples
