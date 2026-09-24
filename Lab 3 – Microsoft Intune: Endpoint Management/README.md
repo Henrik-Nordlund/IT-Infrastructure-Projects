@@ -145,9 +145,9 @@ The Windows Firewall configuration profile was then assigned to GRP-Intune-Test-
 
 ### Endpoint verification
 
-The configuration was verified on WIN11-INTUNE-02 using PowerShell. 
+The configuration was verified on WIN11-INTUNE-02 using PowerShell.
 
-Baseline configuration: The Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured as can be seen below.
+Baseline configuration: Windows Defender Firewall was enabled for all network profiles, while the default inbound and outbound actions were not explicitly configured, as shown below.
 
 ```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, DefaultInboundAction, DefaultOutboundAction
@@ -159,9 +159,9 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, De
 | Private | True | NotConfigured | NotConfigured |
 | Public | True | NotConfigured | NotConfigured |
 
-Verification on the endpoint can appear to be somewhat tricky in this case as a Windows Network firewall comes pre-configured with a PersistentStore with local factory settings. When we, as in this case, design and apply a new custom made configuration policy from Intune admin center this will instead be in the ActiveStore where the actual effective policy is set. But one has to specify -PolicyStore in the powershell command.
+Endpoint verification can be somewhat tricky in this case because Windows Firewall comes with a pre-configured PersistentStore containing local settings. When a custom configuration policy is created and applied from the Intune admin center, the resulting policy settings can instead be found in the MDM policy store and the effective ActiveStore configuration. I had to specify the -PolicyStore parameter when checking these settings with PowerShell.
 
-Step 1 to check the firewall profile without any specified settings:   
+Step 1 – Check the firewall profile without specifying a policy store
 ```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, LogBlocked
 ```
@@ -173,7 +173,7 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, LogBlocked
 | Public | False |
 
 
-Step 2 is step 1 with specified settings, that is the policy settings in the ActiveStore:    
+Step 2 - Check the effective policy in ActiveStore    
 
 ```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile -PolicyStore ActiveStore | Select-Object Name, LogBlocked
@@ -184,8 +184,7 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile -PolicyStore ActiveStore | Select
 | Private | False |
 | Public | True |
 
-Step 3 is step 1 again with specified settings, that is the policy settings now set by Intune: 
-
+Step 3 - Check the policy settings applied by Intune 
 
 ```powershell
 PS C:\WINDOWS\system32> Get-NetFirewallProfile -PolicyStore MDM | Select-Object Name, LogBlocked
