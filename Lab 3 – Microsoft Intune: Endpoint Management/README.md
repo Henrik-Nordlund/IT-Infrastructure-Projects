@@ -107,37 +107,6 @@ The Compliance Policy was also assigned to the same security group and thus the 
 | Remediate the condition | Passed |
 | Verify the resulting compliance state | Passed |
 
-### 5. Configuration Verification
-
-The configuration was verified on WIN11-INTUNE-02 using PowerShell.
-
-The local PersistentStore initially reported:
-
-| Profile | LogBlocked |
-|---|---|
-| Domain | False |
-| Private | False |
-| Public | False |
-
-After the Intune policy was applied, the MDM policy store reported:
-
-| Profile | LogBlocked |
-|---|---|
-| Domain | NotConfigured |
-| Private | NotConfigured |
-| Public | True |
-
-The effective ActiveStore configuration also reported:
-
-| Profile | LogBlocked |
-|---|---|
-| Domain | False |
-| Private | False |
-| Public | True |
-
-This confirmed that the Intune configuration was applied to the
-device and became part of the effective Windows Firewall configuration.
-
 ## Test 1 – Enroll a Windows device in Intune
 
 I logged into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enrolled the device in Intune.
@@ -170,6 +139,35 @@ PS C:\WINDOWS\system32> Get-NetFirewallProfile | Select-Object Name, Enabled, De
 | Domain | True | NotConfigured | NotConfigured |
 | Private | True | NotConfigured | NotConfigured |
 | Public | True | NotConfigured | NotConfigured |
+
+The configuration was verified on WIN11-INTUNE-02 using PowerShell. 
+
+The local PersistentStore initially reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | False |
+| Private | False |
+| Public | False |
+
+After the Intune policy was applied, the MDM policy store reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | NotConfigured |
+| Private | NotConfigured |
+| Public | True |
+
+The effective ActiveStore configuration also reported:
+
+| Profile | LogBlocked |
+|---|---|
+| Domain | False |
+| Private | False |
+| Public | True |
+
+This confirmed that the Intune configuration was applied to the
+device and became part of the effective Windows Firewall configuration.
 
 ### Configuration Profile deployment
 
