@@ -255,26 +255,26 @@ The endpoint configuration matched the requirements defined in the Intune compli
 
 ## Test 7 – Introducing a non-compliant condition
 
-For the non-compliant condition to introduce and evaluate, shutting off real-time protection on WIN11-INTUNE-02 was selected.
+To introduce and evaluate a non-compliant condition, I disabled real-time protection on WIN11-INTUNE-02.
+
 <img width="1037" height="922" alt="avstängt skydd" src="https://github.com/user-attachments/assets/17888ed1-89c8-49c1-824f-16e4d15c293d" />
 
-PS C:\WINDOWS\system32> Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
+Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
 
-RealTimeProtectionEnabled
--------------------------
-                    False
+The endpoint reported RealTimeProtectionEnabled = False.
 
-The endpoint reported `RealTimeProtectionEnabled = False`.
+**Expected result → Passed**
 
 ## Test 8 – Verification that Intune detects the non-compliant state
 <img width="1496" height="397" alt="non compliant" src="https://github.com/user-attachments/assets/9edc895d-1c7a-4d01-b147-6799da742040" />
 <img width="1562" height="370" alt="non compliant 2" src="https://github.com/user-attachments/assets/3569363f-6547-4947-8fe2-0eb1b6dd0ceb" />
 <img width="1572" height="547" alt="non compliant 3" src="https://github.com/user-attachments/assets/ef514919-0467-4c2c-ab03-ad07b1fc4193" />
 
-Intune detected the changed endpoint state after synchronization.
-The device was reported as Not compliant. The compliance policy identified
-Real-time protection and Antivirus as not compliant, while the remaining
-requirements remained compliant.
+After synchronization, Intune detected the changed endpoint state. The device was reported as Not compliant.
+
+The compliance policy identified Real-time protection and Antivirus as not compliant, while the remaining requirements remained compliant.
+
+**Expected result → Passed**
 
 ## Test 9 – Remediation
 
