@@ -88,7 +88,7 @@ I reset the password for Adele Vance, another user assigned to AU-West.
 **Expected result: Allowed → Passed**
 
 ### Test 2 – Restricted action
-While I was still logged in as Henrik Berg, I attempted to reset password for Lynne Robbins, located within AU-central another administrative unit.   
+While still logged in as Henrik Berg, I attempted to reset the password for Lynne Robbins, who is assigned to AU-Central, a different Administrative Unit.   
 
 <img width="1597" height="345" alt="cannot reset password" src="https://github.com/user-attachments/assets/3cf18733-f1f7-4883-9a18-61d26358aa7b" />
 
