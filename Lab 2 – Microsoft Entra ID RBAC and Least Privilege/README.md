@@ -39,8 +39,8 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 The 16 fictional corporate users created in Lab 1 are used as test accounts in this lab.
 
 ## Administrative Units (AU) 
+These Administrative Units, along with the other AUs used in this lab, were created in Lab 1. Not all AUs in Lab 1 will be used in this lab however. 
 
-These Administrative Units, along with the other AUs used in this lab, were created in Lab 1.  
 #### AU-West
 - Adele Vance
 - Alex Wilber
@@ -55,7 +55,7 @@ These Administrative Units, along with the other AUs used in this lab, were crea
 - Lynne Robbins
 <img width="1497" height="475" alt="AU-central users" src="https://github.com/user-attachments/assets/a5c4fd26-8b79-4c27-8ee3-c346c5e3b552" />
 
-These AUs along with other AUs, and the users assigned to them, were created in Lab 1. See Lab 1 for further reference.
+See Lab 1 for further reference.
 
 # Implementation
 
