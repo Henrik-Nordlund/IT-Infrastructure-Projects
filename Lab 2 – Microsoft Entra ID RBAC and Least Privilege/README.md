@@ -78,10 +78,10 @@ I created three test accounts for the administrative roles used in this lab: a H
 
 ### Test 1 – Allowed action
 
-I logged in as Henrik Berg, whom I assigned the Helpdesk Administrator role scoped to AU-West.
+I logged in as Henrik Berg, who was assigned the Helpdesk Administrator role scoped to AU-West.
 <img width="290" height="56" alt="inloggad Henrik Berg" src="https://github.com/user-attachments/assets/0af28714-7b63-4c61-bd13-65ea7cca1a2a" />
 
-Resetting password for user Adele Vance, another member in AU-West.
+I reset the password for Adele Vance, another user assigned to AU-West.
 <img width="1582" height="395" alt="reset password AU-west" src="https://github.com/user-attachments/assets/42ec5d74-8233-4da9-9f8c-7cdd3bf6ae29" />
 
 **Expected result: Allowed → Passed**
