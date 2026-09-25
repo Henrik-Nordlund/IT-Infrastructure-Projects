@@ -111,7 +111,7 @@ The Compliance Policy was also assigned to the same security group and thus the 
 
 I logged into WIN11-INTUNE-01 as Adele Vance (the local administrator) and enrolled the device in Intune.
 
-As shown below, the Windows device is now joined to both Microsoft Entra ID and Microsoft Intune.
+As shown below, the Windows device is now joined to Microsoft Entra ID and enrolled in Microsoft Intune.
 
 <img width="1291" height="631" alt="WIN11_INTUNE-01 enrolleras i Intune" src="https://github.com/user-attachments/assets/f1040138-a490-4902-9db4-38b0ae78a949" />   
 
