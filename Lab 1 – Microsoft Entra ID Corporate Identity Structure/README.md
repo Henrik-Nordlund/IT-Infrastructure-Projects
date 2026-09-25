@@ -78,6 +78,7 @@ M365- groups are used for collaboration. These are the M365 groups I created for
 
 
 ### Administrative Units
+Administrative Units are a grouping of users, or devices, that have some relevant feature in common where it would make sense to administer them together rather than individually.
 <img width="1417" height="491" alt="administrative units" src="https://github.com/user-attachments/assets/21d39102-7546-44d4-a79a-3416461f20d6" />
 
 
