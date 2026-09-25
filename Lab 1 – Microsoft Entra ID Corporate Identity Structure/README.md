@@ -116,7 +116,7 @@ The membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that use
 <img width="1462" height="537" alt="sales group" src="https://github.com/user-attachments/assets/f721bb76-0d84-406f-a3f3-f5296f626064" />
 <img width="1267" height="566" alt="Marketing group" src="https://github.com/user-attachments/assets/f551b990-220e-44a7-959d-907d83c95d24" />
 
-**Result:** Passed
+**Expected result → Passed**
 
 **PowerShell:**
 
