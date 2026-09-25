@@ -21,7 +21,7 @@ Focus:
 
 ## Scenario
 
-Nordlund Industries has a central IT-department, but not all IT-admininistrators should have access to the entire organization's digital environment. The company therefore would like to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
+Nordlund Industries has a central IT-department, but not all IT-administrators should have access to the entire organization's digital environment. The company therefore would like to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
 
 For instance, if we create an IT Helpdesk Administrator for an office he/she should be able to manage user accounts within his/her AU only.
 
@@ -31,6 +31,8 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 | Helpdesk                | Helpdesk Administrator | AU-West      |
 | Identity administration | User Administrator     | AU-Central   |
 | Security administration | Security Administrator | Tenant-wide* |
+
+*Security Administrator is tenant-wide because it was not scoped within an administrative unit.
 
 
 ## Users 
