@@ -108,6 +108,8 @@ Update-MgUser -UserId "miriam.graham@1s1mkr.onmicrosoft.com" `
     -State "CA"
 ```
 
+**Expected result → Passed**
+
 ### Test 2 – Security Group Membership
 The membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that users were assigned to the appropriate groups.
 
