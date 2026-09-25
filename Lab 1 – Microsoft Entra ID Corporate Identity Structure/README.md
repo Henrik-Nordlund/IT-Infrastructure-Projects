@@ -95,7 +95,7 @@ Administrative Units in Entra are used to organize users into defined administra
 
 ### Test 1 – User Structure
 
-Miriam Graham was selected as a test user. Her job title, department, state and manager were verified against the planned organizational structure.  
+Miriam Graham was selected as a test user. Her job title, department and state were verified against the planned organizational structure.  
 <img width="1312" height="742" alt="Miriam Graham user information" src="https://github.com/user-attachments/assets/841d589f-9a94-43f1-8e3d-17ec67ae4ad5" />
 **Result:** Passed
 
@@ -116,8 +116,6 @@ The membership of `SEC-Sales` and `SEC-Marketing` was checked to verify that use
 <img width="1462" height="537" alt="sales group" src="https://github.com/user-attachments/assets/f721bb76-0d84-406f-a3f3-f5296f626064" />
 <img width="1267" height="566" alt="Marketing group" src="https://github.com/user-attachments/assets/f551b990-220e-44a7-959d-907d83c95d24" />
 
-**Expected result → Passed**
-
 **PowerShell:**
 
 ```powershell
@@ -126,6 +124,8 @@ $group = Get-MgGroup -Filter "displayName eq 'SEC-Sales'"
 
 New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
 ```
+**Expected result → Passed**
+
 ### Test 3 – Group Owner vs. Member
 
 Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This demonstrates the distinction between group ownership and group membership.
