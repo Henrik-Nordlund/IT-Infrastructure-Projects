@@ -132,8 +132,6 @@ Miriam Graham is assigned as the owner of both SEC-Sales and SEC-Marketing. This
 
 <img width="1246" height="377" alt="owner sales" src="https://github.com/user-attachments/assets/8885ba77-76dd-4061-91a6-b380a45ebb83" />
 <img width="1251" height="405" alt="owner marketing" src="https://github.com/user-attachments/assets/88d8744a-7429-44d9-be99-6c80312e9f98" /> 
- 
- **Result:** Passed
 
 **PowerShell:**
 ```powershell
@@ -147,6 +145,8 @@ $group = Get-MgGroup -Filter "displayName eq 'SEC-Marketing'"
 New-MgGroupOwnerByRef -GroupId $group.Id `
     -OdataId "https://graph.microsoft.com/v1.0/users/$($user.Id)"
 ```
+
+**Expected result → Passed**
 
 ### Test 4 – Microsoft 365 Collaboration Group
 
