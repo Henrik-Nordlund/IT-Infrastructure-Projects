@@ -139,56 +139,33 @@ Reading long sequences of PowerShell commands on a GitHub repo one after another
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
+**Anna Lind – User Administrator**
+
+<img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4648-a800-1776ff361a02" />
+
+I also queried the role assignment for Anna Lind using Microsoft Graph PowerShell.
+
+The steps are:
+
+- Find her Entra ID using her email address.
+- Use that ID to find her role assignment, which returns machine-readable IDs.
+- Use the role definition ID to verify that it corresponds to the intended role, in this case User Administrator.
+- Finally, resolve the directory scope to identify the Administrative Unit.
+
 **PowerShell:**
-
-Step 1. Identify the admnin account for Anna Lind         
 ```powershell
-Get-MgUser -UserId "anna.lind@1s1mkr.onmicrosoft.com" |
-    Select-Object Id,DisplayName,UserPrincipalName
-```
-Result:    
-Id: 1520c1b3-321a-4498-a04e-febf9f0da685
-DisplayName:  Anna Lind    
-UserPrincipalName: anna.lind@1s1mkr.onmicrosoft.com
-
-Step 2. Control RBAC role assignment for Anna.
-
-```powershell
-Get-MgRoleManagementDirectoryRoleAssignment `
-    -Filter "principalId eq '1520c1b3-321a-4498-a04e-febf9f0da685'" |
-    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
-```
-
-Result:    
-PrincipalId      : 1520c1b3-321a-4498-a04e-febf9f0da685   
-RoleDefinitionId : fe930be7-5e62-47db-91af-98c3a49a38b1   
-DirectoryScopeId : /administrativeUnits/961d8447-dc46-4dc3-871e-3be19f7f4bc3    
-
-Step 3. Control RBAC id for Anna.
-
-```powershell
-Get-MgRoleManagementDirectoryRoleAssignment `
-    -Filter "principalId eq '1520c1b3-321a-4498-a04e-febf9f0da685'" |
-    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+Get-MgRoleManagementDirectoryRoleDefinition
+   -UnifiedRoleDefinitionId "fe930be7-5e62-47db-91af-98c3a49a38b1" |
+   Select-Object Id,DisplayName
 ```
 
 Result:   
 Id:  fe930be7-5e62-47db-91af-98c3a49a38b1     
 DisplayName:  User Administrator        
 
-Step 4. Control scope for Anna.
+For readability, I chose to include only one of those steps here – Step 3 this time, finding her role definition. 
 
-```powershell
-Get-MgDirectoryAdministrativeUnit `
-    -AdministrativeUnitId "961d8447-dc46-4dc3-871e-3be19f7f4bc3" |
-    Select-Object Id,DisplayName
-```
-
-Result:
-Id: 961d8447-dc46-4dc3-871e-3be19f7f4bc3     
-DisplayName:  AU-central
-
-Conclusion: Henrik Berg is a User Administrator with scope: AU-central
+**Expected result: Anna Lind is User Administrator with scope: AU-Central → Passed**
 
 
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
