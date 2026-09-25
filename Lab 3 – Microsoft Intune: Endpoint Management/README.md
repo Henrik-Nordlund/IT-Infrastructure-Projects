@@ -216,9 +216,9 @@ I assigned the Compliance Policy to GRP-Intune-Test-Devices, containing WIN11-IN
 The policy was then synchronized with the test devices and evaluated by Intune.
 
 **Compliance policy matrix** 
-| Focus area         | Settings                           | requirement   |
+| Focus area         | Settings                           | Requirement   |
 |--------------------|------------------------------------|-------  |
-| Device Health       | Trusted Platform module (TPM)      | Require |
+| Device Health       | Trusted Platform Module (TPM)      | Require |
 | Device Health       | Require Secure Boot                | Require | 
 | Device Security    | Firewall                           | Require | 
 | Device Security    | Antivirus                          | Require |
