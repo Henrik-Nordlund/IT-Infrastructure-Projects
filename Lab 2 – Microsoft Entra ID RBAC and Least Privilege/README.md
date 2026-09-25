@@ -32,14 +32,13 @@ For instance, if we create an IT Helpdesk Administrator for an office, they shou
 | Identity administration | User Administrator     | AU-Central   |
 | Security administration | Security Administrator | Tenant-wide* |
 
-*Security Administrator is tenant-wide because it was not scoped within an administrative unit.
-
+*Security Administrator is assigned at tenant scope in this lab. The role is intended to provide organization-wide security administration.
 
 ## Users 
 The 16 fictional corporate users created in Lab 1 are used as test accounts in this lab.
 
 ## Administrative Units (AU) 
-These Administrative Units, along with the other AUs used in this lab, were created in Lab 1. Not all AUs in Lab 1 will be used in this lab however. 
+These Administrative Units were created in Lab 1. However, not all AUs created in Lab 1 are used in this lab.
 
 ### AU-West
 - Adele Vance
