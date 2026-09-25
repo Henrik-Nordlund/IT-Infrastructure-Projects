@@ -104,7 +104,7 @@ Here, the RBAC assignments were verified using Microsoft Graph PowerShell to con
 | **Erik Holm**   | Security Administrator    | Tenant-wide |
 
 
-** Henrik Berg – Helpdesk Administrator ** 
+#### Henrik Berg – Helpdesk Administrator  
 
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
 
@@ -135,7 +135,7 @@ Reading long sequences of PowerShell commands on a GitHub repo one after another
 
 **Expected result: Henrik Berg is Helpdesk Administrator with scope: AU-West → Passed**
 
-** Anna Lind – User Administrator ** 
+#### Anna Lind – User Administrator  
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
