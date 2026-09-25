@@ -259,8 +259,9 @@ To introduce and evaluate a non-compliant condition, I disabled real-time protec
 
 <img width="1037" height="922" alt="avstängt skydd" src="https://github.com/user-attachments/assets/17888ed1-89c8-49c1-824f-16e4d15c293d" />
 
+```powershell
 Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
-
+```
 The endpoint reported RealTimeProtectionEnabled = False.
 
 **Expected result → Passed**
