@@ -21,9 +21,9 @@ Focus:
 
 ## Scenario
 
-Nordlund Industries has a central IT-department, but not all IT-administrators should have access to the entire organization's digital environment. The company therefore would like to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
+Nordlund Industries has a central IT department, but not all administrators should have access to the entire organization's digital environment. The company therefore wants to implement a model where administrators will receive the permissions they need to perform their duties but not more than that.
 
-For instance, if we create an IT Helpdesk Administrator for an office he/she should be able to manage user accounts within his/her AU only.
+For instance, if we create an IT Helpdesk Administrator for an office, they should be able to manage user accounts within their AU only.
 
 ## RBAC design
 | Administrative function | Entra-role             | Scope        |
@@ -41,14 +41,14 @@ The 16 fictional corporate users created in Lab 1 are used as test accounts in t
 ## Administrative Units (AU) 
 These Administrative Units, along with the other AUs used in this lab, were created in Lab 1. Not all AUs in Lab 1 will be used in this lab however. 
 
-#### AU-West
+### AU-West
 - Adele Vance
 - Alex Wilber
 - Miriam Graham
 - Nestor Wilke
 <img width="1522" height="467" alt="AU-West users" src="https://github.com/user-attachments/assets/c4bacdba-70a4-46d2-8f8c-57ebd842d69f" />
 
-#### AU-Central
+### AU-Central
 - Grady Archie
 - Lee Gu
 - Lidia Holloway
