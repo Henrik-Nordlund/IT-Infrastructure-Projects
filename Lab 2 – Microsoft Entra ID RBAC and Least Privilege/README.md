@@ -145,7 +145,7 @@ The steps are:
 
 - Find her Entra ID using her email address.
 - Use that ID to find her role assignment, which returns machine-readable IDs.
-- Use the role definition ID to verify that it corresponds to the intended role, in this case User Administrator.
+- Use the role role definition ID to verify that it corresponds to the intended role, in this case User Administrator.
 - Finally, resolve the directory scope to identify the Administrative Unit.
 
 **PowerShell:**
@@ -163,23 +163,20 @@ For readability, I chose to include only one of those steps here – Step 3 this
 
 **Expected result: Anna Lind is User Administrator with scope: AU-Central → Passed**
 
+#### Erik Holm - Security administrator
 
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
+Finally, I queried the role assignment for the scope for Erik Holm using Microsoft Graph PowerShell.
+
+The steps are:
+
+- Find his Entra ID using his email address.
+- Find his role assignment, which returns machine-readable IDs including the directory scope.
+- Use the role definition ID to verify that it corresponds to the intended role, in this case Security Administrator.
+
 **PowerShell:**
 
-Step 1. Identify the id for Erik Holm         
-```powershell
-Get-MgUser -UserId "erik.holm@1s1mkr.onmicrosoft.com" |
-    Select-Object Id,DisplayName,UserPrincipalName
-```
-
-Result:   
-Id: 50284f0e-8886-4fc1-8efa-842e5a8364d2
-DisplayName: Erik Holm    
-UserPrincipalName: erik.holm@1s1mkr.onmicrosoft.com    
-
-Step 2. Identify the scope for Erik Holm         
 ```powershell
 Get-MgRoleManagementDirectoryRoleAssignment `
     -Filter "principalId eq '50284f0e-8886-4fc1-8efa-842e5a8364d2'" |
@@ -193,18 +190,9 @@ DirectoryScopeId : /
 
 -> /. Scope is global.
 
-Step 3. Identify the role name for Erik Holm         
-```powershell
-Get-MgRoleManagementDirectoryRoleDefinition `
-    -UnifiedRoleDefinitionId "194ae4cb-b126-40b2-bd5b-6091b380977d" |
-    Select-Object Id,DisplayName
-```
+Once again - for readability, I chose to include only one of those steps here.
 
-Result:
-Id: 194ae4cb-b126-40b2-bd5b-6091b380977d                                   
-DisplayName: Security Administrator     
-
-Conclusion: Erik Holm is the security administrator, and his scope is the entire tenant.
+**Expected result: Erik Holm is Security Administrator with a global scope (tenant-wide) → Passed**
 
 ### Test 4 – Privilege comparison
 
@@ -212,7 +200,7 @@ Conclusion: Erik Holm is the security administrator, and his scope is the entire
 | ------------------------------------------------------- | --------------- | ------ |
 | Admin can manage user in AU-West                        | Allowed         | Passed |
 | Admin attempts to manage user outside AU-West           | Denied          | Passed |
-| RBAC assignment has correct scope                       | AU-West         | Passed |
+| RBAC assignment has correct scope                       | Correct scope   | Passed |
 | Global Administrator retains unrestricted access        | Allowed         | Passed |
 | Helpdesk account has no tenant-wide administrative role | Confirmed       | Passed |
 
@@ -222,6 +210,6 @@ Conclusion: Erik Holm is the security administrator, and his scope is the entire
 - Administrative Units can be used to limit the scope of delegated administration.
 - Least privilege reduces the impact of compromised or misused administrative accounts.
 - Administrative role assignments should be reviewed regularly.
-- Global Administrator should not be used for routine administrative tasks. This is an example of Separation of Duties in effect.
-- Bit tedious to use powershell instead of GUI for single users.
+- Global Administrator should not be used for routine administrative tasks. This helps reduce the exposure of highly privileged administrative roles and, to an extent, supports the principle of Separation of Duties.
+- A bit tedious to use PowerShell instead of GUI for single users.
 
