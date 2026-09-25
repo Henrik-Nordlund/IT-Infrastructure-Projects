@@ -187,11 +187,10 @@ New-MgGroupOwnerByRef `
 
 ### Test 5 – Administrative Units
 
-The membership of the Administrative Units was checked. Users were verified against their assigned regional Administrative Unit.
+The users assigned to the Administrative Units were checked against their defined regional scope. Users were verified against their assigned regional Administrative Unit.
 <img width="1512" height="571" alt="AU east-south" src="https://github.com/user-attachments/assets/429d5670-28cf-4d62-a1f8-f581e68041e4" />
 
-
-**Result:** Passed
+**Expected result → Passed**
 
 ## Lessons Learned
 Automation with PowerShell can considerably ease allocation of attributes to users among other tasks when there are many users.
