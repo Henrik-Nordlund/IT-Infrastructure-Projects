@@ -78,7 +78,8 @@ I created three test accounts for the administrative roles used in this lab: a H
 
 ### Test 1 – Allowed action
 
-I logged in as Henrik Berg, who was assigned the Helpdesk Administrator role scoped to AU-West.
+I logged in as Henrik Berg, who was assigned the Helpdesk Administrator role scoped to AU-West.   
+
 <img width="290" height="56" alt="inloggad Henrik Berg" src="https://github.com/user-attachments/assets/0af28714-7b63-4c61-bd13-65ea7cca1a2a" />
 
 I reset the password for Adele Vance, another user assigned to AU-West.
