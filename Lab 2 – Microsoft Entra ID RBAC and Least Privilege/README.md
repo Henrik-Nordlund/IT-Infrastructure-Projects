@@ -100,7 +100,7 @@ Here, the RBAC assignments were verified using Microsoft Graph PowerShell to con
 | Test account    | Entra role                | Scope       |
 | --------------- | ------------------------- | ----------- |
 | **Henrik Berg** | Helpdesk Administrator    | AU-West     |
-| **Anna Lind**   | User Administrator        | AU-Centra   |
+| **Anna Lind**   | User Administrator        | AU-Central  |
 | **Erik Holm**   | Security Administrator    | Tenant-wide |
 
 
@@ -145,14 +145,13 @@ The steps are:
 
 - Find her Entra ID using her email address.
 - Use that ID to find her role assignment, which returns machine-readable IDs.
-- Use the role role definition ID to verify that it corresponds to the intended role, in this case User Administrator.
+- Use the role definition ID to verify that it corresponds to the intended role, in this case User Administrator.
 - Finally, resolve the directory scope to identify the Administrative Unit.
 
 **PowerShell:**
-```powershell
-Get-MgRoleManagementDirectoryRoleDefinition
-   -UnifiedRoleDefinitionId "fe930be7-5e62-47db-91af-98c3a49a38b1" |
-   Select-Object Id,DisplayName
+Get-MgRoleManagementDirectoryRoleDefinition `
+    -UnifiedRoleDefinitionId "fe930be7-5e62-47db-91af-98c3a49a38b1" |
+    Select-Object Id,DisplayName
 ```
 
 Result:   
@@ -167,7 +166,7 @@ For readability, I chose to include only one of those steps here – Step 3 this
 
 <img width="1101" height="405" alt="image" src="https://github.com/user-attachments/assets/b70fae8c-8714-4986-b65b-2da475f013bb" />
 
-Finally, I queried the role assignment for the scope for Erik Holm using Microsoft Graph PowerShell.
+Finally, I queried the role assignment for Erik Holm using Microsoft Graph PowerShell.
 
 The steps are:
 
