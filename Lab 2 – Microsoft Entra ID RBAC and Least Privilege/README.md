@@ -74,8 +74,9 @@ I created three test accounts for the administrative roles used in this lab: a H
 
 <img width="1237" height="626" alt="Erik Holm" src="https://github.com/user-attachments/assets/0d7d3bc8-99d1-4519-87d5-ffa841ac08c7" />
 
+## Testing and Results
 
-## Test 1 – Allowed action
+### Test 1 – Allowed action
 
 Logging in as Henrik Berg
 <img width="290" height="56" alt="inloggad Henrik Berg" src="https://github.com/user-attachments/assets/0af28714-7b63-4c61-bd13-65ea7cca1a2a" />
@@ -85,13 +86,13 @@ Resetting password for user Adele Vance, another member in AU-West.
 
 Result: Allowed -> Passed
 
-## Test 2 – Restricted action
+### Test 2 – Restricted action
 Attempting to reset password for Lynne Robbins, located within AU-central.  
 <img width="1597" height="345" alt="cannot reset password" src="https://github.com/user-attachments/assets/3cf18733-f1f7-4883-9a18-61d26358aa7b" />
 
 Result: Denied - Passed
 
-## Test 3 – Role scope verification
+### Test 3 – Role scope verification
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
 
 **PowerShell:**
@@ -238,7 +239,7 @@ DisplayName: Security Administrator
 
 Conclusion: Erik Holm is the security administrator, and his scope is the entire tenant.
 
-## Test 4 – Privilege comparison
+### Test 4 – Privilege comparison
 
 | Test                                                    | Expected result | Result |
 | ------------------------------------------------------- | --------------- | ------ |
