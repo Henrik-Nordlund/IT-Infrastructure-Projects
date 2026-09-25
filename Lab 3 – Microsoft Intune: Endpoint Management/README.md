@@ -204,7 +204,7 @@ device and became part of the effective Windows Firewall configuration.
 | ----------------------------------------- | ------------------------------- | ------ |
 | Configuration Profile assigned            | Policy deployed to test devices | Passed |
 | Configuration Profile status              | Succeeded                       | Passed |
-| Enable Log Dropped Packets` in MDM store  | Public = True                   | Passed |
+| Enable Log Dropped Packets in MDM store   | Public = True                   | Passed |
 | Effective firewall configuration          | Public = True                   | Passed |
 
 **Expected result → Passed**
