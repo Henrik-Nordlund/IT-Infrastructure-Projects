@@ -330,7 +330,7 @@ The endpoint configuration was successfully restored.
 
 ## Test 10 – Verification of resulting compliance state
 
-I logged into Intune.
+After remediation, I verified the device compliance state in the Intune admin center. WIN11-INTUNE-02 was reported as Compliant again as you can see.
 
 <img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
 
