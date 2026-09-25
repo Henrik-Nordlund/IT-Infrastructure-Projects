@@ -97,10 +97,10 @@ While still logged in as Henrik Berg, I attempted to reset the password for Lynn
 ### Test 3 – Role scope verification
 The RBAC assignments were verified using Microsoft Graph PowerShell to confirm the assigned role and administrative scope for each test account.
 
-| Test account    | Entra role                | Scope                 |
-| --------------- | ------------------------- | ---------------------- |
-| **Henrik Berg** | Helpdesk Administrator    | AU-West                |
-| **Anna Lind**   | User Administrator        | User Administrator     |
+| Test account    | Entra role                | Scope       |
+| --------------- | ------------------------- | ----------- |
+| **Henrik Berg** | Helpdesk Administrator    | AU-West     |
+| **Anna Lind**   | User Administrator        | AU-Centra   |
 | **Erik Holm**   | Security Administrator    | Tenant-wide |
 
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
