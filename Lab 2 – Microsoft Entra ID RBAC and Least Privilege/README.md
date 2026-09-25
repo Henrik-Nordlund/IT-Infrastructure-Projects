@@ -33,10 +33,10 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 | Security administration | Security Administrator | Tenant-wide* |
 
 
-## Users (16 fictional corporate users created in lab 1)
+## Users 
 The 16 fictional corporate users created in Lab 1 are used as test accounts in this lab.
 
-### Administrative Units (AU) 
+## Administrative Units (AU) 
 
 These Administrative Units, along with the other AUs used in this lab, were created in Lab 1.  
 #### AU-West
