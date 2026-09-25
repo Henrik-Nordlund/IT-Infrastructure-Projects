@@ -330,17 +330,17 @@ The endpoint configuration was successfully restored.
 
 ## Test 10 – Verification of resulting compliance state
 
-After remediation, I verified the device compliance state in the Intune admin center. WIN11-INTUNE-02 was reported as Compliant again as you can see.
+After remediation, I verified the device compliance state in the Intune admin center. WIN11-INTUNE-02 was reported as Compliant again, as can be seen below.
 
 <img width="1507" height="331" alt="compliant now" src="https://github.com/user-attachments/assets/5a618818-f813-4529-afe7-730187205b67" />
 
 **Expected result → Passed**
 
 # Lessons Learned
-One lesson from this lab is that compliance and configuration is not the same thing. Configuration policy enables the organization to centrally configure the endpoints in their digital environment to their liking. It could be to not show this optionality if a user clicks in this specific menu, or to automatically have firewall enabled on the device. But it is not really a security setting, it is an administrative tool. Compliance however is used to measure to determine if this particualar device fullfills our security requirements as the organization ha defined them
+One lesson from this lab is that compliance and configuration is not the same thing. Configuration policy enables the organization to centrally configure the endpoints in their digital environment to their liking. It could be to not show this optionality if a user clicks in this specific menu, or to automatically have firewall enabled on the device. But it is not really a security setting, it is an administrative tool. Compliance however is used to measure to determine if this particular device fulfills our security requirements as the organization have defined them
 
 Another important observation from this lab was the distinction between device configuration and compliance evaluation. Intune did not automatically prevent the local user from disabling a security setting. Instead, the change was detected during compliance evaluation and caused the device to become flagged as non-compliant. That makes Intune more an administrative tool used for configuration and monitoring, rather than a security tool to me - even if Intune is useful for security purposes.
 
 It is worth mentioning that Intune does not automatically detect a non-compliant device. There is a check-in cycle, but to apply it immediately - sync.
 
-As always in Microsoft 365 - it is faster and easier to manage things if you put things in groups, and apply policies to those groups rather than manage each device individually. If there are many policies to apply, pay attention to principles as least privilege as those polcies could otherwise interfer with each other. Policies needs to have te right scope and be specific. 
+As always in Microsoft 365 - it is faster and easier to manage things if you put things in groups, and apply policies to those groups rather than manage each device individually. If there are many policies to apply, pay attention to what needs to accessed and where as those policies could otherwise interfer with each other. Policies needs to have the right scope and be specific. 
