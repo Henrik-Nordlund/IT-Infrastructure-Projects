@@ -95,7 +95,7 @@ While still logged in as Henrik Berg, I attempted to reset the password for Lynn
 **Expected result: Denied → Passed**
 
 ### Test 3 – Role scope verification
-The RBAC assignments were verified using Microsoft Graph PowerShell to confirm the assigned role and administrative scope for each test account.
+Here, the RBAC assignments were verified using Microsoft Graph PowerShell to confirm the assigned role and administrative scope for each test account.
 
 | Test account    | Entra role                | Scope       |
 | --------------- | ------------------------- | ----------- |
@@ -103,19 +103,38 @@ The RBAC assignments were verified using Microsoft Graph PowerShell to confirm t
 | **Anna Lind**   | User Administrator        | AU-Centra   |
 | **Erik Holm**   | Security Administrator    | Tenant-wide |
 
+
+** Henrik Berg – Helpdesk Administrator ** 
+
 <img width="1461" height="327" alt="helpdesk AU-west" src="https://github.com/user-attachments/assets/11a4ec5d-8f3a-45f6-9351-5add322d3dad" />
+
+I queried the role assignment for Henrik Berg using Microsoft Graph PowerShell.
+
+The steps are:
+- Find his Entra ID since I know his email address
+- Use that ID to find his role assignment (will be machine code)
+- Use that role assignment to find if that role definition is the right one (i.e "Helpdesk Administrator")
+- Finally find his scope
+
+**PowerShell:**  
+
+```powershell
+Get-MgRoleManagementDirectoryRoleAssignment `
+    -Filter "principalId eq 'add50200-7217-4d6d-b8eb-84fe0dce19df'" |
+    Format-List PrincipalId,RoleDefinitionId,DirectoryScopeId
+```
+
+Result:
+
+PrincipalId      : add50200-7217-4d6d-b8eb-84fe0dce19df
+RoleDefinitionId : 729827e3-9c14-49f7-bb1b-9608f156bbb8
+DirectoryScopeId : /administrativeUnits/75d6878f-63ad-435d-b85b-544d94af4f5d
+
+For readability, I choose to include only of those steps here 
 
 **PowerShell:**
 Step 1. Find the Entra ID for Henrik Berg
-```powershell
-Get-MgUser -UserId "henrik.berg@1s1mkr.onmicrosoft.com" |
-    Select-Object Id,DisplayName,UserPrincipalName
-```
-Result:   
-
-DisplayName       : Henrik Berg    
-UserPrincipalName : henrik.berg@1s1mkr.onmicrosoft.com    
-Id                : add50200-7217-4d6d-b8eb-84fe0dce19df    
+ 
 
 Step 2. Find his RBAC role assignment.  
 ```powershell
