@@ -288,7 +288,7 @@ For this lab, running Remediations directly from Intune was outside the scope be
 
 ### Intune Remediations
 
-A Remediation package consists of two scripts, detection script and remediation script.
+A Remediation package consists of two scripts - a detection script and a remediation script.
 
 **Step 1 – Detection script**
 
@@ -306,7 +306,7 @@ exit 1
 
 **Step 2 – Remediation script**
 
-If the detection script identifies a non-compliant state, the remediation script can re-enable real-time protection.
+If the detection script identifies a non-compliant state, the remediation script would then re-enable real-time protection.
 
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $false
