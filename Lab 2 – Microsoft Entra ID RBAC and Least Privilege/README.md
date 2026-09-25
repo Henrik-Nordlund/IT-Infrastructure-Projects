@@ -126,9 +126,9 @@ Get-MgRoleManagementDirectoryRoleAssignment `
 
 Result:
 
-PrincipalId      : add50200-7217-4d6d-b8eb-84fe0dce19df
-RoleDefinitionId : 729827e3-9c14-49f7-bb1b-9608f156bbb8
-DirectoryScopeId : /administrativeUnits/75d6878f-63ad-435d-b85b-544d94af4f5d
+PrincipalId      : add50200-7217-4d6d-b8eb-84fe0dce19df   
+RoleDefinitionId : 729827e3-9c14-49f7-bb1b-9608f156bbb8    
+DirectoryScopeId : /administrativeUnits/75d6878f-63ad-435d-b85b-544d94af4f5d   
 
 For readability, I choose to include only of those steps here - step 2, finding his role assignment.
 
