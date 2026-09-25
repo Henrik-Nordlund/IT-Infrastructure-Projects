@@ -280,15 +280,20 @@ The compliance policy identified Real-time protection and Antivirus as not compl
 
 ## Test 9 – Remediation
 
-At this point I can remediate this by this by enabling real-time protection from the endpoint, and I ultimately that is what I decided to do. 
+The non-compliant condition was remediated by re-enabling real-time protection on WIN11-INTUNE-02.
 
-To remediate from the intune portal, the run remediation function could be run however this requires purchasing specific windows license for the OS on the virtual machines which was out of scope for this demonstration lab.
+Intune also provides a Remediations feature that can be used to detect and automatically remediate endpoint configuration issues. In a production environment, this could be implemented using a detection script and a remediation script.
 
-It would be done in 2 steps.
+For this lab, running Remediations directly from Intune was outside the scope because the required Windows licensing was not available for the virtual machines.
 
-Step 1 - Detection script
+### Intune Remediations
 
-Ex: 
+A Remediation package consists of two scripts, detection script and remediation script.
+
+**Step 1 – Detection script**
+
+The detection script in this case would check whether real-time protection is enabled and returns a status indicating whether remediation is required.
+
 ```powershell
 $Status = Get-MpComputerStatus
 
@@ -298,19 +303,28 @@ if ($Status.RealTimeProtectionEnabled -eq $true) {
 
 exit 1
 ```
-  
-Step 2 - Remediation script
 
-Ex:
+**Step 2 – Remediation script**
+
+If the detection script identifies a non-compliant state, the remediation script can re-enable real-time protection.
+
 ```powershell
 Set-MpPreference -DisableRealtimeMonitoring $false
 ```
+
 ### Remediation from the endpoint
+
+Since Intune Remediations could not be executed in this lab environment, I restored the configuration directly on the endpoint using PowerShell.
 
 ```powershell
 PS C:\WINDOWS\system32> Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled
 ```
-Result -> RealTimeProtectionEnabled: True
+
+Result:
+
+`RealTimeProtectionEnabled: True`
+
+The endpoint configuration was successfully restored.
 
 **Expected result → Passed**
 
