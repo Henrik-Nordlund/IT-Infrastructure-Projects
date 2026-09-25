@@ -17,7 +17,7 @@ Focus:
 - Microsoft Entra ID
 - Microsoft 365 Developer Program
 - Microsoft Entra ID Premium P2
-- 16 developer users and associated administrative units (created in lab 1) 
+- 16 fictional corporate users and associated Administrative Units (created in lab 1) 
 
 ## Scenario
 
@@ -34,26 +34,11 @@ For instance, if we create an IT Helpdesk Administrator for an office he/she sho
 
 
 ## Users (16 fictional corporate users created in lab 1)
-
-- Adele Vance
-- Alex Wilber
-- Diego Siciliani
-- Grady Archie
-- Henrietta Mueller
-- Isaiah Langer
-- Johanna Lorenz
-- Joni Sherman
-- Lee Gu
-- Lidia Holloway
-- Lynne Robbins
-- Megan Bowen
-- Miriam Graham
-- Nestor Wilke
-- Patti Fernandez
-- Pradeep Gupta
+The 16 fictional corporate users created in Lab 1 are used as test accounts in this lab.
 
 ### Administrative Units (AU) 
 
+These Administrative Units, along with the other AUs used in this lab, were created in Lab 1.  
 #### AU-West
 - Adele Vance
 - Alex Wilber
