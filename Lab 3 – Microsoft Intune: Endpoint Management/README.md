@@ -3,7 +3,7 @@
 
 ## Project overview
 
-This lab demonstrate how Microsoft Intune can be used to manage Windows endpoints, apply security-related configuration, and evaluate device compliance.
+This lab demonstrates how Microsoft Intune can be used to manage Windows endpoints, apply security-related configuration, and evaluate device compliance.
 
 The focus is the hands-on administration and verification of managed Windows devices, including policy deployment, endpoint configuration, compliance evaluation, and troubleshooting.
 
@@ -40,7 +40,7 @@ On both virtual machines, I configured Windows 11 Pro to use Swedish as the syst
 
 Nordlund Industries wants to centrally manage Windows endpoints using Microsoft Intune.
 
-The objective is to establish a basic endpoint management environment where devices can be enrolled, configured through centralized policies, and evaluated against  security and compliance requirements defined by me for this fictional company.
+The objective is to establish a basic endpoint management environment where devices can be enrolled, configured through centralized policies, and evaluated against security and compliance requirements defined by me for this fictional company
 
 The lab uses a small test environment to simulate common endpoint management tasks performed by an IT administrator. Policy deployment and compliance results are verified both in the Intune admin center and directly on the Windows endpoints.
 
