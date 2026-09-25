@@ -148,14 +148,11 @@ New-MgGroupOwnerByRef -GroupId $group.Id `
 
 **Expected result → Passed**
 
-### Test 4 – Microsoft 365 Collaboration Group
+### Test 4 – Microsoft 365 Group
 
 The membership of `M365-Sales-Marketing` was verified. The group contains users from both Sales and Marketing for collaboration purposes.
 <img width="1482" height="632" alt="Sales and marketing" src="https://github.com/user-attachments/assets/b75b5883-fedc-429a-b1ac-df5ef22675b1" />
 <img width="1485" height="372" alt="owner sales and marketing" src="https://github.com/user-attachments/assets/c86dccdf-dc5a-4890-b08a-2f602aaa64fb" />
-
-
-**Result:** Passed
 
 **PowerShell:**
 ```powershell
@@ -185,6 +182,9 @@ New-MgGroupOwnerByRef `
     -GroupId $group.Id `
     -OdataId "https://graph.microsoft.com/v1.0/users/$($miriam.Id)"
 ```
+
+**Expected result → Passed**
+
 ### Test 5 – Administrative Units
 
 The membership of the Administrative Units was checked. Users were verified against their assigned regional Administrative Unit.
