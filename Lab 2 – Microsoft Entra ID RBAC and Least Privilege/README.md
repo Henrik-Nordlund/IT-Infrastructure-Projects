@@ -139,10 +139,6 @@ Reading long sequences of PowerShell commands on a GitHub repo one after another
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
-**Anna Lind – User Administrator**
-
-<img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4648-a800-1776ff361a02" />
-
 I also queried the role assignment for Anna Lind using Microsoft Graph PowerShell.
 
 The steps are:
