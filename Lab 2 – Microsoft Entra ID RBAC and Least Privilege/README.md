@@ -130,9 +130,12 @@ PrincipalId      : add50200-7217-4d6d-b8eb-84fe0dce19df
 RoleDefinitionId : 729827e3-9c14-49f7-bb1b-9608f156bbb8    
 DirectoryScopeId : /administrativeUnits/75d6878f-63ad-435d-b85b-544d94af4f5d   
 
-For readability, I chose to include only one of those steps here – Step 2, finding his role assignment. Reading long sequences of PowerShell commands on a GitHub repo one after another becomes a pain for a human after a while...
+For readability, I chose to include only one of those steps here – Step 2, finding his role assignment.   
+Reading long sequences of PowerShell commands on a GitHub repo one after another becomes a pain for a human after a while...
 
 **Expected result: Henrik Berg is Helpdesk Administrator with scope: AU-West → Passed**
+
+** Anna Lind – User Administrator ** 
 
 <img width="1437" height="332" alt="User admin Anna Lind" src="https://github.com/user-attachments/assets/f15ff09a-3184-4644-a800-1776ff361a02" />
 
