@@ -195,7 +195,7 @@ The users assigned to the Administrative Units were checked against their define
 ## Lessons Learned
 This lab showed how different Microsoft Entra components can be used to structure and administer identities in a tenant. Security groups, Microsoft 365 groups, and Administrative Units serve different administrative purposes and can be combined as part of an overall identity structure.
 
-Another observation was the difference between group ownership and membership. A user can be assigned as a group owner without being a member of the group, which is relevant when separating administration from access.
+Another observation was the difference between group ownership and membership. A user can be assigned as a group owner without being a member of the group, which is important when separating administration from access.
 
 Automation with PowerShell can considerably simplify assigning attributes to users among other tasks when there are many users.
 
