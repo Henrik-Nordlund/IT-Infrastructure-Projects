@@ -58,11 +58,11 @@ See Lab 1 for further reference.
 
 # Implementation
 
-## Create administrative test accounts 
+## Create administrative test accounts
 
-I create a new user for the helpdesk role in AU-West, for the management of user accounts in AU-central as well as a security administrator for the entire organization, respectively. 
+I created three test accounts for the administrative roles used in this lab: a Helpdesk Administrator scoped to AU-West, a User Administrator scoped to AU-Central, and a Security Administrator assigned at tenant scope. 
 
-| Person          | Job title                 | Purpose i Lab 2        |
+| Person          | Job title                 | Purpose in Lab 2        |
 | --------------- | ------------------------- | ---------------------- |
 | **Henrik Berg** | IT Support Technician     | Helpdesk Administrator |
 | **Anna Lind**   | IT Administrator          | User Administrator     |
