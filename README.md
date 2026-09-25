@@ -1,6 +1,6 @@
 # IT Support & Microsoft Infrastructure
 
-PPractical lab work and documentation focused on IT support, Microsoft 365, Azure, infrastructure, and the Microsoft ecosystem.
+Practical lab work and documentation focused on IT support, Microsoft 365, Azure, infrastructure, and the Microsoft ecosystem.
 
 ## Areas
 
