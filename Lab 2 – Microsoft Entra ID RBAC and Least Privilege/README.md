@@ -84,7 +84,7 @@ I logged in as Henrik Berg, whom I assigned the Helpdesk Administrator role scop
 Resetting password for user Adele Vance, another member in AU-West.
 <img width="1582" height="395" alt="reset password AU-west" src="https://github.com/user-attachments/assets/42ec5d74-8233-4da9-9f8c-7cdd3bf6ae29" />
 
-## Result: Allowed -> Passed ##
+**Expected result: Allowed → Passed**
 
 ### Test 2 – Restricted action
 Attempting to reset password for Lynne Robbins, located within AU-central.  
