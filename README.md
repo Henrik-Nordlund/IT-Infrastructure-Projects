@@ -26,9 +26,9 @@ identity management and access control.
 - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%202%20%E2%80%93%20Microsoft%20Entra%20ID%20RBAC%20and%20Least%20Privilege/README.md">Lab 2 – Microsoft Entra ID: RBAC and Least Privilege</a>
 
 ### Intune
-Practical exercises covering device management, configuration profiles, compliance policies, application deployment, and endpoint configuration.
+Practical exercises covering device management, configuration profiles, compliance policies and endpoint configuration.
 
- - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%203%20%E2%80%93%20Microsoft%20Intune%3A%20Endpoint%20Management/README.md">Lab 3 – Microsoft Intune: Endpoint Management</a></a>
+ - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%203%20%E2%80%93%20Microsoft%20Intune%3A%20Endpoint%20Management/README.md">Lab 3 – Microsoft Intune: Endpoint Management</a>
 
 ### Azure
 Planned lab covering Azure administration, networking,
