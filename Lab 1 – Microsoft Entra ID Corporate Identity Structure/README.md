@@ -193,7 +193,8 @@ The users assigned to the Administrative Units were checked against their define
 **Expected result → Passed**
 
 ## Lessons Learned
-Automation with PowerShell can considerably ease allocation of attributes to users among other tasks when there are many users.
+Automation with PowerShell can considerably ease assigning attributes to users among other tasks when there are many users.
+Security groups are meant for access control/permissions and M365 groups for collaboration only.
 
 ## References
 
