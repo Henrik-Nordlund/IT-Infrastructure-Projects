@@ -25,11 +25,11 @@ identity management and access control.
 
 - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%202%20%E2%80%93%20Microsoft%20Entra%20ID%20RBAC%20and%20Least%20Privilege/README.md">Lab 2 – Microsoft Entra ID: RBAC and Least Privilege</a>
 
-- Lab 3 – Conditional Access (planned)
-- Lab 4 – Microsoft 365 Security (planned)
-- Lab 5 – Identity Protection (planned)
-- Lab 6 – Identity Governance (planned)
-- Lab 7 – Identity & Security Operations (planned)
+- Planned lab – Conditional Access
+- Planned lab – Microsoft 365 Security
+- Planned lab – Identity Protection 
+- Planned lab – Identity Governance 
+- Planned lab – Identity & Security Operations 
 
 ### Intune
 Practical exercises covering device management, configuration profiles, compliance policies, remediation and endpoint configuration.
