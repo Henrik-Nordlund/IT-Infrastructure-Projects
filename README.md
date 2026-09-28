@@ -27,8 +27,8 @@ identity management and access control.
 
 - Planned lab – Conditional Access
 - Planned lab – Microsoft 365 Security
-- Planned lab – Identity Protection 
-- Planned lab – Identity Governance 
+- Planned lab – Identity Protection
+- Planned lab – Identity Governance
 - Planned lab – Identity & Security Operations 
 
 ### Intune
