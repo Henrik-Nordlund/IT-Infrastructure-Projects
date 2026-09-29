@@ -77,7 +77,6 @@ Verify that the resources have been removed
 
 ## Testing and Results
 
-Här skulle jag inte skriva resultaten ännu, utan bara definiera vilka tester labben ska innehålla.
 
 ### Test 1 – Verify Azure subscription access
 
