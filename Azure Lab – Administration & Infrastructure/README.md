@@ -1,4 +1,4 @@
-# Lab 4 - Azure Administration & Infrastructure (under construction)
+# Lab 4 - Azure Administration & Infrastructure (under construction) 
 
 ## Project overview
 
