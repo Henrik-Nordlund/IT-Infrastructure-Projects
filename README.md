@@ -40,7 +40,7 @@ Practical exercises covering device management, configuration profiles, complian
 Planned lab covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
-- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/edit/main/Azure%20Lab%20%E2%80%93%20Administration%20%26%20Infrastructure/README.md"></a>
+- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/edit/main/Azure%20Lab%20%E2%80%93%20Administration%20%26%20Infrastructure/README.md">Lab 4 - Azure Administration & Infrastructure (in progress)</a>
 
 ### Purview
 Planned lab covering Microsoft Purview and information protection.
