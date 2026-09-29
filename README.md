@@ -40,6 +40,8 @@ Practical exercises covering device management, configuration profiles, complian
 Planned lab covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
+- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%203%20%E2%80%93%20Microsoft%20Intune%3A%20Endpoint%20Management/README.md"></a>
+
 ### Purview
 Planned lab covering Microsoft Purview and information protection.
 
