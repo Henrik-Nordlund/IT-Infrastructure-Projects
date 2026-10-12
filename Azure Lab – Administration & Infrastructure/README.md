@@ -36,41 +36,50 @@ Verify tenant and subscription relationship
 Verify user permissions
 Verify Azure RBAC role
 
-2. Resource Group
+- Verified that the Azure subscription is active and accessible.
+- Verified the Microsoft Entra tenant associated with the subscription.
+- Confirmed Owner access at subscription scope.
+
+3. Resource Group
 Create a dedicated Resource Group for the lab
 Configure basic resource organisation
 Add appropriate tags
 
-3. Azure RBAC
+4. Azure RBAC
 Review Azure RBAC
 Verify role assignment and scope
 Test access to the Resource Group and resources
 
-4. Networking
+- Reviewed existing Azure RBAC role assignments at subscription scope.
+- Identified two separate Owner role assignments for the same user principal and scope.
+- Confirmed that the assignments have distinct role assignment IDs.
+- No changes were made to the existing role assignments.
+
+5. Networking
 Create a Virtual Network
 Create a subnet
 Create a Network Security Group
 Configure required network rules
 Associate the NSG with the appropriate subnet or network interface
 
-5. Compute
+6. Compute
 Deploy a small test Virtual Machine
 Configure the required operating system and network settings
 Verify the VM deployment
 Connect to the VM
 
-6. Monitoring
+7. Monitoring
 Review Azure Activity Log
 Verify administrative activities
 Review relevant monitoring information
 
-7. Security configuration
+8. Security configuration
 Review network exposure
 Verify NSG configuration
 Verify Azure RBAC assignments
 Review basic security configuration of the deployed resources
 
-8. Resource lifecycle and cleanup
+9. Resource lifecycle and cleanup
 Document the completed environment
 Delete the temporary Azure resources
 Verify that the resources have been removed
@@ -82,13 +91,24 @@ Verify that the resources have been removed
 
 Verify that the Azure subscription is accessible and that the user has sufficient permissions to create and manage resources.
 
+**Initial environment verification**
+
+- Azure subscription: Henrik Azure Subscription
+- Subscription status: Active
+- Directory: Standardkatalog (`nordlundhenrikoutlook.onmicrosoft.com`)
+- Administrative access: Owner at subscription scope
+- Identity: Microsoft account identity represented in Microsoft Entra ID
+- Subscription access: Verified through Azure Portal and Azure PowerShell
+
+The subscription and administrative access were verified before creating the lab environment. Existing resources will be inventoried before deployment to avoid unnecessary resource creation and costs.
+
 Expected result → Passed
 
 ### Test 2 – Verify Resource Group configuration
 
 Verify that the Resource Group was created in the intended subscription and region and that the configured tags are present.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 3 – Verify Azure RBAC
 
@@ -96,43 +116,51 @@ Verify the assigned Azure RBAC role and its scope.
 
 Test that the assigned permissions correspond to the intended administrative role.
 
-Expected result → Passed
+RBAC baseline review
+
+The subscription contains two separate Azure RBAC role assignments for the same user, both granting the built-in Owner role at subscription scope.
+
+The assignments have different role assignment IDs but share the same principal Object ID, role definition and scope.
+
+The duplicate assignment is redundant under the current configuration. Its origin has not been established. No changes were made to the existing role assignments during the initial review.
+
+Expected result → Partially verified
 
 ### Test 4 – Verify Virtual Network configuration
 
 Verify that the Virtual Network and subnet were created correctly and that the NSG is associated with the intended resource.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 5 – Verify VM deployment
 
 Verify that the Virtual Machine was successfully deployed and that it can be accessed using the configured network and authentication settings.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 6 – Verify network security rules
 
 Test network connectivity permitted by the NSG and verify that traffic not permitted by the configured rules is blocked.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 7 – Verify monitoring
 
 Perform an administrative change to an Azure resource and verify that the corresponding activity is recorded in the Azure Activity Log.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 8 – Verify security configuration
 
 Verify the RBAC assignments, network exposure, and relevant security configuration of the deployed resources.
 
-Expected result → Passed
+Expected result → Pending
 
 ### Test 9 – Verify resource cleanup
 
 Delete the temporary Azure resources and verify that the lab environment has been removed.
 
-Expected result → Passed
+Expected result → Pending
 
 # Lessons learned
 
