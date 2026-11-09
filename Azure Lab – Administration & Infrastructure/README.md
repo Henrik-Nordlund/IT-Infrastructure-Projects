@@ -126,11 +126,18 @@ The duplicate assignment is redundant under the current configuration. Its origi
 
 Expected result → Partially verified
 
-### Test 4 – Verify Virtual Network configuration
+### Test 4 – Verify Virtual Network Configuration
 
-Verify that the Virtual Network and subnet were created correctly and that the NSG is associated with the intended resource.
+**Objective:** Verify that the Virtual Network, subnet, and Network Security Group (NSG) are correctly configured and associated.
 
-Expected result → Pending
+**Verification:**
+
+- Confirmed that `vnet-nordlund-lab4` contains the subnet `snet-workload` with the address range `10.10.1.0/24`.
+- Verified that `nsg-nordlund-lab4` was successfully associated with `snet-workload`.
+- Confirmed that the NSG contains the default inbound and outbound security rules, with no custom rules configured.
+- Verified that no route table is associated with the subnet.
+
+**Result:** Passed – The Virtual Network, subnet, and NSG association were verified in Azure Portal.
 
 ### Test 5 – Verify VM deployment
 
