@@ -125,17 +125,19 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 ### Test 2 – Verify Resource Group Configuration
 
-**Objective:** Verify that the dedicated Resource Group was created in the intended subscription and region.
+**Objective:** Verify that the dedicated Resource Group was created in the intended subscription and region and that its organizational tags were configured.
 
-<img width="1862" height="481" alt="Resource Group Configuration verified" src="https://github.com/user-attachments/assets/83743dc6-a92d-45a1-961d-ad8a44ef2e62" />    
+<img width="1862" height="481" alt="Resource Group Configuration verified" src="https://github.com/user-attachments/assets/83743dc6-a92d-45a1-961d-ad8a44ef2e62" />
+
+*Figure: Resource Group configuration before deployment of the lab infrastructure.*
 
 **Verification:**
 
-- Confirmed the existence of `rg-nordlund-lab4`.
-- Verified that the lab resources were deployed within the Resource Group.
-- Confirmed that the environment was deployed in Sweden Central.
+- Confirmed that `rg-nordlund-lab4` was created in the intended Azure subscription.
+- Verified that the Resource Group was located in Sweden Central.
+- Confirmed that organizational tags were configured, including `Purpose: Lab4` and `Environment: Temporary`.
 
-**Result:** Passed – The Resource Group was created in the intended subscription and region, and the lab resources were verified.
+**Result:** Passed – The Resource Group's subscription, region, and organizational tags were verified.
 
 ### Test 3 – Verify Azure RBAC
 
