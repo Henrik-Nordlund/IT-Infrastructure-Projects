@@ -153,11 +153,18 @@ Expected result → Partially verified
 
 **Result:** Passed – The VM was successfully deployed, started, and accessed through an authenticated Windows command-line session.
 
-### Test 6 – Verify network security rules
+### Test 6 – Verify Network Security Rules
 
-Test network connectivity permitted by the NSG and verify that traffic not permitted by the configured rules is blocked.
+**Objective:** Verify that the Network Security Group (NSG) applies the intended security rules to the virtual machine.
 
-Expected result → Pending
+**Verification:**
+
+- Confirmed that `nsg-nordlund-lab4` is associated with the subnet `snet-workload`.
+- Reviewed the effective inbound and outbound security rules for the VM's network interface.
+- Used Azure Network Watcher IP flow verify to evaluate inbound TCP traffic to `10.10.1.4` on port `3389` (RDP).
+- The verification returned `Access denied`, confirming that the specified traffic flow is blocked by the effective security rules.
+
+**Result:** Passed – The NSG configuration was verified, and the specified inbound RDP traffic was denied.
 
 ### Test 7 – Verify monitoring
 
