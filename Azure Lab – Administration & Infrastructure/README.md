@@ -141,16 +141,23 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 ### Test 3 – Verify Azure RBAC
 
-**Objective:** Review the assigned Azure RBAC roles and their scope.
+**Objective:** Review the existing Azure RBAC role assignments and verify their scope.
+
+<img width="1513" height="389" alt="azure-subscription-rbac" src="https://github.com/user-attachments/assets/e265b346-2588-4a14-8bc8-593c647d2c3f" />   
 
 **Verification:**
 
-- Reviewed existing role assignments at subscription scope.
-- Confirmed two separate Owner role assignments for the same principal.
-- Verified that the assignments had different role assignment IDs but the same principal Object ID, role definition, and scope.
+- Reviewed the existing Azure RBAC role assignments at subscription scope.
+- Identified two Owner role assignments for the same user principal.
+- Confirmed that both assignments shared the same principal Object ID, role definition, and scope.
+- Verified that the assignments had distinct role assignment IDs.
 - Documented the redundant assignment without modifying the existing configuration.
 
-**Result:** Passed – The existing role assignments and their scope were reviewed. The origin of the duplicate assignment remains unknown.
+**Result:** Passed – The existing Azure RBAC assignments and their scope were reviewed. The duplicate Owner assignment was identified, although its origin remains unknown.
+
+**Additional observation:**
+
+I have a possible explanation for when I may have inadvertently created the duplicate Owner assignment. However, I could not verify this hypothesis because the relevant events were outside the retention period of the available Azure Activity Logs. The origin of the duplicate assignment therefore remains unconfirmed.
 
 ### Test 4 – Verify Virtual Network Configuration
 
