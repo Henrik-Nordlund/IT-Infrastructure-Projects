@@ -166,11 +166,18 @@ Expected result → Partially verified
 
 **Result:** Passed – The NSG configuration was verified, and the specified inbound RDP traffic was denied.
 
-### Test 7 – Verify monitoring
+### Test 7 – Verify Monitoring
 
-Perform an administrative change to an Azure resource and verify that the corresponding activity is recorded in the Azure Activity Log.
+**Objective:** Verify that administrative activities affecting the virtual machine are recorded in Azure Activity Log.
 
-Expected result → Pending
+**Verification:**
+
+- Opened Azure Activity Log for `vm-nordlund-lab4`.
+- Confirmed that VM creation and update operations were recorded.
+- Reviewed administrative connection events and Azure Policy evaluation events.
+- Verified that the log includes operation names, timestamps, status information, and the identity associated with the recorded activities.
+
+**Result:** Passed – Administrative activities were successfully recorded and could be reviewed through Azure Activity Log.
 
 ### Test 8 – Verify security configuration
 
