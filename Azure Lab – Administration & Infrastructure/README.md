@@ -1,3 +1,295 @@
+
+# Lab 4 – Azure Administration & Infrastructure
+
+## Project Overview
+
+This lab demonstrates the administration of a small Microsoft Azure infrastructure environment, including resource management, Azure role-based access control (RBAC), networking, virtual machine deployment, monitoring, and security configuration.
+
+The objective was to create a temporary Azure environment, verify its configuration and functionality, document the results, and remove the resources after completing the lab.
+
+The project also demonstrates basic Azure resource lifecycle management on my part, from deployment and configuration to verification and cleanup.
+
+## Scenario
+
+Nordlund Industries wants to establish a small infrastructure environment in Microsoft Azure.
+
+The objective is to deploy and administer basic Azure resources, configure network security, verify administrative access, and monitor infrastructure activity.
+
+The environment is intended for testing and demonstration purposes only. All lab resources are deployed within a dedicated Resource Group and are removed after testing and documentation have been completed. That last step is actually in itself a part of the lab.
+
+## Lab Environment
+
+| Component | Configuration |
+|---|---|
+| Cloud platform | Microsoft Azure |
+| Subscription | Henrik Azure Subscription |
+| Region | Sweden Central |
+| Resource Group | `rg-nordlund-lab4` |
+| Virtual Network | `vnet-nordlund-lab4` |
+| Subnet | `snet-workload` (`10.10.1.0/24`) |
+| Network Security Group | `nsg-nordlund-lab4` |
+| Virtual Machine | `vm-nordlund-lab4` |
+| Operating System | Windows Server 2025 Datacenter: Azure Edition |
+| VM Size | Standard_B2s (2 vCPUs, 4 GiB RAM) |
+| Private IP Address | `10.10.1.4` |
+| Public IP Address | None |
+| Monitoring | Azure Activity Log |
+| Access Control | Azure RBAC |
+| VM Security | Trusted Launch, Secure Boot, vTPM |
+
+## Implementation
+
+### 1. Azure Subscription and Administrative Access
+
+Verified that the Azure subscription was active and accessible through Azure Portal and Azure PowerShell.
+
+Confirmed the relationship between the Azure subscription and its associated Microsoft Entra tenant.
+
+Reviewed administrative access and verified that the user had the built-in Owner role at subscription scope.
+
+### 2. Resource Group
+
+Created a dedicated Resource Group, `rg-nordlund-lab4`, to contain the temporary infrastructure resources.
+
+The Resource Group was used to organize the lab environment and simplify resource management and eventual cleanup.
+
+### 3. Azure RBAC
+
+Reviewed the existing Azure RBAC role assignments at subscription scope.
+
+Identified two separate Owner role assignments for the same user principal and scope. The assignments had distinct role assignment IDs but shared the same principal Object ID, role definition, and scope.
+
+The duplicate assignment was identified as redundant under the existing configuration. Its origin was not established, and no changes were made to the role assignments.
+
+### 4. Networking
+
+Created the Virtual Network `vnet-nordlund-lab4` with the subnet `snet-workload`, using the address range `10.10.1.0/24`.
+
+Created the Network Security Group `nsg-nordlund-lab4` and associated it with the subnet.
+
+The NSG uses Azure's default inbound and outbound security rules. No custom security rules were configured.
+
+The subnet was configured without default outbound internet access. No NAT Gateway or custom route table was associated with the subnet.
+
+### 5. Virtual Machine Deployment
+
+Deployed `vm-nordlund-lab4` using Windows Server 2025 Datacenter: Azure Edition.
+
+The VM was configured with:
+
+- Standard_B2s (2 vCPUs, 4 GiB RAM)
+- Trusted Launch
+- Secure Boot and vTPM
+- Standard SSD operating system disk
+- Private IP address `10.10.1.4`
+- No public IP address
+- Network connectivity through `vnet-nordlund-lab4/snet-workload`
+
+The VM was successfully deployed and started.
+
+An authenticated Windows command-line session was established through Azure Serial Console, without using a public RDP connection or deploying Azure Bastion.
+
+### 6. Monitoring
+
+Reviewed Azure Activity Log for the deployed virtual machine.
+
+Verified that administrative operations, including VM creation and update activities, were recorded with timestamps, operation status, and associated identities.
+
+Azure Policy evaluation events were also visible in the log.
+
+### 7. Security Configuration
+
+Reviewed the VM's security configuration, network exposure, and administrative access.
+
+Confirmed that Trusted Launch, Secure Boot, and vTPM were enabled.
+
+Verified that the VM had no public IP address and that the NSG was associated with its subnet.
+
+Used Azure Network Watcher to examine effective security rules and verify how the NSG evaluates a specified inbound RDP traffic flow.
+
+## Testing and Results
+
+### Test 1 – Verify Azure Subscription Access
+
+**Objective:** Verify that the Azure subscription is accessible and that the user has sufficient administrative permissions.
+
+**Verification:**
+
+- Confirmed that the subscription was active.
+- Verified the associated Microsoft Entra tenant.
+- Confirmed Owner access at subscription scope.
+- Verified subscription access through Azure Portal and Azure PowerShell.
+
+**Result:** Passed.
+
+### Test 2 – Verify Resource Group Configuration
+
+**Objective:** Verify that the dedicated Resource Group was created in the intended subscription and region.
+
+**Verification:**
+
+- Confirmed the existence of `rg-nordlund-lab4`.
+- Verified that the lab resources were deployed within the Resource Group.
+- Confirmed that the environment was deployed in Sweden Central.
+
+**Result:** Passed for Resource Group creation and resource organization. Tag verification was not documented.
+
+### Test 3 – Verify Azure RBAC
+
+**Objective:** Review the assigned Azure RBAC roles and their scope.
+
+**Verification:**
+
+- Reviewed existing role assignments at subscription scope.
+- Confirmed two separate Owner role assignments for the same principal.
+- Verified that the assignments had different role assignment IDs but the same principal Object ID, role definition, and scope.
+- Documented the redundant assignment without modifying the existing configuration.
+
+**Result:** Passed – The existing role assignments and their scope were reviewed. The origin of the duplicate assignment remains unknown.
+
+### Test 4 – Verify Virtual Network Configuration
+
+**Objective:** Verify the Virtual Network, subnet, and NSG configuration.
+
+**Verification:**
+
+- Confirmed that `vnet-nordlund-lab4` contains the subnet `snet-workload`.
+- Verified the subnet address range `10.10.1.0/24`.
+- Associated `nsg-nordlund-lab4` with the subnet.
+- Confirmed that the NSG uses the default security rules.
+- Verified that no custom route table was associated with the subnet.
+
+**Result:** Passed – The network configuration and NSG association were verified.
+
+### Test 5 – Verify VM Deployment
+
+**Objective:** Verify that the Windows Server VM was successfully deployed and could be accessed.
+
+**Verification:**
+
+- Confirmed successful VM deployment through Azure Portal.
+- Verified that the VM was running.
+- Confirmed Windows Server 2025 Datacenter: Azure Edition and Standard_B2s configuration.
+- Verified private IP address `10.10.1.4` and the absence of a public IP address.
+- Established an authenticated command-line session through Azure Serial Console.
+- Executed `hostname`, `whoami`, and `ipconfig /all` to inspect the Windows environment.
+
+**Result:** Passed – The VM was deployed, started, and accessed successfully.
+
+![Azure VM deployment completed](screenshots/azure-vm-deployment-completed.png)
+
+![Azure VM overview](screenshots/azure-vm-overview.png)
+
+![Windows Server console verification](screenshots/azure-vm-console-verification.png)
+
+### Test 6 – Verify Network Security Rules
+
+**Objective:** Verify the effective NSG rules and evaluate inbound RDP traffic.
+
+**Verification:**
+
+- Confirmed that `nsg-nordlund-lab4` was associated with the VM's subnet.
+- Reviewed the effective inbound and outbound security rules for the VM's network interface.
+- Used Azure Network Watcher IP flow verify to evaluate inbound TCP traffic from a representative external IP address to `10.10.1.4` on port `3389`.
+- Confirmed that the traffic was denied by the `DenyAllInBound` rule.
+
+**Result:** Passed – The effective NSG configuration was verified, and the specified inbound RDP traffic flow was denied.
+
+The IP flow verification evaluated the applicable NSG rules. It was not a live network connectivity test.
+
+![Effective NSG security rules](screenshots/azure-vm-effective-security-rules.png)
+
+![NSG IP flow verification](screenshots/azure-nsg-ip-flow-verification.png)
+
+### Test 7 – Verify Monitoring
+
+**Objective:** Verify that administrative activities affecting the virtual machine are recorded in Azure Activity Log.
+
+**Verification:**
+
+- Opened Azure Activity Log for `vm-nordlund-lab4`.
+- Confirmed that VM creation and update operations were recorded.
+- Reviewed administrative connection events and Azure Policy evaluation events.
+- Verified the presence of operation names, timestamps, status information, and associated identities.
+
+**Result:** Passed – Administrative activities were recorded and could be reviewed through Azure Activity Log.
+
+Azure Activity Log provides visibility into Azure control-plane operations. It does not provide detailed monitoring of activity inside the Windows operating system.
+
+![Azure VM Activity Log](screenshots/azure-vm-activity-log.png)
+
+### Test 8 – Verify Security Configuration
+
+**Objective:** Review the VM's security configuration, network exposure, and administrative access.
+
+**Verification:**
+
+- Confirmed that Trusted Launch was enabled.
+- Verified that Secure Boot and vTPM were enabled.
+- Confirmed that integrity monitoring was disabled.
+- Verified that the VM had no public IP address.
+- Confirmed the subnet-level NSG association.
+- Verified that the tested inbound RDP traffic flow was denied.
+- Reviewed the existing Azure RBAC Owner assignments at subscription scope.
+
+**Result:** Passed – The security settings, network exposure, and administrative role assignments were reviewed and documented.
+
+![Azure VM security configuration](screenshots/azure-vm-security-configuration.png)
+
+### Test 9 – Verify Resource Cleanup
+
+**Objective:** Remove the temporary Azure infrastructure and verify that the resources have been deleted.
+
+**Planned verification:**
+
+- Review the resources contained in `rg-nordlund-lab4`.
+- Confirm that no resources outside the intended lab environment will be affected.
+- Delete the dedicated Resource Group and its associated resources.
+- Verify that the Resource Group and temporary infrastructure have been removed.
+
+**Result:** Pending – Resource cleanup has not yet been performed.
+
+## Lessons Learned
+
+This lab provided practical experience in deploying, administering, and verifying a small Azure infrastructure environment.
+
+Several aspects were particularly useful:
+
+**Azure RBAC and administrative scope**
+
+Reviewing existing role assignments demonstrated the importance of examining both role definitions and assignment scope. The duplicate Owner assignments also illustrated why administrative configurations should be inspected rather than assumed to be correct.
+
+**Network security and effective rules**
+
+Creating an NSG was only part of the task. Associating it with the intended subnet and verifying the effective security rules were necessary to establish how the configuration applied to the VM.
+
+Azure Network Watcher provided a way to evaluate a specific traffic flow without requiring an additional test machine.
+
+**Secure VM administration**
+
+The VM was deployed without a public IP address. Azure Serial Console allowed authenticated command-line access without exposing RDP to the internet or deploying Azure Bastion.
+
+This demonstrated the difference between managing a virtual machine through Azure and accessing its operating system through a network connection.
+
+**Monitoring and verification**
+
+Azure Activity Log provided visibility into administrative operations affecting the VM. The exercise also highlighted the distinction between Azure control-plane logging and monitoring within the guest operating system.
+
+**Resource lifecycle management**
+
+The lab emphasized the importance of controlling resource costs and managing temporary infrastructure throughout its lifecycle.
+
+The final cleanup and verification will complete this part of the exercise.
+
+## Resource Cleanup
+
+The lab resources are temporary and will be removed after the final documentation review.
+
+**Status:** Pending.
+
+The cleanup process and its verification will be documented here after the Resource Group has been deleted.
+
+
 # Lab 4 - Azure Administration & Infrastructure
 
 ## Project overview
