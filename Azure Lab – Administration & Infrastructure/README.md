@@ -205,9 +205,12 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 The IP flow verification evaluated the applicable NSG rules. It was not a live network connectivity test.
 
-![Effective NSG security rules](screenshots/azure-vm-effective-security-rules.png)
+<img width="1360" height="693" alt="effective security-rules-expanded" src="https://github.com/user-attachments/assets/90027949-6b51-4a5b-97c5-91bd207966eb" />
+
+
 
 ![NSG IP flow verification](screenshots/azure-nsg-ip-flow-verification.png)
+<img width="1524" height="710" alt="acitivitly log" src="https://github.com/user-attachments/assets/85a238ac-933f-4907-bbb3-d901cdf490b2" />
 
 ### Test 7 – Verify Monitoring
 
@@ -224,7 +227,8 @@ The IP flow verification evaluated the applicable NSG rules. It was not a live n
 
 Azure Activity Log provides visibility into Azure control-plane operations. It does not provide detailed monitoring of activity inside the Windows operating system.
 
-![Azure VM Activity Log](screenshots/azure-vm-activity-log.png)
+<img width="1524" height="710" alt="azure-vm-activity-log" src="https://github.com/user-attachments/assets/c80b5894-92be-4183-ae5a-0a1ea09d654a" />
+
 
 ### Test 8 – Verify Security Configuration
 
@@ -242,7 +246,7 @@ Azure Activity Log provides visibility into Azure control-plane operations. It d
 
 **Result:** Passed – The security settings, network exposure, and administrative role assignments were reviewed and documented.
 
-![Azure VM security configuration](screenshots/azure-vm-security-configuration.png)
+<img width="634" height="734" alt="azure-vm-security-configuration" src="https://github.com/user-attachments/assets/d491e43e-86c3-4c9c-aee6-2236bf111c7f" />
 
 ### Test 9 – Verify Resource Cleanup
 
