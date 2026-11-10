@@ -259,14 +259,21 @@ Azure Activity Log provides visibility into Azure control-plane operations. It d
 
 **Objective:** Remove the temporary Azure infrastructure and verify that the resources have been deleted.
 
-**Planned verification:**
+**Verification:**
 
-- Review the resources contained in `rg-nordlund-lab4`.
-- Confirm that no resources outside the intended lab environment will be affected.
-- Delete the dedicated Resource Group and its associated resources.
-- Verify that the Resource Group and temporary infrastructure have been removed.
+- Reviewed the contents of `rg-nordlund-lab4` before deletion.
+- Confirmed that the Resource Group contained five lab resources: a Network Security Group, Virtual Machine, Network Interface, managed OS disk, and Virtual Network.
+- Reviewed Azure's deletion confirmation to verify which resources would be affected.
+- Deleted the dedicated Resource Group and its associated resources.
+- Verified that `rg-nordlund-lab4` was no longer present in the Azure subscription.
+- Confirmed that unrelated Resource Groups were left untouched.
+- 
+<img width="1526" height="446" alt="Before cleanup" src="https://github.com/user-attachments/assets/b2f16fe9-a955-4978-afe3-70b3b27e7c71" />
 
-**Result:** Pending – Resource cleanup has not yet been performed.
+<img width="509" height="704" alt="azure-resource-group-deletion-confirmation" src="https://github.com/user-attachments/assets/0bb14bd6-43ef-4331-afc0-0830ab1c14bf" />
+
+
+**Result:** Passed – The temporary lab environment was successfully removed.
 
 ## Lessons Learned
 
@@ -310,8 +317,10 @@ The final cleanup and verification will complete this part of the exercise.
 
 ## Resource Cleanup
 
-The lab resources are temporary and will be removed after the final documentation review.
+After completing the lab and documenting the results, I deleted the dedicated Resource Group `rg-nordlund-lab4` and its five associated resources.
 
-**Status:** Pending.
+I verified that the Resource Group was no longer present in the Azure subscription. Other, unrelated Resource Groups were left untouched.
 
-The cleanup process and its verification will be documented here after the Resource Group has been deleted.
+This completed the Azure resource lifecycle, from deployment and configuration through testing, verification, and cleanup.
+
+**Status:** Completed.
