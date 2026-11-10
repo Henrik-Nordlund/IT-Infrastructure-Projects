@@ -1,12 +1,11 @@
 # Lab 4 – Azure Administration & Infrastructure
 
 ## Project Overview
-
 This lab demonstrates the administration of a small Microsoft Azure infrastructure environment, including resource management, Azure role-based access control (RBAC), networking, virtual machine deployment, monitoring, and security configuration.
 
 The objective was to create a temporary Azure environment, verify its configuration and functionality, document the results, and remove the resources after completing the lab.
 
-The project also demonstrates basic Azure resource lifecycle management on my part, from deployment and configuration to verification and cleanup.
+The project also demonstrates my practical experience with Azure resource lifecycle management, from deployment and configuration to verification and cleanup.  
 
 ## Scenario
 
@@ -14,7 +13,7 @@ Nordlund Industries wants to establish a small infrastructure environment in Mic
 
 The objective is to deploy and administer basic Azure resources, configure network security, verify administrative access, and monitor infrastructure activity.
 
-The environment is intended for testing and demonstration purposes only. All lab resources are deployed within a dedicated Resource Group and are removed after testing and documentation have been completed. That last step is actually in itself a part of the lab.
+The environment is intended for testing and demonstration purposes only. All lab resources are deployed within a dedicated Resource Group and are removed after testing and documentation have been completed. Resource cleanup and verification are integral parts of the lab.
 
 ## Lab Environment
 
@@ -48,7 +47,7 @@ Reviewed administrative access and verified that the user had the built-in Owner
 
 ### 2. Resource Group
 
-Created a dedicated Resource Group, `rg-nordlund-lab4`, to contain the temporary infrastructure resources.
+Created a dedicated Resource Group, `rg-nordlund-lab4`, to contain the temporary infrastructure resources. Applied organizational tags to identify the purpose and temporary nature of the lab resources, including Purpose: Lab4 and Environment: Temporary.
 
 The Resource Group was used to organize the lab environment and simplify resource management and eventual cleanup.
 
@@ -56,9 +55,9 @@ The Resource Group was used to organize the lab environment and simplify resourc
 
 Reviewed the existing Azure RBAC role assignments at subscription scope.
 
-During experimentation two separate Owner role assignments for the same user principal and scope was identified. The assignments had distinct role assignment IDs but shared the same principal Object ID, role definition, and scope.
+During the initial review, I identified two separate Owner role assignments for the same user principal and scope. The assignments had distinct role assignment IDs but shared the same principal Object ID, role definition, and scope.
 
-The duplicate assignment was of course identified as redundant under the existing configuration. Its origin was not established, and no changes were made to the role assignments.
+The duplicate assignment was identified as redundant under the existing configuration. Its origin was not established, and no changes were made to the role assignments.
 
 ### 4. Networking
 
@@ -220,8 +219,6 @@ The IP flow verification evaluated the applicable NSG rules. It was not a live n
 
 <img width="810" height="698" alt="Ip flow verify" src="https://github.com/user-attachments/assets/cbbf2b32-4494-4f6d-915b-8d0b104c2a2e" />   
 
-<img width="1524" height="710" alt="acitivitly log" src="https://github.com/user-attachments/assets/85a238ac-933f-4907-bbb3-d901cdf490b2" />
-
 ### Test 7 – Verify Monitoring
 
 **Objective:** Verify that administrative activities affecting the virtual machine are recorded in Azure Activity Log.
@@ -281,6 +278,14 @@ Several aspects were particularly useful:
 
 Reviewing existing role assignments demonstrated the importance of examining both role definitions and assignment scope. The duplicate Owner assignments also illustrated why administrative configurations should be inspected rather than assumed to be correct.
 
+**Azure Activity Log retention**
+
+Azure Activity Log retains events for 90 days by default. This became relevant when I investigated the duplicate Owner role assignment identified during the lab.
+
+I had a possible explanation for when I might have created the duplicate assignment, but the relevant events were no longer available in the Activity Log. I therefore could not verify its origin.
+
+This highlighted the importance of planning log retention in advance. For longer-term auditing and investigation, Azure Activity Logs can be exported to services such as Log Analytics or Azure Storage, rather than relying solely on the default retention period.
+
 **Network security and effective rules**
 
 Creating an NSG was only part of the task. Associating it with the intended subnet and verifying the effective security rules were necessary to establish how the configuration applied to the VM.
@@ -310,210 +315,3 @@ The lab resources are temporary and will be removed after the final documentatio
 **Status:** Pending.
 
 The cleanup process and its verification will be documented here after the Resource Group has been deleted.
-
-
-# Lab 4 - Azure Administration & Infrastructure
-
-## Project overview
-
-This lab demonstrates the administration of basic Azure infrastructure, including resource management, Azure RBAC, networking, compute, monitoring, and security configuration.
-
-The lab focuses on creating and managing a small temporary Azure environment, verifying its configuration and functionality, and documenting the results.
-
-A key part of the lab is the complete lifecycle of Azure resources: resources are created for testing, documented, and removed after the lab has been completed.
-
-## Scenario
-
-Nordlund Industries wants to use Microsoft Azure for a small infrastructure environment.
-
-The objective is to establish and administer a basic Azure environment where resources can be created, access can be controlled, network configuration can be applied, and infrastructure activity can be monitored.
-
-The lab uses a temporary test environment. Azure resources are created only for the purpose of the lab and are removed after testing and documentation have been completed.
-
-Environment
-Microsoft Azure
-Azure subscription
-Microsoft Entra ID
-Azure Resource Group
-Azure Virtual Network
-Azure Subnet
-Network Security Group
-Azure Virtual Machine
-Azure Monitor / Activity Log
-Azure RBAC
-
-## Implementation
-
-1. Azure subscription and access
-Verify Azure subscription
-Verify tenant and subscription relationship
-Verify user permissions
-Verify Azure RBAC role
-
-- Verified that the Azure subscription is active and accessible.
-- Verified the Microsoft Entra tenant associated with the subscription.
-- Confirmed Owner access at subscription scope.
-
-3. Resource Group
-Create a dedicated Resource Group for the lab
-Configure basic resource organisation
-Add appropriate tags
-
-4. Azure RBAC
-Review Azure RBAC
-Verify role assignment and scope
-Test access to the Resource Group and resources
-
-- Reviewed existing Azure RBAC role assignments at subscription scope.
-- Identified two separate Owner role assignments for the same user principal and scope.
-- Confirmed that the assignments have distinct role assignment IDs.
-- No changes were made to the existing role assignments.
-
-5. Networking
-Create a Virtual Network
-Create a subnet
-Create a Network Security Group
-Configure required network rules
-Associate the NSG with the appropriate subnet or network interface
-
-6. Compute
-Deploy a small test Virtual Machine
-Configure the required operating system and network settings
-Verify the VM deployment
-Connect to the VM
-
-7. Monitoring
-Review Azure Activity Log
-Verify administrative activities
-Review relevant monitoring information
-
-8. Security configuration
-Review network exposure
-Verify NSG configuration
-Verify Azure RBAC assignments
-Review basic security configuration of the deployed resources
-
-9. Resource lifecycle and cleanup
-Document the completed environment
-Delete the temporary Azure resources
-Verify that the resources have been removed
-
-## Testing and Results
-
-
-### Test 1 – Verify Azure subscription access
-
-Verify that the Azure subscription is accessible and that the user has sufficient permissions to create and manage resources.
-
-**Initial environment verification**
-
-- Azure subscription: Henrik Azure Subscription
-- Subscription status: Active
-- Directory: Standardkatalog (`nordlundhenrikoutlook.onmicrosoft.com`)
-- Administrative access: Owner at subscription scope
-- Identity: Microsoft account identity represented in Microsoft Entra ID
-- Subscription access: Verified through Azure Portal and Azure PowerShell
-
-The subscription and administrative access were verified before creating the lab environment. Existing resources will be inventoried before deployment to avoid unnecessary resource creation and costs.
-
-Expected result → Passed
-
-### Test 2 – Verify Resource Group configuration
-
-Verify that the Resource Group was created in the intended subscription and region and that the configured tags are present.
-
-Expected result → Pending
-
-### Test 3 – Verify Azure RBAC
-
-Verify the assigned Azure RBAC role and its scope.
-
-Test that the assigned permissions correspond to the intended administrative role.
-
-RBAC baseline review
-
-The subscription contains two separate Azure RBAC role assignments for the same user, both granting the built-in Owner role at subscription scope.
-
-The assignments have different role assignment IDs but share the same principal Object ID, role definition and scope.
-
-The duplicate assignment is redundant under the current configuration. Its origin has not been established. No changes were made to the existing role assignments during the initial review.
-
-Expected result → Partially verified
-
-### Test 4 – Verify Virtual Network Configuration
-
-**Objective:** Verify that the Virtual Network, subnet, and Network Security Group (NSG) are correctly configured and associated.
-
-**Verification:**
-
-- Confirmed that `vnet-nordlund-lab4` contains the subnet `snet-workload` with the address range `10.10.1.0/24`.
-- Verified that `nsg-nordlund-lab4` was successfully associated with `snet-workload`.
-- Confirmed that the NSG contains the default inbound and outbound security rules, with no custom rules configured.
-- Verified that no route table is associated with the subnet.
-
-**Result:** Passed – The Virtual Network, subnet, and NSG association were verified in Azure Portal.
-
-### Test 5 – Verify VM Deployment
-
-**Objective:** Verify that the Windows Server virtual machine was successfully deployed, is running, and can be accessed using the configured authentication method.
-
-**Verification:**
-
-- Deployed `vm-nordlund-lab4` using Windows Server 2025 Datacenter: Azure Edition.
-- Confirmed that the VM was running in Sweden Central with the `Standard_B2s` size (2 vCPUs, 4 GiB RAM).
-- Verified that the VM was connected to `vnet-nordlund-lab4/snet-workload` and assigned the private IP address `10.10.1.4`, without a public IP address.
-- Established an authenticated command-line session through Azure Serial Console without requiring Azure Bastion or public RDP access.
-- Executed `hostname`, `whoami`, and `ipconfig /all` to verify the Windows environment and inspect its network configuration.
-
-**Result:** Passed – The VM was successfully deployed, started, and accessed through an authenticated Windows command-line session.
-
-### Test 6 – Verify Network Security Rules
-
-**Objective:** Verify that the Network Security Group (NSG) applies the intended security rules to the virtual machine.
-
-**Verification:**
-
-- Confirmed that `nsg-nordlund-lab4` is associated with the subnet `snet-workload`.
-- Reviewed the effective inbound and outbound security rules for the VM's network interface.
-- Used Azure Network Watcher IP flow verify to evaluate inbound TCP traffic to `10.10.1.4` on port `3389` (RDP).
-- The verification returned `Access denied`, confirming that the specified traffic flow is blocked by the effective security rules.
-
-**Result:** Passed – The NSG configuration was verified, and the specified inbound RDP traffic was denied.
-
-### Test 7 – Verify Monitoring
-
-**Objective:** Verify that administrative activities affecting the virtual machine are recorded in Azure Activity Log.
-
-**Verification:**
-
-- Opened Azure Activity Log for `vm-nordlund-lab4`.
-- Confirmed that VM creation and update operations were recorded.
-- Reviewed administrative connection events and Azure Policy evaluation events.
-- Verified that the log includes operation names, timestamps, status information, and the identity associated with the recorded activities.
-
-**Result:** Passed – Administrative activities were successfully recorded and could be reviewed through Azure Activity Log.
-
-### Test 8 – Verify Security Configuration
-
-**Objective:** Review the virtual machine's security configuration, network exposure, and access controls.
-
-**Verification:**
-
-- Confirmed that the VM uses Trusted Launch with Secure Boot and vTPM enabled.
-- Verified that integrity monitoring was not enabled.
-- Confirmed that the VM has no public IP address.
-- Verified that `nsg-nordlund-lab4` is associated with the VM's subnet.
-- Used Azure Network Watcher IP flow verify to confirm that inbound RDP traffic from the tested external source was denied.
-- Reviewed the existing Azure RBAC Owner assignments at subscription scope.
-
-**Result:** Passed – The VM's security settings, network exposure, and existing administrative role assignments were reviewed and documented.
-
-### Test 9 – Verify resource cleanup
-
-Delete the temporary Azure resources and verify that the lab environment has been removed.
-
-Expected result → Pending
-
-# Lessons learned
-
-To be completed after the lab.
