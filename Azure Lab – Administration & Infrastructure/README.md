@@ -179,11 +179,20 @@ Expected result → Partially verified
 
 **Result:** Passed – Administrative activities were successfully recorded and could be reviewed through Azure Activity Log.
 
-### Test 8 – Verify security configuration
+### Test 8 – Verify Security Configuration
 
-Verify the RBAC assignments, network exposure, and relevant security configuration of the deployed resources.
+**Objective:** Review the virtual machine's security configuration, network exposure, and access controls.
 
-Expected result → Pending
+**Verification:**
+
+- Confirmed that the VM uses Trusted Launch with Secure Boot and vTPM enabled.
+- Verified that integrity monitoring was not enabled.
+- Confirmed that the VM has no public IP address.
+- Verified that `nsg-nordlund-lab4` is associated with the VM's subnet.
+- Used Azure Network Watcher IP flow verify to confirm that inbound RDP traffic from the tested external source was denied.
+- Reviewed the existing Azure RBAC Owner assignments at subscription scope.
+
+**Result:** Passed – The VM's security settings, network exposure, and existing administrative role assignments were reviewed and documented.
 
 ### Test 9 – Verify resource cleanup
 
