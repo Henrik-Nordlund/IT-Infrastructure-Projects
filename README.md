@@ -37,7 +37,7 @@ Practical exercises covering device management, configuration profiles, complian
  - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%203%20%E2%80%93%20Microsoft%20Intune%3A%20Endpoint%20Management/README.md">Lab 3 – Microsoft Intune: Endpoint Management</a>
 
 ### Azure
-Planned lab covering Azure administration, networking,
+Infrastructur lab covering Azure administration, networking,
 monitoring and cloud infrastructure.
 
 - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/edit/main/Azure%20Lab%20%E2%80%93%20Administration%20%26%20Infrastructure/README.md">Lab 4 - Azure Administration & Infrastructure</a>
