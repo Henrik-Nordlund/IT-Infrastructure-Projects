@@ -127,7 +127,8 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 **Objective:** Verify that the dedicated Resource Group was created in the intended subscription and region and that its organizational tags were configured.
 
-<img width="1862" height="481" alt="Resource Group Configuration verified" src="https://github.com/user-attachments/assets/83743dc6-a92d-45a1-961d-ad8a44ef2e62" />
+<img width="1490" height="385" alt="Resource Group Configuration verified" src="https://github.com/user-attachments/assets/afa8758c-e0e9-4db2-8457-41b2fd51a28f" />
+
 
 *Figure: Resource Group configuration before deployment of the lab infrastructure.*
 
