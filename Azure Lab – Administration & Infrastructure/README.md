@@ -181,11 +181,14 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 **Result:** Passed – The VM was deployed, started, and accessed successfully.
 
-![Azure VM deployment completed](screenshots/azure-vm-deployment-completed.png)
 
-![Azure VM overview](screenshots/azure-vm-overview.png)
+<img width="1220" height="706" alt="azure-vm-deployment-completed" src="https://github.com/user-attachments/assets/aba029b8-5f7c-411d-b73e-aafde3e80c21" />
 
-![Windows Server console verification](screenshots/azure-vm-console-verification.png)
+<img width="1061" height="579" alt="azure-vm-overview" src="https://github.com/user-attachments/assets/34f1a8ca-6622-44ef-9692-347c2ca751a5" />   
+
+<img width="1102" height="686" alt="azure-vm-console-verification" src="https://github.com/user-attachments/assets/c8c295a1-08c3-4a8f-aa35-7cdf6a834cf9" />   
+
+<img width="722" height="254" alt="azure-vm-console-verification-final" src="https://github.com/user-attachments/assets/89c0728c-1e0c-4046-a79f-f9dbccbea829" />   
 
 ### Test 6 – Verify Network Security Rules
 
