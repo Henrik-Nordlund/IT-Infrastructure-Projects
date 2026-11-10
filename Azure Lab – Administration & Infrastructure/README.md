@@ -1,4 +1,3 @@
-
 # Lab 4 – Azure Administration & Infrastructure
 
 ## Project Overview
@@ -207,9 +206,8 @@ The IP flow verification evaluated the applicable NSG rules. It was not a live n
 
 <img width="1360" height="693" alt="effective security-rules-expanded" src="https://github.com/user-attachments/assets/90027949-6b51-4a5b-97c5-91bd207966eb" />
 
+<img width="810" height="698" alt="Ip flow verify" src="https://github.com/user-attachments/assets/cbbf2b32-4494-4f6d-915b-8d0b104c2a2e" />   
 
-
-![NSG IP flow verification](screenshots/azure-nsg-ip-flow-verification.png)
 <img width="1524" height="710" alt="acitivitly log" src="https://github.com/user-attachments/assets/85a238ac-933f-4907-bbb3-d901cdf490b2" />
 
 ### Test 7 – Verify Monitoring
