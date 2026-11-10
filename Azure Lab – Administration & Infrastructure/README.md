@@ -139,11 +139,19 @@ Expected result → Partially verified
 
 **Result:** Passed – The Virtual Network, subnet, and NSG association were verified in Azure Portal.
 
-### Test 5 – Verify VM deployment
+### Test 5 – Verify VM Deployment
 
-Verify that the Virtual Machine was successfully deployed and that it can be accessed using the configured network and authentication settings.
+**Objective:** Verify that the Windows Server virtual machine was successfully deployed, is running, and can be accessed using the configured authentication method.
 
-Expected result → Pending
+**Verification:**
+
+- Deployed `vm-nordlund-lab4` using Windows Server 2025 Datacenter: Azure Edition.
+- Confirmed that the VM was running in Sweden Central with the `Standard_B2s` size (2 vCPUs, 4 GiB RAM).
+- Verified that the VM was connected to `vnet-nordlund-lab4/snet-workload` and assigned the private IP address `10.10.1.4`, without a public IP address.
+- Established an authenticated command-line session through Azure Serial Console without requiring Azure Bastion or public RDP access.
+- Executed `hostname`, `whoami`, and `ipconfig /all` to verify the Windows environment and inspect its network configuration.
+
+**Result:** Passed – The VM was successfully deployed, started, and accessed through an authenticated Windows command-line session.
 
 ### Test 6 – Verify network security rules
 
