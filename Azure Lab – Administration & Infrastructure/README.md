@@ -57,9 +57,9 @@ The Resource Group was used to organize the lab environment and simplify resourc
 
 Reviewed the existing Azure RBAC role assignments at subscription scope.
 
-Identified two separate Owner role assignments for the same user principal and scope. The assignments had distinct role assignment IDs but shared the same principal Object ID, role definition, and scope.
+During experimentation two separate Owner role assignments for the same user principal and scope was identified. The assignments had distinct role assignment IDs but shared the same principal Object ID, role definition, and scope.
 
-The duplicate assignment was identified as redundant under the existing configuration. Its origin was not established, and no changes were made to the role assignments.
+The duplicate assignment was of course identified as redundant under the existing configuration. Its origin was not established, and no changes were made to the role assignments.
 
 ### 4. Networking
 
@@ -126,13 +126,15 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 
 **Objective:** Verify that the dedicated Resource Group was created in the intended subscription and region.
 
+<img width="1862" height="481" alt="Resource Group Configuration verified" src="https://github.com/user-attachments/assets/83743dc6-a92d-45a1-961d-ad8a44ef2e62" />    
+
 **Verification:**
 
 - Confirmed the existence of `rg-nordlund-lab4`.
 - Verified that the lab resources were deployed within the Resource Group.
 - Confirmed that the environment was deployed in Sweden Central.
 
-**Result:** Passed for Resource Group creation and resource organization. Tag verification was not documented.
+**Result:** Passed for Resource Group creation and resource organization. Tag verification was not documented in this lab.
 
 ### Test 3 – Verify Azure RBAC
 
@@ -152,12 +154,15 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 **Objective:** Verify the Virtual Network, subnet, and NSG configuration.
 
 **Verification:**
-
 - Confirmed that `vnet-nordlund-lab4` contains the subnet `snet-workload`.
 - Verified the subnet address range `10.10.1.0/24`.
 - Associated `nsg-nordlund-lab4` with the subnet.
 - Confirmed that the NSG uses the default security rules.
 - Verified that no custom route table was associated with the subnet.
+
+<img width="716" height="907" alt="ip adress range" src="https://github.com/user-attachments/assets/5d01edbf-0e15-49d6-b171-c920a8aa7935" />    
+
+<img width="1518" height="722" alt="subnet" src="https://github.com/user-attachments/assets/368427c2-53c8-4265-bcc7-af1c8ee2605c" />   
 
 **Result:** Passed – The network configuration and NSG association were verified.
 
