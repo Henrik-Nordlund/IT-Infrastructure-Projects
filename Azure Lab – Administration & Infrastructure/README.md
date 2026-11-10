@@ -119,6 +119,8 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 - Confirmed Owner access at subscription scope.
 - Verified subscription access through Azure Portal and Azure PowerShell.
 
+<img width="1224" height="454" alt="azure-subscription-overview" src="https://github.com/user-attachments/assets/40f484a4-21d8-4bf6-9d8d-211a20df08ea" />   
+
 **Result:** Passed.
 
 ### Test 2 – Verify Resource Group Configuration
@@ -133,7 +135,7 @@ Used Azure Network Watcher to examine effective security rules and verify how th
 - Verified that the lab resources were deployed within the Resource Group.
 - Confirmed that the environment was deployed in Sweden Central.
 
-**Result:** Passed for Resource Group creation and resource organization. Tag verification was not documented in this lab.
+**Result:** Passed – The Resource Group was created in the intended subscription and region, and the lab resources were verified.
 
 ### Test 3 – Verify Azure RBAC
 
