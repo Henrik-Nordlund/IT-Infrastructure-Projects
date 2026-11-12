@@ -25,9 +25,8 @@ identity management and access control.
 
 - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%202%20%E2%80%93%20Microsoft%20Entra%20ID%20RBAC%20and%20Least%20Privilege/README.md">Lab 2 – Microsoft Entra ID: RBAC and Least Privilege</a>
 
+- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/tree/main/Lab%205%20%E2%80%93%20Microsoft%20Entra%20Conditional%20Access/README.md">Lab 5 – Microsoft Entra Conditional Access (in progress)</a>
 Hands-on identity security lab covering Conditional Access policies, MFA enforcement, device compliance, location-based access controls, and policy evaluation using Report-only mode, What If, and sign-in logs.
-
--<a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/tree/main/Lab%205%20%E2%80%93%20Microsoft%20Entra%20Conditional%20Access/README.md">Lab 5 – Microsoft Entra Conditional Access (in progress)</a>
  
 - Planned lab – Conditional Access
 - Planned lab – Microsoft 365 Security
