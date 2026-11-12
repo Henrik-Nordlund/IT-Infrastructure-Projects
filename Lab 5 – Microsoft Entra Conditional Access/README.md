@@ -11,7 +11,7 @@ The lab will document policy configuration, testing, verification, and troublesh
 
 ## Scenario
 
-Nordlund Industries has implemented Microsoft Entra ID for identity management and Microsoft Intune for endpoint management. Users access Microsoft 365 services from different devices and network locations.
+Nordlund Industries has implemented Microsoft Entra ID for identity management and Microsoft Intune for endpoint management. Further information about these efforts are available in previous projects. Users access Microsoft 365 services from different devices and network locations.
 
 The IT security team has been tasked with strengthening access controls using Microsoft Entra Conditional Access, following Zero Trust principles.
 
