@@ -24,3 +24,20 @@ The objective is to evaluate how access policies can:
 - Be evaluated and troubleshot using Report-only mode, What If, and sign-in logs.
 
 Policies will initially be tested in Report-only mode and scoped to designated test accounts to minimize the risk of unintended access restrictions.
+
+### Emergency Access Account Configuration
+
+A dedicated emergency access account was created to reduce the risk of administrative lockout during Conditional Access configuration.
+
+The account was configured with:
+
+- A separate Microsoft Entra user identity.
+- A directly assigned, permanently active Global Administrator role.
+- Microsoft Authenticator for multi-factor authentication.
+- Verified access to Microsoft Entra Admin Center.
+
+**Verification:** A successful interactive sign-in with an MFA requirement was recorded in Microsoft Entra sign-in logs. Administrative portal access was also verified.
+
+**Result:** Passed.
+
+**Limitation:** The account uses Microsoft Authenticator rather than an independent hardware security key. It is suitable for this lab but does not represent a fully resilient production emergency access configuration.
