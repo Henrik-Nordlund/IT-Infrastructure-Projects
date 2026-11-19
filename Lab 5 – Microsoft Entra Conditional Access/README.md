@@ -51,6 +51,8 @@ The assessment established that:
 - Security Defaults provided baseline identity protection, including MFA requirements.
 - A controlled transition to Conditional Access would be necessary before custom policies could be enforced.
 
+<img width="1270" height="660" alt="conditional-access-initial-state" src="https://github.com/user-attachments/assets/8fa3f5b1-33b4-4e2d-aeb1-6e474fb9b33f" />
+
 The initial Conditional Access policy inventory was documented before making changes.
 
 ### 2. Emergency Access Account Configuration
@@ -76,6 +78,16 @@ The following checks were performed:
 | Administrative portal access | Passed |
 
 **Result:** Passed – The emergency access account was configured and its administrative access verified.
+
+<img width="1057" height="668" alt="emergency-access-account-ny" src="https://github.com/user-attachments/assets/b1644e17-634a-4efb-b7ba-378b2ee60b9d" />   
+
+<img width="1258" height="585" alt="emergency-access-permanent-global-admin" src="https://github.com/user-attachments/assets/25edeb5b-f2fd-488f-ab69-faccce557d36" />   
+
+<img width="1321" height="568" alt="emergency-access-authentication" src="https://github.com/user-attachments/assets/79e981ef-7ebd-4c6d-a580-735d10aec039" />  
+
+<img width="1361" height="274" alt="emergency-access-signed-in-mfa" src="https://github.com/user-attachments/assets/4856e328-ac54-4bdf-bc32-20d36947234e" />
+
+
 
 **Limitation:** The account uses Microsoft Authenticator rather than an independent hardware security key. This is sufficient for the current lab exercises but does not represent a fully resilient production emergency access configuration. The account must also be explicitly excluded from applicable Conditional Access policies when these are introduced.
 
