@@ -369,5 +369,7 @@ Remaining:
 - Standard user sign-in tests.
 - Sign-in log analysis.
 - Final screenshot review and documentation cleanup.
-- Optional Named Locations exercise.<img width="1530" height="866" alt="security-defaults-enabled" src="https://github.com/user-attachments/assets/d0156dd4-7017-4f4d-b4c9-a0d97e2d65a7" />
+- Optional Named Locations exercise.
+
+  <img width="1530" height="866" alt="security-defaults-enabled-" src="https://github.com/user-attachments/assets/c3edd947-fc18-47f2-b09f-f1a27d9f8377" />
 
