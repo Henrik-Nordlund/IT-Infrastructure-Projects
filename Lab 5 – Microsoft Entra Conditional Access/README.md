@@ -406,6 +406,16 @@ Their configuration demonstrates familiarity with Conditional Access administrat
 
 Distinguishing configuration evidence from enforcement evidence is essential for accurate security documentation.
 
+### 6. Sign-in logs distinguish authentication outcomes from access policy enforcement
+
+The sign-in tests demonstrated the importance of examining authentication requirements and sign-in details rather than relying solely on the user's experience.
+
+Both test users successfully accessed Microsoft 365 without an observed MFA challenge. Their sign-in records showed single-factor authentication requirements and no applied Conditional Access policies.
+
+An interrupted sign-in event was also identified as an expected browser authentication step rather than an access failure.
+
+These findings provide a baseline for comparing authentication behavior before and after custom Conditional Access policies are enabled.
+
 ## Project Status
 
 **In progress**
