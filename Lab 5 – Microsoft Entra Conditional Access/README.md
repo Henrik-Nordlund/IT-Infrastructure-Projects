@@ -293,6 +293,10 @@ Microsoft Entra sign-in logs confirmed:
 - Authentication details indicating that the authentication requirement had been previously satisfied.
 - Conditional Access status: Not applied.
 
+<img width="830" height="836" alt="signin-engineering-basic-info" src="https://github.com/user-attachments/assets/f279e026-1f03-49b3-bc74-9e94fc251721" />  
+<img width="841" height="741" alt="signin-engineering-authentication" src="https://github.com/user-attachments/assets/1b4293e6-f4a0-4790-9909-a59fc0178aa5" />   
+<img width="827" height="861" alt="signin-engineering-interrupted" src="https://github.com/user-attachments/assets/08b27977-89bb-4593-a053-f3c618e6ecc2" />   
+
 An interrupted sign-in event immediately preceding the successful authentication was investigated. Microsoft Entra identified the event as an expected part of the browser sign-in flow associated with the *Stay signed in?* prompt.
 
 The cause of the earlier difficulty during Authenticator registration was not conclusively established.
@@ -306,6 +310,8 @@ Microsoft Entra sign-in logs confirmed:
 - Successful interactive authentication.
 - Single-factor authentication requirement.
 - Conditional Access status: Not applied.
+
+<img width="837" height="856" alt="signin-adele-basic-info" src="https://github.com/user-attachments/assets/c5ac16ab-dc97-417a-a32c-7f738cc00833" />   
 
 **Result:** Passed – Both users successfully authenticated, and their sign-in events were located and reviewed.
 
