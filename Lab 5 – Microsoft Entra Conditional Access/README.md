@@ -267,7 +267,61 @@ No transition from Security Defaults to enforced custom Conditional Access polic
 
 ### Authentication and Sign-In Log Verification
 
-*Pending – Interactive sign-in tests using standard organizational accounts and review of Microsoft Entra sign-in logs.*
+On November 22, 2026, interactive Microsoft 365 sign-in tests were performed using two standard user accounts with different security group memberships.
+
+The objective was to verify successful authentication, examine Microsoft Entra sign-in logs, and establish baseline authentication behavior before enabling custom Conditional Access policies.
+
+| Test | Johanna Lorenz | Adele Vance |
+|---|---|---|
+| SEC-Engineering membership | Member | Non-member |
+| Application | OfficeHome | OfficeHome |
+| Interactive sign-in | Success | Success |
+| Authentication requirement | Single-factor authentication | Single-factor authentication |
+| MFA challenge during successful sign-in | Not observed | Not observed |
+| Conditional Access status | Not applied | Not applied |
+
+**Johanna Lorenz**
+
+During the initial sign-in attempt, Johanna was prompted to register Microsoft Authenticator. The registration process was followed by an unsuccessful sign-in experience.
+
+A subsequent attempt succeeded without an additional Authenticator challenge.
+
+Microsoft Entra sign-in logs confirmed:
+
+- Successful interactive authentication.
+- Single-factor authentication requirement.
+- Authentication details indicating that the authentication requirement had been previously satisfied.
+- Conditional Access status: Not applied.
+
+An interrupted sign-in event immediately preceding the successful authentication was investigated. Microsoft Entra identified the event as an expected part of the browser sign-in flow associated with the *Stay signed in?* prompt.
+
+The cause of the earlier difficulty during Authenticator registration was not conclusively established.
+
+**Adele Vance**
+
+Adele, who is not a member of `SEC-Engineering`, successfully signed in to Microsoft 365 without an observed MFA challenge.
+
+Microsoft Entra sign-in logs confirmed:
+
+- Successful interactive authentication.
+- Single-factor authentication requirement.
+- Conditional Access status: Not applied.
+
+**Result:** Passed – Both users successfully authenticated, and their sign-in events were located and reviewed.
+
+**Limitation:** These tests establish baseline authentication behavior under the existing tenant configuration. They do not demonstrate enforcement of the custom Conditional Access policies, which remained Off.
+
+### Planned Conditional Access Enforcement Tests
+
+The following scenarios have been identified for the next phase:
+
+1. Require MFA for organizational users.
+2. Verify that MFA alone is insufficient for members of `SEC-Engineering` when device compliance is required.
+3. Verify access for an Engineering user signing in with MFA from an Intune-managed, compliant device.
+4. Configure a country-based Named Location and test a geographic blocking policy.
+5. Configure a trusted headquarters Named Location and evaluate location-based policy behavior.
+
+Before enforcement testing, the transition from Security Defaults to Conditional Access must be planned and administrative recovery arrangements verified.
 
 ### Testing Limitations
 
