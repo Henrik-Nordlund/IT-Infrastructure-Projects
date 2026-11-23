@@ -89,7 +89,7 @@ The following checks were performed:
 
 **Result:** Passed – The emergency access account was configured and its administrative access verified.
 
-<img width="1057" height="668" alt="Emergency access account creation" src="https://github.com/user-attachments/assets/b1644e17-634a-4efb-b7ba-378b2ee60b9d" />
+<img width="1057" height="667" alt="emergency-access-account-creation" src="https://github.com/user-attachments/assets/3a0a294d-58ff-47bc-8999-ee217b58358a" />
 
 <img width="1258" height="585" alt="Permanent Global Administrator role assignment" src="https://github.com/user-attachments/assets/25edeb5b-f2fd-488f-ab69-faccce557d36" />
 
