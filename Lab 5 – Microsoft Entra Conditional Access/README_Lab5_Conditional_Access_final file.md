@@ -14,16 +14,16 @@ Nordlund Industries is a fictional organization that has implemented Microsoft E
 
 Employees access Microsoft 365 services using different identities and devices. The IT security team has been tasked with designing additional access controls based on Zero Trust principles.
 
-The objectives are to demonstrate that the author are able to:
+The objectives are to demonstrate that the author is able to:
 
 - Configure an organization-wide MFA policy.
 - Configure a policy to block legacy authentication.
-- Apply device compliance requirements, in addition to MFA, to a particular security group for hardening the attack surface in a that vector.
+- Apply device compliance requirements in addition to MFA, to strengthen access security for the Engineering group by requiring compliant devices in addition to MFA.
 - Integrate Conditional Access configuration with existing Intune device management from a previous lab (lab 3).
 - Protect administrative access through account exclusions and emergency access arrangements.
 - Examine policy configuration, authentication activity, and available verification methods.
 - Evaluate the operational risks associated with introducing Conditional Access.
-- Evaluate the ability to block sign-ins from geographical locations that might be compromised.
+- Evaluate the ability to block sign-ins from geographical locations that might for instance be compromised. The security policy is to limit access from specific geographical areas, in this case the country of China
 
 **Implementation approach:** Policies were initially created in the **Off** state while Security Defaults remained enabled. After verifying regular and emergency administrative access, Security Defaults were disabled and custom policies were deployed in stages. MFA and Engineering device compliance were subsequently enforced and verified using Microsoft Entra sign-in logs. The geographic block policy was activated after a successful What If evaluation. The legacy authentication policy was evaluated in Report-only using What If and subsequently enabled. Actual legacy-client blocking was not tested.
 
@@ -67,7 +67,7 @@ The initial policy inventory was documented before making changes.
 
 ### 2. Emergency Access Account Configuration
 
-A emergency access account was created to reduce the risk of administrative lockout during Conditional Access administration ("a break glass global administrator").
+An emergency access account was created to reduce the risk of administrative lockout during Conditional Access administration ("a break glass global administrator").
 
 The account was configured with:
 
@@ -254,7 +254,7 @@ After administrative access was verified, Security Defaults were disabled to all
 
 ## Testing and Results
 
-### 1. Baseline Sign-In Testing – November 22, 2026
+### 1. Baseline Sign-In Testing 
 
 Before enabling the custom policies, Johanna Lorenz (`SEC-Engineering` member) and Adele Vance (non-member) signed in to OfficeHome. Both successful baseline sign-ins showed **Single-factor authentication** and **Conditional Access: Not applied**.
 
@@ -272,7 +272,7 @@ Johanna initially registered Microsoft Authenticator and encountered an unsucces
 
 <img width="837" height="856" alt="Baseline Adele sign-in details" src="https://github.com/user-attachments/assets/c5ac16ab-dc97-417a-a32c-7f738cc00833" />
 
-### 2. MFA Enforcement – November 23, 2026
+### 2. MFA Enforcement 
 
 The MFA baseline was enabled after administrative recovery access had been verified.
 
@@ -347,7 +347,7 @@ The **Device info** tab also showed:
 
 ### 6. Geographic Restriction – What If Evaluation
 
-The What If tool evaluated a simulated sign-in for Johanna Lorenz to Office 365 Exchange Online, with country **China** and a matching Chinese IP address (`114.114.114.114`). That is a public server in China.
+The What If tool evaluated a simulated sign-in for Johanna Lorenz to Office 365 Exchange Online, with country **China** and a matching Chinese IP address (`114.114.114.114`). That is a public server located in China.
 
 | Matching policy | Control | State during simulation |
 |---|---|---|
@@ -360,8 +360,6 @@ The What If tool evaluated a simulated sign-in for Johanna Lorenz to Office 365 
 ### 7. Legacy Authentication – What If Evaluation
 
 The policy `CA-BASE-Block-Legacy-Authentication` was placed in **Report-only** for testing. A What If evaluation used **Johanna Lorenz** and **Office 365 Exchange Online**, with **Other clients** selected. The result included the legacy authentication policy under *Policies that will apply*, with **Block access** and **Report-only**.
-
-An additional What If evaluation was performed while working through the Exchange ActiveSync client variants. The user confirmed a matching result after correcting an issue with the What If Reset interface; the precise platform/client variant of that final result should be confirmed from the saved screenshot before it is labelled more specifically.
 
 **Result: Passed (simulated policy matching).** This demonstrates matching configuration, **not** a real legacy-protocol authentication denial. The policy was subsequently changed to **On**. No actual legacy-client authentication denial was performed, so real-world blocking remains unverified.
 
