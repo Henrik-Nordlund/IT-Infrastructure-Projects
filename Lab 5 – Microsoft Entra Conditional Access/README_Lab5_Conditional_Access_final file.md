@@ -200,7 +200,7 @@ A What If simulation was performed for **Johanna Lorenz**, targeting **Office 36
 
 **Result:** Policy match validated by simulation; policy subsequently enabled. **A real sign-in from China was not attempted**, so an actual geographic access denial was not observed. IP-based country identification can be imperfect, including when users connect through VPNs or other network intermediaries.
 
-**Evidence pending upload:** `ca-geo-china-what-if.png` (the actual image must be added and linked before publication).
+<img width="637" height="911" alt="ca-geo-china-what-if" src="https://github.com/user-attachments/assets/9f186cdb-acaa-4e64-a4f9-6078bab6e239" />
 
 A separate trusted-headquarters location was considered but deliberately not implemented. Exempting users from device compliance solely because they are on an office network would weaken the intended Zero Trust controls; the geographic restriction already demonstrates practical Named Locations usage.
 
@@ -347,7 +347,7 @@ The **Device info** tab also showed:
 
 ### 6. Geographic Restriction – What If Evaluation
 
-The What If tool evaluated a simulated sign-in for Johanna Lorenz to Office 365 Exchange Online, with country **China** and a matching Chinese IP address (`114.114.114.114`).
+The What If tool evaluated a simulated sign-in for Johanna Lorenz to Office 365 Exchange Online, with country **China** and a matching Chinese IP address (`114.114.114.114`). That is a public server in China.
 
 | Matching policy | Control | State during simulation |
 |---|---|---|
@@ -365,8 +365,9 @@ An additional What If evaluation was performed while working through the Exchang
 
 **Result: Passed (simulated policy matching).** This demonstrates matching configuration, **not** a real legacy-protocol authentication denial. The policy was subsequently changed to **On**. No actual legacy-client authentication denial was performed, so real-world blocking remains unverified.
 
-**Evidence pending upload:** `ca-legacy-auth-other-clients-what-if.png` and any verified Exchange ActiveSync What If screenshot.
-
+<img width="671" height="897" alt="ca-legacy-auth-other-clients-what-if" src="https://github.com/user-attachments/assets/fd4d05ee-f19a-471c-8e82-1688d9f3bcc7" />
+   
+<img width="580" height="887" alt="ca-legacy-auth-Exchange ActiveSync-what-if" src="https://github.com/user-attachments/assets/c40c0b7e-b821-43a9-be8d-7303841b8d8c" />   
 ### 8. Verification Summary
 
 | Verification | Result | Evidence |
@@ -416,7 +417,7 @@ The Engineering scenario illustrates that MFA and device compliance are separate
 
 ### Geographic Controls and Zero Trust
 
-A country-based Named Location can support geographic restrictions, but it is not proof of a user's physical location. Trusted-network exemptions were not introduced: the Engineering compliance requirement remains independent of the user's network location.
+A country-based Named Location can support geographic restrictions, but it is not proof of a user's physical location. With modern VPN one can get around that. Trusted-network exemptions were not introduced: the Engineering compliance requirement remains independent of the user's network location.
 
 ### Device Identification and Browser Support
 
@@ -433,17 +434,3 @@ Device-based Conditional Access depends on the sign-in conveying usable device i
 7. **Administrative recovery needs deliberate planning.** Emergency access was verified before changing the tenant's baseline identity protection.
 8. **Geographic conditions are additional signals, not substitutes for device trust.** The China policy was tested without exempting headquarters users from MFA or device compliance.
 9. **What If evaluates policy applicability, not real-world enforcement.** The geographic and legacy-client tests must be described as simulations.
-
-## Project Status
-
-**Implementation and testing completed, subject to final documentation checks.**
-
-**Completed:** Four Conditional Access policies enabled; initial security assessment; emergency administrator configuration and verification; four Conditional Access policy configurations; controlled Security Defaults transition; enforced MFA verification; Engineering Report-only evaluation; real access denial from an unmanaged/noncompliant device; real access grant from an Intune-managed compliant VM; Intune/sign-in-log analysis; China Named Location and What If validation; legacy-authentication What If evaluation.
-
-**Before marking the lab fully complete:**
-
-1. Upload and link the November 23 MFA, Engineering denial/grant, China What If, legacy-authentication What If, and final policy-inventory screenshots. Do not create placeholder image URLs.
-2. Review screenshots for credentials, recovery details, personally identifying tenant data, and public IP addresses before publication.
-3. Check that earlier screenshots are clearly identified as historical states, not the final policy configuration.
-
-**Evidence standard:** Policy configuration, What If matching, sign-in-log results, and observed access decisions are reported separately. No production-wide effectiveness claim is made from this limited developer-tenant test.
