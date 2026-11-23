@@ -67,7 +67,7 @@ The initial policy inventory was documented before making changes.
 
 ### 2. Emergency Access Account Configuration
 
-A dedicated emergency access account was created to reduce the risk of administrative lockout during Conditional Access administration.
+A emergency access account was created to reduce the risk of administrative lockout during Conditional Access administration ("a break glass global administrator").
 
 The account was configured with:
 
