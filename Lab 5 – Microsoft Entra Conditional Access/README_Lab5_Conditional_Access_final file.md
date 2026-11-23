@@ -1,7 +1,5 @@
 # Lab 5 – Microsoft Entra Conditional Access
 
-**Status:** Implementation and testing completed; evidence upload and documentation review pending
-
 ## Project Overview
 
 This lab explores identity and access security using Microsoft Entra Conditional Access, focusing on multi-factor authentication (MFA), legacy authentication restrictions, group-based access controls, and Microsoft Intune device compliance.
@@ -16,12 +14,12 @@ Nordlund Industries is a fictional organization that has implemented Microsoft E
 
 Employees access Microsoft 365 services using different identities and devices. The IT security team has been tasked with designing additional access controls based on Zero Trust principles.
 
-The objectives are to:
+The objectives are to demonstrate that the author are able to:
 
 - Configure an organization-wide MFA policy.
 - Configure a policy to block legacy authentication.
-- Apply device compliance requirements to a designated security group.
-- Integrate Conditional Access configuration with existing Intune device management.
+- Apply device compliance requirements, in addition to MFA, to a designated security group for hardening the attack surface in a particular vector.
+- Integrate Conditional Access configuration with existing Intune device management from a previous lab.
 - Protect administrative access through account exclusions and emergency access arrangements.
 - Examine policy configuration, authentication activity, and available verification methods.
 - Evaluate the operational risks associated with introducing Conditional Access.
