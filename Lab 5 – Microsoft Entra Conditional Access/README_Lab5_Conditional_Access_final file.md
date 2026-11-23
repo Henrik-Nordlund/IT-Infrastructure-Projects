@@ -18,11 +18,12 @@ The objectives are to demonstrate that the author are able to:
 
 - Configure an organization-wide MFA policy.
 - Configure a policy to block legacy authentication.
-- Apply device compliance requirements, in addition to MFA, to a designated security group for hardening the attack surface in a particular vector.
-- Integrate Conditional Access configuration with existing Intune device management from a previous lab.
+- Apply device compliance requirements, in addition to MFA, to a particular security group for hardening the attack surface in a that vector.
+- Integrate Conditional Access configuration with existing Intune device management from a previous lab (lab 3).
 - Protect administrative access through account exclusions and emergency access arrangements.
 - Examine policy configuration, authentication activity, and available verification methods.
 - Evaluate the operational risks associated with introducing Conditional Access.
+- Evaluate the ability to block sign-ins from geographical locations that might be compromised.
 
 **Implementation approach:** Policies were initially created in the **Off** state while Security Defaults remained enabled. After verifying regular and emergency administrative access, Security Defaults were disabled and custom policies were deployed in stages. MFA and Engineering device compliance were subsequently enforced and verified using Microsoft Entra sign-in logs. The geographic block policy was activated after a successful What If evaluation. The legacy authentication policy was evaluated in Report-only using What If and subsequently enabled. Actual legacy-client blocking was not tested.
 
