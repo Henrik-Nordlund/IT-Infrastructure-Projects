@@ -29,7 +29,7 @@ Practical exercises covering users, groups, administrative units, identity manag
 - <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%205%20%E2%80%93%20Microsoft%20Entra%20Conditional%20Access/README.md">Lab 5 – Microsoft Entra Conditional Access</a>    
 Hands-on identity security lab covering Conditional Access policies, MFA enforcement, device compliance, location-based access controls, and policy evaluation using Report-only mode, What If, and sign-in logs.
 
-- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%206%20%E2%80%93%20Microsoft%20Entra%20Privileged%20Identity%20Management/README.md">Lab 6 – Microsoft Entra Privileged Identity Management</a>    
+- <a href= "https://github.com/Henrik-Nordlund/IT-Infrastructure-Projects/blob/main/Lab%206%20%E2%80%93%20Microsoft%20Entra%20Privileged%20Identity%20Management/README.md">Lab 6 – Microsoft Entra Privileged Identity Management (under construction)</a>    
 Lab focused on privileged access management using eligible role assignments, Just-in-Time administrative access, role activation requirements, approval workflows and audit logging.
 
 - Planned lab – Identity Protection
